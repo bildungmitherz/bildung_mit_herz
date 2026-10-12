@@ -29,7 +29,7 @@
     {
       "tier": "Klassenzimmer-Patenschaft",
       "amount": "ab 3.500 €",
-      "targetProject": "Mamoru oder Madina",
+      "targetProject": "Mamoru Grundschule",
       "impact": { "de": "Ermöglicht bis zu 45 Kindern das tägliche Lernen an festen Tischen in einem wetterfesten Raum.", "en": "Enables up to 45 children to learn in a safe, fully sheltered classroom." },
       "deliverables": [
         "Namensplakette am Klassenraum (auf Wunsch)",
@@ -51,7 +51,7 @@
     {
       "tier": "Architektur- & Leuchtturmförderung",
       "amount": "ab 7.500 €",
-      "targetProject": "Learning Hub Mafabaneh",
+      "targetProject": "Mafabaneh Learning Hub",
       "impact": { "de": "Förderung von innovativer Lehmbauarchitektur und passivem Klimadesign in Kooperation mit Tchoban Voss.", "en": "Support innovative sustainable earth architecture in cooperation with Tchoban Voss Architects." },
       "deliverables": [
         "Nennung im Architektur- und Veröffentlichungsdossier",

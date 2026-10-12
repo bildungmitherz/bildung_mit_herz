@@ -124,8 +124,7 @@ allImageSrcs.forEach(({ from, src, hasAlt }) => {
 console.log(`\nTest Group 5: Financial Data Consistency & Traceability`);
 const projects = [
   JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'content', 'projects', 'mafabaneh.json'), 'utf8')),
-  JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'content', 'projects', 'mamoru.json'), 'utf8')),
-  JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'content', 'projects', 'madina.json'), 'utf8'))
+  JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'content', 'projects', 'mamoru.json'), 'utf8'))
 ];
 
 projects.forEach(p => {

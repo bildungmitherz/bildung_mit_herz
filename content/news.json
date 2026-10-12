@@ -1,0 +1,47 @@
+[
+  {
+    "id": "trockenzeit-2026",
+    "date": "Oktober 2026",
+    "category": { "de": "Baufortschritt", "en": "Construction" },
+    "title": {
+      "de": "Vorbereitungen für die Trockenzeit-Bauphase 2026/2027",
+      "en": "Preparations for the 2026/2027 Dry Season Construction Works"
+    },
+    "summary": {
+      "de": "Mit dem Abklingen der Monsun-Regenzeit koordinieren wir mit unseren Partnern vor Ort die nächsten Materiallieferungen: Verputzarbeiten und Estrichböden in Mamoru sowie die Holzkonstruktion für den Mafabaneh Learning Hub.",
+      "en": "As the monsoon season subsides, we are coordinating upcoming material deliveries with local partners: protective plaster and screed flooring for Mamoru, and timber roofing for the Mafabaneh Learning Hub."
+    },
+    "image": "/assets/images/mafabaneh-bricks.jpg",
+    "link": "/projekte/mamoru/"
+  },
+  {
+    "id": "reisebericht-2026",
+    "date": "März 2026",
+    "category": { "de": "Bildungsreise", "en": "Educational Journey" },
+    "title": {
+      "de": "Rückblick Bildungsreise: 26 Teilnehmende & Grundsteinlegung",
+      "en": "Field Dispatch: 26 Travelers & Mafabaneh Cornerstone"
+    },
+    "summary": {
+      "de": "Unsere dritte Bildungsreise vereinte Schüler:innen, Eltern und Lehrkräfte. Gemeinsam mit der Dorfgemeinschaft wurden 2.000 Lehmziegel hergestellt und ein historischer Friedensschluss zwischen Nachbardörfern besiegelt.",
+      "en": "Our third educational journey brought together students, parents and teachers. Hand-in-hand with community elders, 2,000 earth bricks were produced, sealing a historic inter-village peace covenant."
+    },
+    "image": "/assets/images/hero-home.jpg",
+    "link": "/bildungsreisen/reiseberichte/"
+  },
+  {
+    "id": "academediasupport-2026",
+    "date": "Januar 2026",
+    "category": { "de": "Unternehmenspartnerschaft", "en": "Corporate Partnership" },
+    "title": {
+      "de": "AcadeMedia sichert Mobiliar und Jahresgehälter in Mamoru",
+      "en": "AcadeMedia Funds Classroom Desks & Annual Teacher Payroll"
+    },
+    "summary": {
+      "de": "Dank der Förderung durch AcadeMedia Education GmbH wurden alle fünf Klassenräume der Grundschule Mamoru mit soliden Möbeln ausgestattet und die Gehälter für fünf Lehrkräfte für volle 12 Monate garantiert.",
+      "en": "Thanks to major support from AcadeMedia Education GmbH, all five classrooms at Mamoru Primary School were equipped with sturdy wooden desks, and five teacher salaries were guaranteed for 12 months."
+    },
+    "image": "/assets/images/mamoru-school.jpg",
+    "link": "/projekte/mamoru/"
+  }
+]

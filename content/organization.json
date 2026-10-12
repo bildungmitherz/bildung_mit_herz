@@ -34,6 +34,58 @@
     "taxOffice": "Finanzamt für Körperschaften I, Berlin",
     "taxStatus": "Gemeinnützig anerkannt zur Förderung der Bildung und der Entwicklungszusammenarbeit"
   },
+  "governanceDocuments": [
+    {
+      "id": "satzung",
+      "title": { "de": "Offizielle Vereinssatzung", "en": "Articles of Association (Statutes)" },
+      "subtitle": {
+        "de": "Satzung von Make them smile / Bildung mit Herz Sierra Leone e. V. mit festgelegtem gemeinnützigem Zweck der Bildungsförderung.",
+        "en": "Official statutes detailing the nonprofit educational mandate and governance framework."
+      },
+      "issuer": "Amtsgericht Charlottenburg",
+      "format": "PDF"
+    },
+    {
+      "id": "freistellung",
+      "title": { "de": "Freistellungsbescheid zur Gemeinnützigkeit", "en": "Tax Exemption Certificate (Gemeinnützigkeit)" },
+      "subtitle": {
+        "de": "Anerkennung der Steuerbegünstigung für gemeinnützige Zwecke durch das Finanzamt für Körperschaften I Berlin.",
+        "en": "Official tax-exempt certification for educational philanthropy issued by the Berlin tax authority."
+      },
+      "issuer": "Finanzamt für Körperschaften I Berlin",
+      "format": "PDF"
+    },
+    {
+      "id": "registerauszug",
+      "title": { "de": "Auszug aus dem Vereinsregister", "en": "Register of Associations Excerpt (VR 41272 B)" },
+      "subtitle": {
+        "de": "Eintragungsnachweis beim Amtsgericht Charlottenburg (Berlin) unter der Registernummer VR 41272 B.",
+        "en": "Certified court registration excerpt from the Local Court of Charlottenburg (Berlin), VR 41272 B."
+      },
+      "issuer": "Amtsgericht Charlottenburg (Berlin)",
+      "format": "PDF"
+    },
+    {
+      "id": "kassenpruefung",
+      "title": { "de": "Kassenprüfbericht & Mittelverwendungsnachweis", "en": "Annual Financial Audit & Grant Accountability" },
+      "subtitle": {
+        "de": "Rechnungslegung und lückenlose Dokumentation: 100 % der Spenden fließen direkt in Baumaterial und lokale Schulprojekte.",
+        "en": "Audited receipts and disbursements verifying zero administrative overhead deducted from donor funds."
+      },
+      "issuer": "Kassenprüfung & Mitgliederversammlung",
+      "format": "PDF"
+    },
+    {
+      "id": "transparenzstandards",
+      "title": { "de": "Selbstverpflichtung Transparente Zivilgesellschaft", "en": "Transparent Civil Society Commitment" },
+      "subtitle": {
+        "de": "Freiwillige Selbstverpflichtung zur Offenlegung von Zielen, Mittelherkunft, Mittelverwendung und Entscheidungsträgern.",
+        "en": "Voluntary public disclosure framework detailing leadership, source of funds, and project expenditures."
+      },
+      "issuer": "Initiative Transparente Zivilgesellschaft",
+      "format": "PDF"
+    }
+  ],
   "banking": {
     "bankName": "Berliner Sparkasse",
     "accountHolder": "Make Them Smile e.V.",

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bricks",
+    "name": { "de": "10 handgefertigte Lehmziegel (CSEB)", "en": "10 Handmade Earth Bricks (CSEB)" },
+    "amountEur": 15,
+    "desc": {
+      "de": "Vor Ort von der Dorfgemeinschaft aus lokalem Lehm und Sand gepresst und sonnengetrocknet. Bildet das massive, atmungsaktive Mauerwerk für den Rundbau in Mafabaneh.",
+      "en": "Pressed and sun-dried on site by the local community from earth and sand. Forms the solid, breathable masonry for the circular learning hub in Mafabaneh."
+    },
+    "image": "/assets/images/mafabaneh-bricks.jpg"
+  },
+  {
+    "id": "cement",
+    "name": { "de": "1 Sack Zement & Fundamentmörtel", "en": "1 Bag of Structural Cement" },
+    "amountEur": 18,
+    "desc": {
+      "de": "Sichert die statische Stabilität von Fundamenten und schützt die Sockelbereiche vor tropischem Monsunregen.",
+      "en": "Ensures structural foundation stability and reinforces ground plinths against severe tropical monsoon rains."
+    },
+    "image": "/assets/images/madina-site.jpg"
+  },
+  {
+    "id": "roof-sheet",
+    "name": { "de": "1 Wellblech-Dachelement & Versiegelung", "en": "1 Metal Roofing Sheet & Sealant" },
+    "amountEur": 25,
+    "desc": {
+      "de": "Verzinktes, langlebiges Wellblech zum Schutz der Klassenräume und Unterrichtsmaterialien vor schweren Regenfällen.",
+      "en": "Heavy-duty galvanized roofing sheet protecting classrooms and textbooks from heavy seasonal downpours."
+    },
+    "image": "/assets/images/mamoru-school.jpg"
+  },
+  {
+    "id": "desk",
+    "name": { "de": "1 solider Holztisch & Bank für 2 Kinder", "en": "1 Sturdy Wooden Desk & Bench for 2 Children" },
+    "amountEur": 35,
+    "desc": {
+      "de": "In einer lokalen Schreinerei in Makeni handgefertigt. Verhindert, dass Kinder auf dem nackten Boden sitzen müssen.",
+      "en": "Handcrafted by local carpenters in Makeni. Ensures children no longer have to sit on bare dirt or stone floors."
+    },
+    "image": "/assets/images/hero-secondary.jpg"
+  },
+  {
+    "id": "window-shutter",
+    "name": { "de": "1 wetterfestes Holzfenster & Schutzgitter", "en": "1 Weatherproof Window Shutter & Security Grill" },
+    "amountEur": 65,
+    "desc": {
+      "de": "Sorgt für passive Querlüftung und Tageslicht bei gleichzeitiger Einbruchsicherung und Schutz vor Schlagregen.",
+      "en": "Provides natural cross-ventilation and daylight while securing learning equipment and repelling driving rain."
+    },
+    "image": "/assets/images/mamoru-partner.jpg"
+  },
+  {
+    "id": "solar-light",
+    "name": { "de": "1 Solarlampe & LED-Klassenraumbeleuchtung", "en": "1 Solar Panel & LED Classroom Light" },
+    "amountEur": 85,
+    "desc": {
+      "de": "Ermöglicht Hausaufgabenbetreuung und Erwachsenenbildung nach Einbruch der Dunkelheit in Dörfern ohne Stromnetz.",
+      "en": "Powers evening study hours and adult literacy classes after sunset in off-grid rural communities."
+    },
+    "image": "/assets/images/about-team.jpg"
+  },
+  {
+    "id": "teacher-month",
+    "name": { "de": "1 Monatsgehalt für eine qualifizierte Lehrkraft", "en": "1 Month Salary for a Qualified Teacher" },
+    "amountEur": 200,
+    "desc": {
+      "de": "Garantiert kontinuierlichen, verlässlichen Unterricht für eine ganze Schulklasse und sichert das Auskommen der Lehrkraft.",
+      "en": "Guarantees reliable, uninterrupted daily schooling for an entire classroom and supports the teacher's livelihood."
+    },
+    "image": "/assets/images/about-founders.jpg"
+  }
+]

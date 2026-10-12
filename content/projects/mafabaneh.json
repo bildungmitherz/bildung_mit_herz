@@ -2,8 +2,8 @@
   "id": "mafabaneh",
   "slug": "mafabaneh",
   "title": {
-    "de": "Kaprr Yoni Global Learning Hub — Mafabaneh",
-    "en": "Kaprr Yoni Global Learning Hub — Mafabaneh"
+    "de": "Mafabaneh Learning Hub",
+    "en": "Mafabaneh Learning Hub"
   },
   "tagline": {
     "de": "Nachhaltige Architektur als Brücke für Bildung, Umwelt und Frieden",
@@ -24,8 +24,14 @@
   "architect": {
     "name": "Tchoban Voss Architekten",
     "leadArchitect": "Sergei Tchoban",
-    "notableDetails": "Träger des European Prize for Architecture 2018. Ehrenamtlicher Entwurf eines modularen Rundbaus mit passiver Querlüftung ohne Stromnetz.",
-    "siteVisit": "Zwei Architekten aus dem Büro Tchoban Voss begleiten den Bau 2026 direkt vor Ort in Sierra Leone."
+    "notableDetails": {
+      "de": "Träger des European Prize for Architecture 2018. Ehrenamtlicher Entwurf eines modularen Rundbaus mit passiver Querlüftung ohne Stromnetz.",
+      "en": "Laureate of the European Prize for Architecture 2018. Pro bono design of a circular modular pavilion featuring passive ventilation without electric grid dependency."
+    },
+    "siteVisit": {
+      "de": "Zwei Architekten aus dem Büro Tchoban Voss begleiten den Bau 2026 direkt vor Ort in Sierra Leone.",
+      "en": "Two architects from Tchoban Voss are supervising construction on the ground in Sierra Leone in 2026."
+    }
   },
   "localPartner": {
     "organization": "Kaprr Yoni Global Learning Hub",
@@ -98,7 +104,7 @@
       {
         "title": { "de": "Schulbänke & Klassenraumausstattung", "en": "Desks, Benches & Classroom Fittings" },
         "amount": 2500,
-        "description": { "de": "Ergonomische Tische und Bänke, lokal von Schreinern gefertigt.", "en": "Locally crafted wooden desks and benches supporting the local economy." }
+        "description": { "de": "Ausstattung mit langlebigen Holztischen und Bänken für 50 Schüler:innen.", "en": "Furnishing with durable wooden tables and benches for 50 pupils." }
       }
     ]
   }

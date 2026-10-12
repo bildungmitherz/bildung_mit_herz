@@ -19,7 +19,8 @@
   "galleryImages": [
     "/assets/images/mamoru-school.jpg",
     "/assets/images/mamoru-partner.jpg",
-    "/assets/images/hero-secondary.jpg"
+    "/assets/images/hero-secondary.jpg",
+    "/assets/images/travel-masingbi.jpg"
   ],
   "localPartner": {
     "organization": "Welfare Alert Sierra Leone (WA-SL)",
@@ -28,14 +29,14 @@
     "partnerDocument": "/assets/documents/WelfareAlert.pdf"
   },
   "impactSummary": {
-    "de": "Zuvor saßen über 100 Schulkinder auf dem nackten Steinboden einer maroden ehemaligen Kirchenhalle, wo ein einzelner Lehrer drei Klassenstufen parallel an unterschiedlichen Wänden unterrichten musste. Heute steht ein massives Schulgebäude mit fünf separaten Klassenräumen.",
-    "en": "Previously, more than 100 school children sat on the stone floor of a makeshift church, where one teacher had to teach three classes simultaneously on different walls. Today, a solid school building with five distinct classrooms stands on the site."
+    "de": "Zuvor saßen über 100 Schulkinder auf dem nackten Steinboden einer maroden ehemaligen Kirchenhalle, wo ein einzelner Lehrer drei Klassenstufen parallel an unterschiedlichen Wänden unterrichten musste. Heute steht ein massives Schulgebäude mit fünf separaten Klassenräumen für über 150 Kinder.",
+    "en": "Previously, more than 100 school children sat on the bare stone floor of a dilapidated church hall, where a single teacher had to teach three grade levels simultaneously on different walls. Today, a solid school building with five distinct classrooms stands on the site, educating over 150 children."
   },
   "corporateSponsorship": {
     "sponsor": "AcadeMedia Education GmbH",
     "contributions": [
       {
-        "item": { "de": "Solide Schultische & Sitzbänke für alle Räume", "en": "Sturdy desks & benches for all five classrooms" },
+        "item": { "de": "Solide Schultische & Sitzbänke für alle fünf Klassenräume", "en": "Sturdy wooden desks & benches for all five classrooms" },
         "year": "2026",
         "verified": true
       },
@@ -48,26 +49,42 @@
   },
   "milestones": [
     {
-      "date": "2017–2024",
-      "title": { "de": "Lokale Initiative & Engagement durch Juliet Fornah", "en": "Community advocacy initiated by Juliet Fornah" },
+      "date": "2017–2023",
+      "title": { "de": "Lokale Initiative & Mobilisierung durch Juliet Fornah", "en": "Community advocacy initiated by Juliet Fornah" },
+      "desc": { "de": "Juliet Fornah gründet Welfare Alert und dokumentiert die prekäre Lernsituation im Dorf Mamoru.", "en": "Juliet Fornah establishes Welfare Alert and documents the urgent learning conditions in Mamoru." },
+      "image": "/assets/images/mamoru-partner.jpg",
       "completed": true,
       "source": "Welfare Alert S.L."
     },
     {
+      "date": "2024",
+      "title": { "de": "Fundamentlegung & Errichtung der Blockstein-Mauern", "en": "Foundation & Masonry Wall Construction" },
+      "desc": { "de": "Gemeinsam mit lokalen Maurern und der Dorfgemeinschaft werden die massiven Wände für 5 Klassenräume errichtet.", "en": "Local masons and community members construct the solid structural walls for 5 classrooms." },
+      "image": "/assets/images/madina-site.jpg",
+      "completed": true,
+      "source": "Bautagebuch 2024"
+    },
+    {
       "date": "2025",
-      "title": { "de": "Bauphase Rohbau: Errichtung der Außenwände & Dachstuhl für 5 Räume", "en": "Shell construction: 5 classroom walls and roof" },
+      "title": { "de": "Dachkonstruktion & Fertigstellung der Gebäudehülle", "en": "Timber Roof Structure & Weatherproof Enclosure" },
+      "desc": { "de": "Solider Dachstuhl mit verzinktem Wellblech schützt das Gebäude vor monsunartigem Starkregen.", "en": "Heavy-duty timber roof structure and metal sheeting provide full rain protection." },
+      "image": "/assets/images/mamoru-school.jpg",
       "completed": true,
       "source": "Vereinsfinanzierung 2025"
     },
     {
       "date": "Januar 2026",
-      "title": { "de": "Ausstattung mit Schulmöbeln & Gehaltsübernahme (AcadeMedia)", "en": "Furnishing & teacher payroll funding (AcadeMedia)" },
+      "title": { "de": "Möblierung & Lehrergehälter durch AcadeMedia", "en": "Furnishing & 1-Year Teacher Salaries (AcadeMedia)" },
+      "desc": { "de": "Lieferung von Schultischen und Stühlen für alle 5 Räume; Sicherung von 5 Lehrergehältern für das Schuljahr.", "en": "Delivery of desks and chairs for all 5 rooms; 5 teacher salaries secured for 12 months." },
+      "image": "/assets/images/hero-secondary.jpg",
       "completed": true,
       "source": "Bildungsreisebericht 2026"
     },
     {
       "date": "2026/2027",
-      "title": { "de": "Abschlussarbeiten: Verputz, Estrichböden, Türen & Fensterverglasung", "en": "Finishing: Plastering, concrete screed, doors & window shutters" },
+      "title": { "de": "Endspurt Ausbau: Verputz, Estrichböden & Solarlichter", "en": "Final Finishing Phase: Plaster, Screed Floors & Solar Lights" },
+      "desc": { "de": "Wetterfester Zementverputz, glatte Estrichböden, abschließbare Türen und Solarbeleuchtung für Abendkurse.", "en": "Protective plastering, dust-free concrete floors, security doors and solar lighting for night courses." },
+      "image": "/assets/images/about-team.jpg",
       "completed": false,
       "source": "Laufender Restbedarf"
     }
@@ -88,7 +105,7 @@
         "description": { "de": "Staubfreie, glatte Böden für hygienische und saubere Lernbedingungen.", "en": "Hygienic, dust-free concrete flooring for clean learning." }
       },
       {
-        "title": { "de": "Abschließbare Außentüren", "en": "Lockable Security Doors" },
+        "title": { "de": "Abschließbare Außentüren & Fensterläden", "en": "Lockable Security Doors & Shutters" },
         "amount": 1000,
         "description": { "de": "Schutz für Unterrichtsmaterialien, Lehrbücher und Schulausstattung.", "en": "Safe storage for textbooks, teaching materials and assets." }
       }

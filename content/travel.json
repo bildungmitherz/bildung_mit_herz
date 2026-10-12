@@ -11,24 +11,90 @@
     "de": "Unsere Bildungsreisen bringen Schüler:innen, Eltern und Lehrkräfte aus Deutschland direkt in die Dörfer Sierra Leones. Wir schlafen in Zelten und einfachen Gästehäusern, kochen gemeinsam, mischen Lehm für Ziegel und lernen voneinander. Alle Teilnehmer tragen ihre Reisekosten ausnahmslos privat.",
     "en": "Our educational trips bring students, parents and teachers directly into rural Sierra Leonean communities. We camp in village settings, cook together, make earth bricks, and learn from each other. Every single participant pays 100% of their travel expenses privately."
   },
-  "highlights2026": [
+  "videos": {
+    "de": {
+      "id": "5cqYvInke7I",
+      "url": "https://www.youtube-nocookie.com/embed/5cqYvInke7I",
+      "title": "Dokumentation Bildungsreise Sierra Leone (Deutsch)",
+      "desc": "Authentische Video-Einblicke unserer Bildungsreise durch Dörfer, Schulen und Begegnungen vor Ort."
+    },
+    "en": {
+      "id": "jBt4hURaXig",
+      "url": "https://www.youtube-nocookie.com/embed/jBt4hURaXig",
+      "title": "Educational Journey Sierra Leone Documentary (English)",
+      "desc": "Authentic video documentary following our journey through Sierra Leonean communities and school projects."
+    }
+  },
+  "trips": [
     {
-      "title": { "de": "26 Teilnehmende im Januar 2026", "en": "26 Participants in January 2026" },
-      "desc": { "de": "Dritte erfolgreiche Bildungsreise mit Schüler:innen, Lehrkräften und Eltern.", "en": "Third successful expedition uniting students, educators and parents." }
+      "number": 1,
+      "year": "2022 / 2023",
+      "title": {
+        "de": "1. Bildungsreise: Wurzeln & Partnerschaftsgründung",
+        "en": "1st Journey: Roots & Partnership Foundation"
+      },
+      "desc": {
+        "de": "Die erste Pionierreise führte nach Makeni und Masingbi. Erste persönliche Treffen mit Juliet Jeneba Fornah (Welfare Alert) und den Ältesten von Mamoru legten den Grundstein für alle künftigen Bau- und Bildungsprojekte.",
+        "en": "The foundational journey to Makeni and Masingbi. In-person meetings with Juliet Jeneba Fornah (Welfare Alert) and village elders laid the bedrock for all subsequent school and infrastructure projects."
+      },
+      "image": "/assets/images/travel-masingbi.jpg",
+      "location": "Makeni & Masingbi, Northern Province"
     },
     {
-      "title": { "de": "Empfang in Makoma", "en": "Community Gathering in Makoma" },
-      "desc": { "de": "Traditioneller Trommel- und Tanzempfang und Übergabe von Sportgeräten.", "en": "Traditional drumming reception and contribution of sports equipment." }
+      "number": 2,
+      "year": "2024",
+      "title": {
+        "de": "2. Bildungsreise: Gemeinschaftsbau & Vertrauen",
+        "en": "2nd Journey: Community Construction & Trust"
+      },
+      "desc": {
+        "de": "Gemeinsames Anpacken auf den Schulbaustellen in Mamoru und Madina. Übernachtungen in einfachen Dorfhütten, intensiver Austausch über Bildungssysteme und gemeinsames Kochen stärkten die partnerschaftliche Bindung.",
+        "en": "Hands-on collaboration at rural school construction sites in Mamoru. Camping in village huts, sharing meals, and deep dialogues on education built lasting mutual trust between communities."
+      },
+      "image": "/assets/images/travel-gathering.jpg",
+      "location": "Mamoru & Umland"
     },
     {
-      "title": { "de": "Grundsteinlegung in Mafabaneh", "en": "Foundation Ceremony in Mafabaneh" },
-      "desc": { "de": "Fertigstellung von 2.000 Ziegeln und feierliche Versöhnung mit Nachbardorf Magbashai.", "en": "2,000 bricks completed and formal peace covenant with neighboring Magbashai." }
-    },
-    {
-      "title": { "de": "Diplomatische Anerkennung", "en": "High-Level Diplomatic Meetings" },
-      "desc": { "de": "Audienz bei Tourismusministerin Nabeela Tunis und dem deutschen Botschafter Dr. Pascal Richter in Freetown.", "en": "Meetings with Tourism Minister Nabeela Tunis and German Ambassador Dr. Pascal Richter." }
+      "number": 3,
+      "year": "Januar 2026",
+      "title": {
+        "de": "3. Bildungsreise: 26 Teilnehmende & Grundsteinlegung Mafabaneh",
+        "en": "3rd Journey: 26 Travelers & Mafabaneh Cornerstone"
+      },
+      "desc": {
+        "de": "Mit 26 Schüler:innen, Eltern und Lehrkräften die bisher größte Bildungsreise. Herstellung von 2.000 Lehmziegeln für den Learning Hub Mafabaneh, Friedensschluss zwischen Dörfern und Audienz bei Tourismusministerin Nabeela Tunis in Freetown.",
+        "en": "Our largest delegation to date with 26 students, parents and teachers. Making 2,000 earth bricks for the Mafabaneh Learning Hub, formal inter-village peace reconciliation, and reception by Tourism Minister Nabeela Tunis in Freetown."
+      },
+      "image": "/assets/images/hero-home.jpg",
+      "location": "Mafabaneh, Makoma & Freetown"
     }
   ],
+  "contactPerson": {
+    "name": "Philipp Herzberg",
+    "role": {
+      "de": "Vereinsvorsitzender & Schulleiter, Koordinator Bildungsreisen",
+      "en": "Board Chairman & School Principal, Educational Trips Coordinator"
+    },
+    "email": "bmh.sierraleone@gmail.com",
+    "note": {
+      "de": "Haben Sie Interesse, an einer künftigen Bildungsreise teilzunehmen oder möchten Sie mehr über Ablauf und Voraussetzungen erfahren? Wenden Sie sich direkt an Philipp Herzberg.",
+      "en": "Are you interested in participating in a future educational trip or learning more about the itinerary and prerequisites? Contact Philipp Herzberg directly."
+    }
+  },
+  "upcomingTrip": {
+    "title": {
+      "de": "Nächste Bildungsreise (2027)",
+      "en": "Next Educational Journey (2027)"
+    },
+    "status": {
+      "de": "In Vorbereitung — Informationen folgen in Kürze",
+      "en": "In Planning — Information Coming Soon"
+    },
+    "desc": {
+      "de": "Detaillierte Informationen zur Vorbereitung (Impfungen, Visum, Ausrüstung), den geschätzten Reisekosten (Flug, Transport und Unterkunft auf reiner Selbstzahlerbasis) und den genauen Terminen für 2027 werden hier in Kürze veröffentlicht. Voranmeldungen und Fragen nimmt Philipp Herzberg schon jetzt entgegen.",
+      "en": "Comprehensive preparation guidelines (vaccines, visas, gear), transparent cost estimates (flight, transport and guesthouse on a strict self-funded basis) and exact 2027 dates will be published here shortly. Early expressions of interest are welcome."
+    }
+  },
   "faq": [
     {
       "q": { "de": "Tritt der Verein als Reiseveranstalter auf?", "en": "Is the association a commercial tour operator?" },
