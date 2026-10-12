@@ -1,0 +1,62 @@
+{
+  "name": "Bildung mit Herz Sierra Leone e.V.",
+  "legalName": "Make them smile / Bildung mit Herz Sierra Leone e. V.",
+  "shortName": "Bildung mit Herz",
+  "bankAccountName": "Make Them Smile e.V.",
+  "renamingNotice": {
+    "de": "Unser Förderverein befindet sich aktuell in der offiziellen Eintragungsphase der Umbenennung in „Bildung mit Herz Sierra Leone e.V.“. Bis zum Abschluss des Registerverfahrens lautet der Kontoinhaber weiterhin „Make Them Smile e.V.“. Bitte geben Sie diesen Namen bei Überweisungen an.",
+    "en": "Our association is currently undergoing the official register update to 'Bildung mit Herz Sierra Leone e.V.'. Until completion, the official bank account holder remains 'Make Them Smile e.V.'. Please use this recipient name for bank transfers."
+  },
+  "address": {
+    "street": "Herderstr. 9",
+    "postalCode": "12163",
+    "city": "Berlin",
+    "country": "Deutschland"
+  },
+  "board": [
+    {
+      "name": "Philipp Herzberg",
+      "role": "Vorsitzender",
+      "title": "Schulleiter der Internationalen Gesamtschule Potsdam, Mitgründer",
+      "email": "bmh.sierraleone@gmail.com"
+    },
+    {
+      "name": "Barbara Nicholson",
+      "role": "Vorsitzende",
+      "title": "Mitgründerin",
+      "email": "bmh.sierraleone@gmail.com"
+    }
+  ],
+  "editorialResponsible": "Philipp Herzberg, Herderstr. 9, 12163 Berlin",
+  "registration": {
+    "court": "Amtsgericht Charlottenburg (Berlin)",
+    "number": "VR 41272 B",
+    "taxOffice": "Finanzamt für Körperschaften I, Berlin",
+    "taxStatus": "Gemeinnützig anerkannt zur Förderung der Bildung und der Entwicklungszusammenarbeit"
+  },
+  "banking": {
+    "bankName": "Berliner Sparkasse",
+    "accountHolder": "Make Them Smile e.V.",
+    "iban": "DE55100500000191572900",
+    "bic": "BELADEB1BRL",
+    "taxDeductible": true,
+    "receiptPolicy": {
+      "de": "Für Spenden bis 300 € gilt der vereinfachte Zuwendungsnachweis (Kontoauszug). Für Beträge darüber stellen wir gerne eine offizielle Spendenbescheinigung aus. Bitte geben Sie bei Überweisungen Ihre Anschrift im Verwendungszweck an.",
+      "en": "For donations up to €300, a bank statement serves as simplified tax proof in Germany. For higher amounts, we gladly issue an official donation receipt. Please include your postal address in the transfer memo."
+    }
+  },
+  "contacts": {
+    "email": "bmh.sierraleone@gmail.com",
+    "directLead": "Philipp Herzberg",
+    "phone": "+49 30 (über E-Mail-Erstkontakt)"
+  },
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/bildung.mit.herz/",
+    "linkedin": "https://www.linkedin.com/company/bildung-mit-herz-sierra-leone-ev/",
+    "youtube": "https://www.youtube.com/@bildung-mit-herz-sierra-leone",
+    "facebook": "https://www.facebook.com/people/Bildung-Mit-Herz-Sierra-Leone-eV/61586834742075/",
+    "tiktok": "https://www.tiktok.com/@bildung.mit.herz",
+    "whatsapp": "https://whatsapp.com/channel/0029VbCQ7Tc6WaKsOkpd120h",
+    "substack": "https://philippherzberg.substack.com/p/zuruck-aus-sierra-leone-was-wir-gebaut"
+  }
+}

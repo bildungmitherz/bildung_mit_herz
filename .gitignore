@@ -1,0 +1,22 @@
+# Dependencies & Cache
+node_modules/
+.npm/
+.npm-cache/
+.npmrc
+.venv/
+__pycache__/
+*.pyc
+
+# Build Output (built on Cloudflare Pages)
+dist/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.log
+
+# Migration raw scrape (large scraped HTML archives preserved locally)
+migration/raw/pages/

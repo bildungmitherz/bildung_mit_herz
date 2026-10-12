@@ -1,0 +1,68 @@
+{
+  "title": {
+    "de": "Partnerschaften für Unternehmen",
+    "en": "Corporate Partnerships & CSR"
+  },
+  "tagline": {
+    "de": "Verantwortung mit Hebelwirkung: Bauen Sie Schulen, die Generationen tragen.",
+    "en": "High-Impact Philanthropy: Build school infrastructure that empowers generations."
+  },
+  "valueProposition": [
+    {
+      "title": { "de": "Konkrete, greifbare Bauabschnitte", "en": "Tangible Project Milestones" },
+      "desc": { "de": "Kein anonymer Fördertopf: Ihr Unternehmen finanziert einen exakt definierten Baustein – z.B. einen Raum, das Dach oder Lehrergehälter.", "en": "No anonymous overhead: Your company funds an exact milestone – e.g. a specific classroom, a roof, or teacher salaries." }
+    },
+    {
+      "title": { "de": "ESG- & CSR-konforme Dokumentation", "en": "ESG & CSR Verification" },
+      "desc": { "de": "Sie erhalten detaillierte Fotostrecken, GPS-Koordinaten, Belegnachweise und Projektberichte für Ihre Nachhaltigkeitskommunikation.", "en": "Receive high-resolution photo documentation, verified receipts, and progress reports for your sustainability reporting." }
+    },
+    {
+      "title": { "de": "Steuerliche Absetzbarkeit", "en": "Full Tax Deductibility" },
+      "desc": { "de": "Zuwendungsbestätigungen nach amtlich vorgeschriebenem Muster (Anlage 1 zu § 50 Abs. 1 EStDV) für Ihren Steuerberater.", "en": "Official German tax donation receipts issued promptly for corporate accounting." }
+    },
+    {
+      "title": { "de": "Direkter Vorstands-Austausch", "en": "Direct Board Access" },
+      "desc": { "de": "Persönlicher Dialog mit Vereinsvorsitzendem und Schulleiter Philipp Herzberg ohne zwischengeschaltete Agenturen.", "en": "Direct contact with co-founder and school principal Philipp Herzberg without intermediaries." }
+    }
+  ],
+  "partnershipModels": [
+    {
+      "tier": "Klassenzimmer-Patenschaft",
+      "amount": "ab 3.500 €",
+      "targetProject": "Mamoru oder Madina",
+      "impact": { "de": "Ermöglicht bis zu 45 Kindern das tägliche Lernen an festen Tischen in einem wetterfesten Raum.", "en": "Enables up to 45 children to learn in a safe, fully sheltered classroom." },
+      "deliverables": [
+        "Namensplakette am Klassenraum (auf Wunsch)",
+        "Detaillierter Abschlussbericht mit Schülervideos",
+        "Offizielle Spendenbescheinigung"
+      ]
+    },
+    {
+      "tier": "Lehrer-Jahrespatenschaft",
+      "amount": "2.400 € / Jahr (oder 200 € / Monat)",
+      "targetProject": "Mamoru Grundschule",
+      "impact": { "de": "Sichert das monatliche Gehalt einer qualifizierten Lehrkraft für volle 12 Monate.", "en": "Secures the full living salary for a qualified local teacher for 12 months." },
+      "deliverables": [
+        "Direkter Bericht aus dem Klassenzimmer",
+        "Regelmäßige Quartalsupdates zur Unterrichtsentwicklung",
+        "Offizielle Spendenbescheinigung"
+      ]
+    },
+    {
+      "tier": "Architektur- & Leuchtturmförderung",
+      "amount": "ab 7.500 €",
+      "targetProject": "Learning Hub Mafabaneh",
+      "impact": { "de": "Förderung von innovativer Lehmbauarchitektur und passivem Klimadesign in Kooperation mit Tchoban Voss.", "en": "Support innovative sustainable earth architecture in cooperation with Tchoban Voss Architects." },
+      "deliverables": [
+        "Nennung im Architektur- und Veröffentlichungsdossier",
+        "Hochauflösendes Bildmaterial für Jahresberichte",
+        "Einladung zur nächsten Bildungsreise vor Ort"
+      ]
+    }
+  ],
+  "existingSuccessStory": {
+    "company": "AcadeMedia Education GmbH",
+    "quote": "Dank der Unterstützung der AcadeMedia Education GmbH konnten wir 2026 alle fünf Klassenräume der Schule in Mamoru mit soliden Möbeln ausstatten und die Gehälter von fünf Lehrkräften für ein ganzes Jahr im Voraus absichern.",
+    "verified": true
+  }
+}

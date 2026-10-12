@@ -1,0 +1,62 @@
+{
+  "de": {
+    "brand": "Bildung mit Herz",
+    "subBrand": "Sierra Leone e.V.",
+    "links": [
+      { "title": "Startseite", "url": "/" },
+      {
+        "title": "Projekte",
+        "url": "/projekte/",
+        "children": [
+          { "title": "Übersicht", "url": "/projekte/" },
+          { "title": "Mafabaneh (Learning Hub)", "url": "/projekte/mafabaneh/" },
+          { "title": "Mamoru (Grundschule)", "url": "/projekte/mamoru/" },
+          { "title": "Madina (Stahlbetonbau)", "url": "/projekte/madina/" }
+        ]
+      },
+      { "title": "Für Unternehmen", "url": "/fuer-unternehmen/" },
+      { "title": "Transparenz", "url": "/transparenz/" },
+      { "title": "Über uns", "url": "/ueber-uns/" },
+      {
+        "title": "Bildungsreisen",
+        "url": "/bildungsreisen/",
+        "children": [
+          { "title": "Konzept & FAQ", "url": "/bildungsreisen/" },
+          { "title": "Reiseberichte 2026", "url": "/bildungsreisen/reiseberichte/" }
+        ]
+      }
+    ],
+    "cta": { "title": "Spenden", "url": "/spenden/" },
+    "footerLegal": [
+      { "title": "Impressum", "url": "/impressum/" },
+      { "title": "Datenschutz", "url": "/datenschutz/" },
+      { "title": "Widerrufsbelehrung", "url": "/widerruf/" }
+    ]
+  },
+  "en": {
+    "brand": "Education with Heart",
+    "subBrand": "Sierra Leone e.V.",
+    "links": [
+      { "title": "Home", "url": "/en/" },
+      {
+        "title": "Projects",
+        "url": "/en/projects/",
+        "children": [
+          { "title": "Overview", "url": "/en/projects/" },
+          { "title": "Mafabaneh Learning Hub", "url": "/en/projects/mafabaneh/" },
+          { "title": "Mamoru Primary School", "url": "/en/projects/mamoru/" },
+          { "title": "Madina Primary School", "url": "/en/projects/madina/" }
+        ]
+      },
+      { "title": "For Corporate", "url": "/en/corporate/" },
+      { "title": "Transparency", "url": "/en/transparency/" },
+      { "title": "About Us", "url": "/en/about/" },
+      { "title": "Educational Trips", "url": "/en/travel/" }
+    ],
+    "cta": { "title": "Donate", "url": "/en/donate/" },
+    "footerLegal": [
+      { "title": "Legal Notice", "url": "/impressum/" },
+      { "title": "Privacy Policy", "url": "/datenschutz/" }
+    ]
+  }
+}

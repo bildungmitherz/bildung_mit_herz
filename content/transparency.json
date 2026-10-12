@@ -1,0 +1,74 @@
+{
+  "title": {
+    "de": "Finanzielle Transparenz & Mittelverwendung",
+    "en": "Financial Transparency & Governance"
+  },
+  "tagline": {
+    "de": "Jeder Cent nachvollziehbar: Ehrenamtlich getragene Verwaltung, direkte Projektfinanzierung",
+    "en": "Every cent traceable: Volunteer-funded operations, direct project disbursements"
+  },
+  "corePrinciples": [
+    {
+      "title": { "de": "100 % zweckgebundener Mitteleinsatz", "en": "100% Direct Project Allocation" },
+      "desc": {
+        "de": "Alle Spenden fließen direkt in den Einkauf von Baumaterialien, Transport und die faire Bezahlung der Handwerker vor Ort.",
+        "en": "All donations flow directly into building materials, local transport and fair compensation for local craftspeople."
+      }
+    },
+    {
+      "title": { "de": "Privat finanzierte Verwaltung & Reisen", "en": "Privately Funded Operations & Travel" },
+      "desc": {
+        "de": "Reisekosten, Flüge, Impfungen, Unterkünfte und Vereinskosten werden vollständig von den Vorständen und Reiseteilnehmenden aus eigener Tasche bezahlt.",
+        "en": "Flights, accommodation, vaccinations and administrative expenses are paid 100% out of pocket by board members and participants."
+      }
+    },
+    {
+      "title": { "de": "Auszahlung in Tranchen nach Baufortschritt", "en": "Tranche Disbursements Against Milestones" },
+      "desc": {
+        "de": "Keine Pauschalüberweisungen ins Ungewisse: Gelder werden erst nach digitalem Beleg- und Fotonachweis der vorigen Bauphase freigegeben.",
+        "en": "Funds are released in tranches only after photo and receipt verification of the preceding construction phase."
+      }
+    },
+    {
+      "title": { "de": "Gemeinnützigkeit & Steuerabzug", "en": "Registered Charity & Tax Relief" },
+      "desc": {
+        "de": "Eingetragen im Vereinsregister Berlin (VR 41272 B). Anerkannt gemeinnützig vom Finanzamt für Körperschaften I Berlin. Zuwendungsbestätigungen werden ausgestellt.",
+        "en": "Registered nonprofit in Berlin (VR 41272 B) recognized by the German tax authorities. Tax receipts are issued."
+      }
+    }
+  ],
+  "verifiedDocuments": [
+    {
+      "title": "Welfare Alert Sierra Leone — Organisationsprofil",
+      "subtitle": "Offizielle Registrierung und Wirkungsbericht unserer Partnerin Juliet Fornah in Makeni",
+      "filename": "WelfareAlert.pdf",
+      "url": "/assets/documents/WelfareAlert.pdf",
+      "size": "715 KB",
+      "format": "PDF"
+    },
+    {
+      "title": "Kaprr Yoni Global Learning Hub — Strategieplan 2025–2030",
+      "subtitle": "8-seitiges Grundsatzdokument zu Governance, Bildungszielen und Umweltkonzept in Mafabaneh",
+      "filename": "KapprYoniGlobalLearningHub.pdf",
+      "url": "/assets/documents/KapprYoniGlobalLearningHub.pdf",
+      "size": "508 KB",
+      "format": "PDF"
+    }
+  ],
+  "annualFinancialOverview": [
+    {
+      "year": 2025,
+      "totalDonations": 23450,
+      "projectDisbursements": 23450,
+      "adminCosts": 0,
+      "sourceNote": "Jahresbericht 2025 (Kassenprüfung abgeschlossen)"
+    },
+    {
+      "year": 2026,
+      "totalDonations": 17800,
+      "projectDisbursements": 14200,
+      "adminCosts": 0,
+      "sourceNote": "Laufendes Geschäftsjahr (Stand: August 2026, ungeprüft)"
+    }
+  ]
+}

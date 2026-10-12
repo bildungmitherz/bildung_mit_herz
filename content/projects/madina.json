@@ -1,0 +1,89 @@
+{
+  "id": "madina",
+  "slug": "madina",
+  "title": {
+    "de": "Grundschule Madina",
+    "en": "Madina Primary School"
+  },
+  "tagline": {
+    "de": "Lehren aus der Vergangenheit — Neubeginn mit solider Ingenieurbauweise",
+    "en": "Lessons from Experience — Solid Structural Engineering for a Resilient Future"
+  },
+  "status": "planning",
+  "statusLabel": {
+    "de": "In Ingenieurplanung",
+    "en": "Engineering Planning"
+  },
+  "location": "Madina, Sierra Leone",
+  "leadImage": "/assets/images/madina-community.jpg",
+  "galleryImages": [
+    "/assets/images/madina-community.jpg",
+    "/assets/images/madina-site.jpg"
+  ],
+  "honestHistory": {
+    "de": "Bei einem früheren Besuch übergab der Verein dem Dorfältesten rund 200 Dollar. Die Dorfgemeinschaft versuchte voller Mut, die Schule eigenständig zu bauen – jedoch ohne Stahlbetonstützen und statische Berechnungen. In der darauffolgenden heftigen Regenzeit stürzte das Gebäude ein. Für unseren Verein war dies ein schmerzhafter, aber entscheidender Wendepunkt: Wir haben das Prinzip verankert: 'Wir bauen nachhaltig und ingenieurmäßig solid – oder gar nicht.'",
+    "en": "During an earlier visit, the association handed around $200 to the village elders. The community courageously began construction independently, but without reinforced concrete framing. During the subsequent heavy rains, the structure collapsed. This painful moment led to a strict organisational standard: 'We build sustainably and with engineering excellence — or not at all.'"
+  },
+  "engineeringApproach": [
+    {
+      "title": { "de": "Stahlbeton-Skelettkonstruktion", "en": "Reinforced Concrete Frame" },
+      "desc": { "de": "Tragende Pfeiler und Ringanker aus Stahlbeton widerstehen selbst tropischen Wirbelstürmen und Starkregen.", "en": "Load-bearing reinforced pillars and ring beams built to withstand tropical storms and torrential rain." }
+    },
+    {
+      "title": { "de": "Fachliche Baubegleitung", "en": "Professional Structural Oversight" },
+      "desc": { "de": "Unterstützt durch Bauingenieure und Architekten aus dem Kreis unserer Reiseteilnehmenden.", "en": "Supervised by civil engineers and architects from our travel and volunteer network." }
+    },
+    {
+      "title": { "de": "Zwei-Phasen-Konzept", "en": "Two-Phase Phasing" },
+      "desc": { "de": "Phase 1: Sechs Klassenräume + 1 Lehrerzimmer. Phase 2: Trinkwasserbrunnen, Sanitärtrakt, Spielhof.", "en": "Phase 1: Six classrooms + one staff room. Phase 2: Deep water well, sanitation block, playground." }
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2025",
+      "title": { "de": "Erster Initiativversuch & Einsturzanalyse", "en": "Initial attempt & post-collapse structural assessment" },
+      "completed": true,
+      "source": "Reisedokumentation"
+    },
+    {
+      "date": "Januar 2026",
+      "title": { "de": "Gemeindebesuch & Verabschiedung des Qualitätsstandards", "en": "Community consultation & adoption of reinforced standard" },
+      "completed": true,
+      "source": "Reisebericht 2026"
+    },
+    {
+      "date": "2026/2027",
+      "title": { "de": "Ingenieurplanung & Leistungsverzeichnis Phase 1", "en": "Structural design & bill of quantities for Phase 1" },
+      "completed": false,
+      "source": "Projektsteuerung"
+    },
+    {
+      "date": "Ausblick",
+      "title": { "de": "Fundamentierung & Rohbau Phase 1", "en": "Groundbreaking & concrete framework Phase 1" },
+      "completed": false,
+      "source": "Zukunftsziel"
+    }
+  ],
+  "finances": {
+    "totalEstimatedBudget": { "amount": 28000, "currency": "EUR", "status": "estimated", "asOfDate": "2026-03-01", "sourceNote": "Kostenschätzung Phase 1 (6 Räume + Lehrerzimmer)" },
+    "securedFunding": { "amount": 3500, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Gewidmete Rücklagen" },
+    "outstandingNeed": { "amount": 24500, "currency": "EUR", "status": "estimated", "asOfDate": "2026-08-31", "sourceNote": "Stahl, Zement, Schalung & Maurerarbeiten" },
+    "corporateFundingPackages": [
+      {
+        "title": { "de": "Stahlbeton-Pfeiler & Fundamente (Strukturpaket)", "en": "Reinforced Concrete Foundation & Pillar Package" },
+        "amount": 8000,
+        "description": { "de": "Garant für die statische Dauerhaftigkeit über Jahrzehnte.", "en": "The structural backbone guaranteeing decades of safety." }
+      },
+      {
+        "title": { "de": "Klassenraum-Patenschaft (pro Raum)", "en": "Classroom Sponsorship (per room)" },
+        "amount": 4000,
+        "description": { "de": "Vollständige Finanzierung eines einzelnen Klassenraums inklusive Möblierung.", "en": "Complete financing of one individual classroom including desks." }
+      },
+      {
+        "title": { "de": "Tiefbrunnen für sauberes Trinkwasser", "en": "Deep Water Well Installation" },
+        "amount": 3200,
+        "description": { "de": "Trinkwasserversorgung für Schule und umliegende Dorfgemeinschaft.", "en": "Safe drinking water for pupils, teachers and the entire village." }
+      }
+    ]
+  }
+}

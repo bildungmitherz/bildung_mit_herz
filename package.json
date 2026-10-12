@@ -1,0 +1,20 @@
+{
+  "name": "bildung-mit-herz",
+  "version": "1.0.0",
+  "description": "Website of Bildung mit Herz Sierra Leone e.V. (Make Them Smile e.V.) — Cloudflare Pages Static Website",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js",
+    "test": "node scripts/test.js"
+  },
+  "keywords": [
+    "nonprofit",
+    "sierra-leone",
+    "education",
+    "school-construction",
+    "cloudflare-pages"
+  ],
+  "author": "Bildung mit Herz Sierra Leone e.V.",
+  "license": "UNLICENSED"
+}

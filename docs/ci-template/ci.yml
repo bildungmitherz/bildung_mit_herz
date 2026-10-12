@@ -1,0 +1,32 @@
+name: CI Quality Assurance & Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Quality Assurance & Build Tests
+        run: npm test
+
+      - name: Verify build artifacts
+        run: |
+          test -f dist/index.html
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+          test -f dist/_redirects
+          test -f dist/assets/documents/WelfareAlert.pdf
+          test -f dist/assets/documents/KapprYoniGlobalLearningHub.pdf
+          echo "All production artifacts verified successfully."

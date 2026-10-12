@@ -1,0 +1,50 @@
+{
+  "title": {
+    "de": "Bildungsreisen & Interkultureller Austausch",
+    "en": "Educational Trips & Intercultural Exchange"
+  },
+  "tagline": {
+    "de": "Nicht als Touristen. Nicht als Retter. Wir reisen als Lernende und als Partner.",
+    "en": "Not as tourists. Not as saviors. We travel as learners and equal partners."
+  },
+  "philosophy": {
+    "de": "Unsere Bildungsreisen bringen Schüler:innen, Eltern und Lehrkräfte aus Deutschland direkt in die Dörfer Sierra Leones. Wir schlafen in Zelten und einfachen Gästehäusern, kochen gemeinsam, mischen Lehm für Ziegel und lernen voneinander. Alle Teilnehmer tragen ihre Reisekosten ausnahmslos privat.",
+    "en": "Our educational trips bring students, parents and teachers directly into rural Sierra Leonean communities. We camp in village settings, cook together, make earth bricks, and learn from each other. Every single participant pays 100% of their travel expenses privately."
+  },
+  "highlights2026": [
+    {
+      "title": { "de": "26 Teilnehmende im Januar 2026", "en": "26 Participants in January 2026" },
+      "desc": { "de": "Dritte erfolgreiche Bildungsreise mit Schüler:innen, Lehrkräften und Eltern.", "en": "Third successful expedition uniting students, educators and parents." }
+    },
+    {
+      "title": { "de": "Empfang in Makoma", "en": "Community Gathering in Makoma" },
+      "desc": { "de": "Traditioneller Trommel- und Tanzempfang und Übergabe von Sportgeräten.", "en": "Traditional drumming reception and contribution of sports equipment." }
+    },
+    {
+      "title": { "de": "Grundsteinlegung in Mafabaneh", "en": "Foundation Ceremony in Mafabaneh" },
+      "desc": { "de": "Fertigstellung von 2.000 Ziegeln und feierliche Versöhnung mit Nachbardorf Magbashai.", "en": "2,000 bricks completed and formal peace covenant with neighboring Magbashai." }
+    },
+    {
+      "title": { "de": "Diplomatische Anerkennung", "en": "High-Level Diplomatic Meetings" },
+      "desc": { "de": "Audienz bei Tourismusministerin Nabeela Tunis und dem deutschen Botschafter Dr. Pascal Richter in Freetown.", "en": "Meetings with Tourism Minister Nabeela Tunis and German Ambassador Dr. Pascal Richter." }
+    }
+  ],
+  "faq": [
+    {
+      "q": { "de": "Tritt der Verein als Reiseveranstalter auf?", "en": "Is the association a commercial tour operator?" },
+      "a": { "de": "Nein. Der Verein 'Bildung mit Herz Sierra Leone e.V.' ist kein gewerblicher Reiseveranstalter. Die Reisen werden privat organisiert und die Reisekosten von allen Teilnehmenden selbst getragen.", "en": "No. The association is not a commercial travel provider. Expeditions are privately coordinated and fully self-funded by individual travelers." }
+    },
+    {
+      "q": { "de": "Wer darf an den Bildungsreisen teilnehmen?", "en": "Who can participate in educational journeys?" },
+      "a": { "de": "Vorrangig Schüler:innen, Lehrkräfte und engagierte Eltern unserer Partnerschulen. Die Plätze sind streng limitiert, um den respektvollen dörflichen Rahmen nicht zu überfordern.", "en": "Primarily students, teachers and parents from our partner educational institutions. Spots are strictly limited to protect village balance." }
+    },
+    {
+      "q": { "de": "Wo wird übernachtet?", "en": "What are the accommodation arrangements?" },
+      "a": { "de": "In Masingbi im Gästehaus der Familie von Yoni Sesay sowie in Zelten direkt in den Dorfgemeinschaften vor Ort.", "en": "At the Sesay family guesthouse in Masingbi and in tents in the respective village communities." }
+    },
+    {
+      "q": { "de": "Wie ist die medizinische und sicherheitstechnische Vorsorge geregelt?", "en": "What health and safety preparations are required?" },
+      "a": { "de": "Verpflichtende Gelbfieber-Impfung, strikte Malariaprophylaxe, Auslandskrankenversicherung mit Rückholgarantie sowie Begleitung durch ortskundige Guides.", "en": "Mandatory yellow fever vaccination, strict malaria prophylaxis, evacuation medical insurance, and experienced local guides." }
+    }
+  ]
+}

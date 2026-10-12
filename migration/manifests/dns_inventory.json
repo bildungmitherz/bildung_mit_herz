@@ -1,0 +1,60 @@
+{
+  "bildung-mit-herz.org": {
+    "A": [
+      "162.159.129.70",
+      "162.159.128.70"
+    ],
+    "AAAA": [
+      "2606:4700:7::a29f:8146",
+      "2606:4700:7::a29f:8046"
+    ],
+    "CNAME": [],
+    "MX": [],
+    "TXT": [],
+    "CAA": [],
+    "NS": [
+      "viddy.ns.cloudflare.com.",
+      "amalia.ns.cloudflare.com."
+    ],
+    "SOA": [
+      "amalia.ns.cloudflare.com. dns.cloudflare.com. 2414109902 10000 2400 604800 1800"
+    ]
+  },
+  "www.bildung-mit-herz.org": {
+    "A": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net.",
+      "162.159.128.70",
+      "162.159.129.70"
+    ],
+    "AAAA": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net.",
+      "2606:4700:7::a29f:8146",
+      "2606:4700:7::a29f:8046"
+    ],
+    "CNAME": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com."
+    ],
+    "MX": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net."
+    ],
+    "TXT": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net."
+    ],
+    "CAA": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net."
+    ],
+    "NS": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net."
+    ],
+    "SOA": [
+      "bildung-mit-herz-sierra-leone-3.jimdosite.com.",
+      "web.jimdosite.com.cdn.cloudflare.net."
+    ]
+  }
+}

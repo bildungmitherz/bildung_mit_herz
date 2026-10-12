@@ -1,0 +1,97 @@
+{
+  "id": "mamoru",
+  "slug": "mamoru",
+  "title": {
+    "de": "Grundschule Mamoru",
+    "en": "Mamoru Primary School"
+  },
+  "tagline": {
+    "de": "Fünf Klassenräume stehen — der lebendige Beweis für erfolgreiche Partnerschaft",
+    "en": "Five Classrooms Built — Proof of Successful On-the-Ground Partnership"
+  },
+  "status": "in_construction",
+  "statusLabel": {
+    "de": "Im Ausbau (Endspurt)",
+    "en": "Under Finishing Works"
+  },
+  "location": "Mamoru, nahe Makeni, Sierra Leone",
+  "leadImage": "/assets/images/mamoru-school.jpg",
+  "galleryImages": [
+    "/assets/images/mamoru-school.jpg",
+    "/assets/images/mamoru-partner.jpg",
+    "/assets/images/hero-secondary.jpg"
+  ],
+  "localPartner": {
+    "organization": "Welfare Alert Sierra Leone (WA-SL)",
+    "leader": "Juliet Jeneba Fornah",
+    "officialAddress": "13 Yaide Street, Makeni, Bombali District",
+    "partnerDocument": "/assets/documents/WelfareAlert.pdf"
+  },
+  "impactSummary": {
+    "de": "Zuvor saßen über 100 Schulkinder auf dem nackten Steinboden einer maroden ehemaligen Kirchenhalle, wo ein einzelner Lehrer drei Klassenstufen parallel an unterschiedlichen Wänden unterrichten musste. Heute steht ein massives Schulgebäude mit fünf separaten Klassenräumen.",
+    "en": "Previously, more than 100 school children sat on the stone floor of a makeshift church, where one teacher had to teach three classes simultaneously on different walls. Today, a solid school building with five distinct classrooms stands on the site."
+  },
+  "corporateSponsorship": {
+    "sponsor": "AcadeMedia Education GmbH",
+    "contributions": [
+      {
+        "item": { "de": "Solide Schultische & Sitzbänke für alle Räume", "en": "Sturdy desks & benches for all five classrooms" },
+        "year": "2026",
+        "verified": true
+      },
+      {
+        "item": { "de": "Jahresgehälter für fünf Lehrkräfte für volle 12 Monate gesichert", "en": "Full annual salaries for five teachers guaranteed for 12 months" },
+        "year": "2026",
+        "verified": true
+      }
+    ]
+  },
+  "milestones": [
+    {
+      "date": "2017–2024",
+      "title": { "de": "Lokale Initiative & Engagement durch Juliet Fornah", "en": "Community advocacy initiated by Juliet Fornah" },
+      "completed": true,
+      "source": "Welfare Alert S.L."
+    },
+    {
+      "date": "2025",
+      "title": { "de": "Bauphase Rohbau: Errichtung der Außenwände & Dachstuhl für 5 Räume", "en": "Shell construction: 5 classroom walls and roof" },
+      "completed": true,
+      "source": "Vereinsfinanzierung 2025"
+    },
+    {
+      "date": "Januar 2026",
+      "title": { "de": "Ausstattung mit Schulmöbeln & Gehaltsübernahme (AcadeMedia)", "en": "Furnishing & teacher payroll funding (AcadeMedia)" },
+      "completed": true,
+      "source": "Bildungsreisebericht 2026"
+    },
+    {
+      "date": "2026/2027",
+      "title": { "de": "Abschlussarbeiten: Verputz, Estrichböden, Türen & Fensterverglasung", "en": "Finishing: Plastering, concrete screed, doors & window shutters" },
+      "completed": false,
+      "source": "Laufender Restbedarf"
+    }
+  ],
+  "finances": {
+    "totalEstimatedBudget": { "amount": 22000, "currency": "EUR", "status": "verified", "asOfDate": "2026-03-01", "sourceNote": "Gesamtkosten Rohbau + Ausstattung + Gehälter" },
+    "securedFunding": { "amount": 17200, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Spenden & AcadeMedia Sponsoring" },
+    "outstandingNeed": { "amount": 4800, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Finaler KVA für Verputz, Estrich und Türen" },
+    "corporateFundingPackages": [
+      {
+        "title": { "de": "Innen- und Außenverputz der Klassenräume", "en": "Interior and Exterior Wall Plastering" },
+        "amount": 2200,
+        "description": { "de": "Schutz des Mauerwerks vor Auswaschung in der tropischen Regenzeit.", "en": "Essential moisture protection against monsoon rains." }
+      },
+      {
+        "title": { "de": "Feste Zementestrich-Böden", "en": "Durable Concrete Screed Flooring" },
+        "amount": 1600,
+        "description": { "de": "Staubfreie, glatte Böden für hygienische und saubere Lernbedingungen.", "en": "Hygienic, dust-free concrete flooring for clean learning." }
+      },
+      {
+        "title": { "de": "Abschließbare Außentüren", "en": "Lockable Security Doors" },
+        "amount": 1000,
+        "description": { "de": "Schutz für Unterrichtsmaterialien, Lehrbücher und Schulausstattung.", "en": "Safe storage for textbooks, teaching materials and assets." }
+      }
+    ]
+  }
+}
