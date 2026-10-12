@@ -1,5 +1,23 @@
 [
   {
+    "id": "german-design-award-2027",
+    "date": "Oktober 2026",
+    "category": { "de": "Architektur-Auszeichnung", "en": "Architecture Award" },
+    "title": {
+      "de": "German Design Award 2027 für den Mafabaneh Learning Hub!",
+      "en": "Mafabaneh Learning Hub Wins German Design Award 2027!"
+    },
+    "summary": {
+      "de": "Großer internationaler Erfolg: Der Rat für Formgebung zeichnet das Konzept der Mafabaneh Village School mit dem German Design Award 2027 (Excellent Architecture / Conceptual Architecture) aus. Entwurf: Tchoban Voss Architekten.",
+      "en": "Prestigious international recognition: The German Design Council has honored the Mafabaneh Village School concept with the German Design Award 2027 (Excellent Architecture / Conceptual Architecture). Design: Tchoban Voss Architekten."
+    },
+    "image": "/assets/images/mafabaneh-architecture.png",
+    "link": {
+      "de": "/projekte/mafabaneh/",
+      "en": "/en/projects/mafabaneh/"
+    }
+  },
+  {
     "id": "trockenzeit-2026",
     "date": "Oktober 2026",
     "category": { "de": "Baufortschritt", "en": "Construction" },

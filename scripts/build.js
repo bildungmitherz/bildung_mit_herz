@@ -301,6 +301,42 @@ function renderHtmlPage({
       </div>
     </div>
   </footer>
+
+  <!-- German Design Award 2027 Announcement Modal -->
+  <div id="award-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="award-modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="${lang === 'de' ? 'Modal schließen' : 'Close modal'}">&times;</button>
+      <div class="modal-content">
+        <div class="award-header-badge">
+          <span class="award-trophy">🏆</span>
+          <span class="award-badge-text">German Design Award 2027 • Winner</span>
+        </div>
+        <h3 id="award-modal-title" class="award-title">
+          ${lang === 'de' 
+            ? 'Auszeichnung für den Mafabaneh Learning Hub!' 
+            : 'Mafabaneh Learning Hub Wins German Design Award 2027!'}
+        </h3>
+        <div class="award-category">
+          ${lang === 'de'
+            ? 'Kategorie: Excellent Architecture – Conceptual Architecture'
+            : 'Category: Excellent Architecture – Conceptual Architecture'}
+        </div>
+        <p class="award-body-text">
+          ${lang === 'de'
+            ? 'Wir freuen uns riesig: Das visionäre, nachhaltige Schulbaukonzept der <strong>Mafabaneh Village School</strong> in Sierra Leone wurde vom Rat für Formgebung mit dem renommierten <strong>German Design Award 2027</strong> ausgezeichnet! Der Entwurf stammt ehrenamtlich von <strong>Tchoban Voss Architekten (Sergei Tchoban)</strong> in enger Zusammenarbeit mit unserem Verein.'
+            : 'We are thrilled to share: The visionary, sustainable school concept for the <strong>Mafabaneh Village School</strong> in Sierra Leone has been awarded the prestigious <strong>German Design Award 2027</strong> by the German Design Council! The design was created pro bono by <strong>Tchoban Voss Architekten (Sergei Tchoban)</strong> in close partnership with our association.'}
+        </p>
+        <div class="award-actions">
+          <a href="https://www.german-design-award.com/en/gallery/detail/conceptual-architecture/mafabane-village-school-sierra-leone" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            ${lang === 'de' ? 'Offizielle Jury-Würdigung ansehen ↗' : 'View Official Award Entry ↗'}
+          </a>
+          <a href="${lang === 'de' ? '/projekte/mafabaneh/' : '/en/projects/mafabaneh/'}" class="btn btn-secondary btn-sm">
+            ${lang === 'de' ? 'Zum Projekt Mafabaneh →' : 'Explore Mafabaneh Project →'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>`;
 }
@@ -418,22 +454,26 @@ function renderNewsSection(lang = 'de') {
         </div>
 
         <div class="news-grid">
-          ${news.map(item => `
-            <article class="news-card">
-              <img src="${item.image}" alt="${item.title[lang]}" class="news-card-img">
-              <div class="news-card-body">
-                <div class="news-card-meta">
-                  <span class="news-card-pill">${item.category[lang]}</span>
-                  <span class="news-card-date">${item.date}</span>
+          ${news.map(item => {
+            const itemLink = typeof item.link === 'object' ? item.link[lang] : item.link;
+            const isExternal = itemLink.startsWith('http');
+            return `
+              <article class="news-card">
+                <img src="${item.image}" alt="${item.title[lang]}" class="news-card-img">
+                <div class="news-card-body">
+                  <div class="news-card-meta">
+                    <span class="news-card-pill">${item.category[lang]}</span>
+                    <span class="news-card-date">${item.date}</span>
+                  </div>
+                  <h3 class="news-card-title">${item.title[lang]}</h3>
+                  <p class="news-card-summary">${item.summary[lang]}</p>
+                  <div style="margin-top:auto;">
+                    <a href="${itemLink}" ${isExternal ? 'target="_blank" rel="noopener"' : ''} class="btn btn-secondary btn-sm">${isDe ? 'Mehr erfahren →' : 'Read more →'}</a>
+                  </div>
                 </div>
-                <h3 class="news-card-title">${item.title[lang]}</h3>
-                <p class="news-card-summary">${item.summary[lang]}</p>
-                <div style="margin-top:auto;">
-                  <a href="${item.link}" class="btn btn-secondary btn-sm">${isDe ? 'Mehr erfahren →' : 'Read more →'}</a>
-                </div>
-              </div>
-            </article>
-          `).join('')}
+              </article>
+            `;
+          }).join('')}
         </div>
       </div>
     </section>
@@ -524,6 +564,32 @@ function renderProjectDetailPage(p, lang = 'de') {
         <p class="lead" style="margin-bottom:2rem;">${p.tagline[lang]}</p>
 
         <img src="${p.leadImage}" alt="${p.title[lang]}" style="border-radius:var(--radius-lg); margin-bottom:2rem; box-shadow:var(--shadow-md); width:100%; object-fit:cover; max-height:480px;">
+
+        ${isMafabaneh ? `
+          <!-- German Design Award 2027 Feature Box -->
+          <div style="background:linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%); border:2px solid #fde68a; border-radius:var(--radius-lg); padding:1.75rem; margin-bottom:2rem; box-shadow:var(--shadow-sm);">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem; flex-wrap:wrap;">
+              <span style="font-size:1.75rem;">🏆</span>
+              <span style="background:#92400e; color:#ffffff; font-weight:800; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.65rem; border-radius:var(--radius-full);">
+                Winner 2027
+              </span>
+              <strong style="font-size:1.15rem; color:#78350f;">
+                German Design Award 2027
+              </strong>
+            </div>
+            <div style="font-weight:700; color:#92400e; margin-bottom:0.5rem; font-size:0.95rem;">
+              ${isDe ? 'Auszeichnung für Excellent Architecture – Conceptual Architecture' : 'Winner: Excellent Architecture – Conceptual Architecture'}
+            </div>
+            <p style="font-size:0.9rem; color:#78350f; line-height:1.55; margin-bottom:1rem;">
+              ${isDe
+                ? 'Das visionäre Architekturkonzept der Mafabaneh Village School, ehrenamtlich entworfen von <strong>Tchoban Voss Architekten (Sergei Tchoban)</strong> in Partnerschaft mit <strong>Bildung mit Herz Sierra Leone e.V.</strong>, wurde vom Rat für Formgebung mit dem angesehenen German Design Award 2027 prämiert.'
+                : 'The visionary architecture of the Mafabaneh Village School, designed pro bono by <strong>Tchoban Voss Architekten (Sergei Tchoban)</strong> in partnership with <strong>Bildung mit Herz Sierra Leone e.V.</strong>, has been honored with the renowned German Design Award 2027 by the German Design Council.'}
+            </p>
+            <a href="https://www.german-design-award.com/en/gallery/detail/conceptual-architecture/mafabane-village-school-sierra-leone" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              ${isDe ? 'Offizielle Jury-Begründung im German Design Award Katalog ansehen ↗' : 'View Official Jury Entry in German Design Award Gallery ↗'}
+            </a>
+          </div>
+        ` : ''}
 
         <!-- Prominent Bank Info Quick Card Right Near Top -->
         ${renderBankQuickCard(lang, p.title[lang])}
@@ -720,9 +786,6 @@ function buildSite() {
 
     ${renderTrustBar('de')}
 
-    <!-- News & Recent Developments -->
-    ${renderNewsSection('de')}
-
     <!-- Featured Projects Section -->
     <section class="section">
       <div class="container">
@@ -773,6 +836,9 @@ function buildSite() {
         ${renderBankQuickCard('de')}
       </div>
     </section>
+
+    <!-- News & Recent Developments -->
+    ${renderNewsSection('de')}
 
     <!-- Why Trust Us Section -->
     <section class="section">
@@ -1519,9 +1585,6 @@ function buildSite() {
 
     ${renderTrustBar('en')}
 
-    <!-- News & Recent Developments -->
-    ${renderNewsSection('en')}
-
     <!-- Featured Projects Section -->
     <section class="section">
       <div class="container">
@@ -1571,6 +1634,9 @@ function buildSite() {
         ${renderBankQuickCard('en')}
       </div>
     </section>
+
+    <!-- News & Recent Developments -->
+    ${renderNewsSection('en')}
 
     <!-- Why Trust Us Section -->
     <section class="section">

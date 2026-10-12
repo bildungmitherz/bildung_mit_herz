@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleNav = () => {
       const isOpen = navMobile.classList.toggle('active');
       navOverlay.classList.toggle('active');
+      navToggle.classList.toggle('active');
       navToggle.setAttribute('aria-expanded', isOpen);
     };
 
@@ -18,6 +19,49 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && navMobile.classList.contains('active')) {
         toggleNav();
       }
+    });
+  }
+
+  // Announcement Modal (German Design Award 2027)
+  const awardModal = document.getElementById('award-modal');
+  if (awardModal) {
+    const STORAGE_KEY = 'bmh_award_2027_seen';
+    const hasSeen = localStorage.getItem(STORAGE_KEY);
+
+    if (!hasSeen) {
+      setTimeout(() => {
+        awardModal.classList.add('is-open');
+        awardModal.setAttribute('aria-hidden', 'false');
+      }, 1000);
+    }
+
+    const closeModal = () => {
+      awardModal.classList.remove('is-open');
+      awardModal.setAttribute('aria-hidden', 'true');
+      localStorage.setItem(STORAGE_KEY, 'true');
+    };
+
+    const closeBtn = awardModal.querySelector('.modal-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    awardModal.addEventListener('click', (e) => {
+      if (e.target === awardModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && awardModal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    awardModal.querySelectorAll('.award-actions a').forEach(link => {
+      link.addEventListener('click', () => {
+        localStorage.setItem(STORAGE_KEY, 'true');
+      });
     });
   }
 
