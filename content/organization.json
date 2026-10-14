@@ -16,17 +16,41 @@
   "board": [
     {
       "name": "Philipp Herzberg",
-      "role": "Vorsitzender",
-      "title": "Schulleiter der Internationalen Gesamtschule Potsdam, Mitgründer",
+      "role": "1. Vorsitzender & Initiator",
+      "profession": "Schulleiter der Internationalen Gesamtschule Potsdam",
+      "bio": {
+        "de": "Sohn eines Diplomaten (zuletzt Botschafter in Lima, Peru). Wuchs durch ständige Umzüge alle drei Jahre in verschiedenen Ländern auf. Diese Kindheit prägte seine Überzeugung: Das Eintauchen in fremde Kulturkreise ist essenziell für die persönliche Entwicklung, reflektiert eigene Privilegien, erdet und eröffnet neue Lebensentwürfe. Diese Erfahrung gibt er als Schulleiter und Initiator an junge Generationen weiter.",
+        "en": "Son of a German diplomat (most recently Ambassador in Lima, Peru). Grew up relocating to a new country every three years. This upbringing shaped his core conviction: immersing oneself in unfamiliar cultures is vital for personal growth, grounding oneself, reflecting on privilege, and discovering alternative life perspectives."
+      },
       "email": "bmh.sierraleone@gmail.com"
     },
     {
       "name": "Barbara Nicholson",
-      "role": "Vorsitzende",
-      "title": "Mitgründerin",
+      "role": "2. Vorsitzende",
+      "profession": "Lehrerin an den Privaten Kant-Schulen Berlin",
+      "bio": {
+        "de": "Engagierte Pädagogin an den Privaten Kant-Schulen Berlin und Gründungsmitglied. Begleitet die Bildungsreisen und Schulentwicklungsprojekte seit der ersten Stunde.",
+        "en": "Dedicated educator at Private Kant-Schulen Berlin and co-founder. She has co-led the educational trips and school development initiatives from day one."
+      },
       "email": "bmh.sierraleone@gmail.com"
     }
   ],
+  "coFounders": [
+    {
+      "name": "Yoni Sesay",
+      "role": "Mitgründer, Bildungsreisen-Leitung & Projektleiter vor Ort",
+      "profession": "Lehrer in London (ehem. Lehrerkollege von Philipp Herzberg)",
+      "origin": "Gebürtig aus dem Dorf Mafabaneh, Northern Province, Sierra Leone",
+      "bio": {
+        "de": "Lebt und unterrichtet seit über 20 Jahren in England. Als gebürtiger Mafabaneher fungiert er als unersetzliche kulturelle Brücke, Übersetzer und lokaler Organisator. Er genießt das uneingeschränkte Vertrauen der Dorfgemeinschaften und Stammesführer.",
+        "en": "Educator living and teaching in London for over 20 years. Originally from the village of Mafabaneh, he serves as an indispensable cultural bridge, interpreter, and on-the-ground organizer with deep community trust."
+      }
+    }
+  ],
+  "foundingCircle": {
+    "de": "Gegründet von Philipp Herzberg, Barbara Nicholson und 5 weiteren Gründungsmitgliedern (ehemalige Mitreisende, Eltern und Lehrkräfte).",
+    "en": "Founded by Philipp Herzberg, Barbara Nicholson, and 5 fellow founding members (former trip participants, parents, and educators)."
+  },
   "editorialResponsible": "Philipp Herzberg, Herderstr. 9, 12163 Berlin",
   "registration": {
     "court": "Amtsgericht Charlottenburg (Berlin)",

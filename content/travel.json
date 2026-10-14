@@ -11,88 +11,224 @@
     "de": "Unsere Bildungsreisen bringen Schüler:innen, Eltern und Lehrkräfte aus Deutschland direkt in die Dörfer Sierra Leones. Wir schlafen in Zelten und einfachen Gästehäusern, kochen gemeinsam, mischen Lehm für Ziegel und lernen voneinander. Alle Teilnehmer tragen ihre Reisekosten ausnahmslos privat.",
     "en": "Our educational trips bring students, parents and teachers directly into rural Sierra Leonean communities. We camp in village settings, cook together, make earth bricks, and learn from each other. Every single participant pays 100% of their travel expenses privately."
   },
-  "videos": {
-    "de": {
+  "videos": [
+    {
       "id": "5cqYvInke7I",
       "url": "https://www.youtube-nocookie.com/embed/5cqYvInke7I",
-      "title": "Dokumentation Bildungsreise Sierra Leone (Deutsch)",
-      "desc": "Authentische Video-Einblicke unserer Bildungsreise durch Dörfer, Schulen und Begegnungen vor Ort."
+      "title": { "de": "Dokumentation Bildungsreise (Deutsch)", "en": "Educational Journey Documentary (German)" },
+      "desc": { "de": "Umfassender Einblick in die Bildungsreise, Begegnungen mit Dorfgemeinschaften und gemeinsame Bauprojekte.", "en": "Comprehensive insight into the educational journey, community encounters and school building." }
     },
-    "en": {
+    {
       "id": "jBt4hURaXig",
       "url": "https://www.youtube-nocookie.com/embed/jBt4hURaXig",
-      "title": "Educational Journey Sierra Leone Documentary (English)",
-      "desc": "Authentic video documentary following our journey through Sierra Leonean communities and school projects."
+      "title": { "de": "Educational Journey Documentary (English)", "en": "Educational Journey Documentary (English)" },
+      "desc": { "de": "Authentische Dokumentation der Reise aus internationaler Perspektive.", "en": "Authentic video documentary following our journey through Sierra Leonean communities." }
+    },
+    {
+      "id": "Oh38F0LFiew",
+      "url": "https://www.youtube-nocookie.com/embed/Oh38F0LFiew",
+      "title": { "de": "Schulbau vor Ort: Handwerk & Gemeinschaft", "en": "School Construction: Craft & Community" },
+      "desc": { "de": "Wie Schüler:innen, Eltern und Dorfbewohner gemeinsam Fundamente gießen und Lehmziegel setzen.", "en": "How students, parents and villagers work hand-in-hand to build foundations and walls." }
+    },
+    {
+      "id": "9yS0TS3fl1Q",
+      "url": "https://www.youtube-nocookie.com/embed/9yS0TS3fl1Q",
+      "title": { "de": "Schulbesuch in Sierra Leone", "en": "School Visit in Sierra Leone" },
+      "desc": { "de": "Direkte Begegnungen im Klassenzimmer, Unterrichtsalltag und Austausch auf Augenhöhe.", "en": "Direct classroom encounters, learning routines and mutual exchange." }
+    },
+    {
+      "id": "iiM8gJwvpc8",
+      "url": "https://www.youtube-nocookie.com/embed/iiM8gJwvpc8",
+      "title": { "de": "Ein typischer Tag im Dorf", "en": "A Typical Day in the Village" },
+      "desc": { "de": "Alltag im Landesinneren: Gemeinsames Kochen, Dorffeste, Fußballspiele und afrikanische Gastfreundschaft.", "en": "Everyday life in the interior: communal cooking, festivities, soccer matches and warm hospitality." }
+    },
+    {
+      "id": "SDXB4AJdDjE",
+      "url": "https://www.youtube-nocookie.com/embed/SDXB4AJdDjE",
+      "title": { "de": "Grundschule Mamoru: Der Rohbau steht", "en": "Mamoru School: Structural Completion" },
+      "desc": { "de": "Einblick in die 5 massiven Klassenräume der Grundschule Mamoru.", "en": "Showcasing the 5 finished structural classroom units at Mamoru Primary." }
+    },
+    {
+      "id": "Af6_6Oa0BMU",
+      "url": "https://www.youtube-nocookie.com/embed/Af6_6Oa0BMU",
+      "title": { "de": "Baufortschritt & Ziegelproduktion", "en": "Construction Update & Brick Production" },
+      "desc": { "de": "Aktuelle Fortschritte auf den Baustellen in Sierra Leone.", "en": "Latest on-the-ground construction progress in Sierra Leone." }
     }
+  ],
+  "presentationDeck": {
+    "title": { "de": "Umfassende Informationspräsentation (PowerPoint)", "en": "Comprehensive Information Presentation (PowerPoint)" },
+    "url": "https://potsdaminternationalschool-my.sharepoint.com/:p:/g/personal/p_herzberg_school-international_de/EUAVAWNw_1VMmCD86tE3BKkBkAAMxBXJA7BpIDG7TPSmbg?e=nBcuYM"
   },
   "trips": [
     {
       "number": 1,
-      "year": "2022 / 2023",
+      "year": "2023 / 2024",
       "title": {
-        "de": "1. Bildungsreise: Wurzeln & Partnerschaftsgründung",
-        "en": "1st Journey: Roots & Partnership Foundation"
+        "de": "1. Bildungsreise: 12 Teilnehmende & Beschluss zum Schulbau",
+        "en": "1st Journey: 12 Participants & School Build Decision"
+      },
+      "participants": {
+        "de": "12 Personen (6 Schüler:innen der 13. Klasse, 5 Lehrkräfte, 1 Elternteil — Kant-Oberschule)",
+        "en": "12 persons (6 students 13th grade, 5 teachers, 1 parent — Kant-Oberschule)"
       },
       "desc": {
-        "de": "Die erste Pionierreise führte nach Makeni und Masingbi. Erste persönliche Treffen mit Juliet Jeneba Fornah (Welfare Alert) und den Ältesten von Mamoru legten den Grundstein für alle künftigen Bau- und Bildungsprojekte.",
-        "en": "The foundational journey to Makeni and Masingbi. In-person meetings with Juliet Jeneba Fornah (Welfare Alert) and village elders laid the bedrock for all subsequent school and infrastructure projects."
+        "de": "Nach einer Vorab-Sondierung 2022 durch Philipp Herzberg und Yoni Sesay startete die erste Gruppenreise. Tiefe persönliche Begegnungen mit Juliet Fornah (Welfare Alert) und den Ältesten von Mamoru führten direkt zur Gründung unseres Fördervereins und dem Beschluss, die erste feste Grundschule zu errichten.",
+        "en": "Following a 2022 survey by Philipp Herzberg and Yoni Sesay, the first cohort embarked. Profound encounters with Juliet Fornah (Welfare Alert) and elders in Mamoru led directly to founding our association and the decision to construct a permanent primary school."
       },
       "image": "/assets/images/travel-masingbi.jpg",
-      "location": "Makeni & Masingbi, Northern Province"
+      "location": "Makeni, Masingbi & Mamoru"
     },
     {
       "number": 2,
-      "year": "2024",
+      "year": "2024 / 2025",
       "title": {
-        "de": "2. Bildungsreise: Gemeinschaftsbau & Vertrauen",
-        "en": "2nd Journey: Community Construction & Trust"
+        "de": "2. Bildungsreise: 29 Teilnehmende — Expansion & Baueinsatz",
+        "en": "2nd Journey: 29 Participants — Expansion & Construction"
+      },
+      "participants": {
+        "de": "29 Personen (18 Schüler:innen der 11. & 12. Klasse, 8 Eltern, 4 Lehrkräfte)",
+        "en": "29 persons (18 students 11th & 12th grade, 8 parents, 4 teachers)"
       },
       "desc": {
-        "de": "Gemeinsames Anpacken auf den Schulbaustellen in Mamoru und Madina. Übernachtungen in einfachen Dorfhütten, intensiver Austausch über Bildungssysteme und gemeinsames Kochen stärkten die partnerschaftliche Bindung.",
-        "en": "Hands-on collaboration at rural school construction sites in Mamoru. Camping in village huts, sharing meals, and deep dialogues on education built lasting mutual trust between communities."
+        "de": "Mit fast dreißig Teilnehmenden packten Schüler:innen, Eltern und Lehrkräfte auf den Schulbaustellen in Mamoru an. Übernachtungen in einfachen Dorfhütten, gemeinsames Kochen und intensiver Austausch über das sierra-leonische 6-3-3-4-Bildungssystem schufen tiefes gegenseitiges Vertrauen.",
+        "en": "With nearly thirty participants, students, parents and teachers worked together on site in Mamoru. Camping in village settings, cooking local meals, and in-depth discussions on Sierra Leone's 6-3-3-4 curriculum fostered enduring trust."
       },
       "image": "/assets/images/travel-gathering.jpg",
-      "location": "Mamoru & Umland"
+      "location": "Mamoru, Makeni & Masingbi"
     },
     {
       "number": 3,
-      "year": "Januar 2026",
+      "year": "2025 / 2026",
       "title": {
         "de": "3. Bildungsreise: 26 Teilnehmende & Grundsteinlegung Mafabaneh",
-        "en": "3rd Journey: 26 Travelers & Mafabaneh Cornerstone"
+        "en": "3rd Journey: 26 Participants & Mafabaneh Cornerstone"
+      },
+      "participants": {
+        "de": "26 Personen (Schüler:innen der Klassen 10–12, Eltern und Lehrkräfte aus Potsdam, Berlin und Erfurt)",
+        "en": "26 persons (students grades 10–12, parents and teachers from Potsdam, Berlin and Erfurt)"
       },
       "desc": {
-        "de": "Mit 26 Schüler:innen, Eltern und Lehrkräften die bisher größte Bildungsreise. Herstellung von 2.000 Lehmziegeln für den Learning Hub Mafabaneh, Friedensschluss zwischen Dörfern und Audienz bei Tourismusministerin Nabeela Tunis in Freetown.",
-        "en": "Our largest delegation to date with 26 students, parents and teachers. Making 2,000 earth bricks for the Mafabaneh Learning Hub, formal inter-village peace reconciliation, and reception by Tourism Minister Nabeela Tunis in Freetown."
+        "de": "Gemeinsam mit der Dorfgemeinschaft wurden über 2.000 Ziegel hergestellt, die Grundsteinlegung für den Learning Hub Mafabaneh gefeiert und ein historischer Friedensschluss zwischen Nachbardörfern besiegelt. Zudem fand ein Empfang im Tourismusministerium in Freetown statt.",
+        "en": "Hand-in-hand with the community, 2,000 earth bricks were formed, the foundation of the Mafabaneh Learning Hub was laid, and an inter-village peace covenant was celebrated, alongside an official audience in Freetown."
       },
       "image": "/assets/images/hero-home.jpg",
-      "location": "Mafabaneh, Makoma & Freetown"
+      "location": "Mafabaneh, Makeni & Freetown"
     }
+  ],
+  "activities": [
+    {
+      "title": { "de": "Handwerk & Baupraxis", "en": "Craftsmanship & Building" },
+      "desc": { "de": "Herstellung von traditionellem Palmöl; Bau einer vollständigen Dorfhütte an einem einzigen Tag mit Naturmaterialien (Lehm, Holzstangen, Strohdach).", "en": "Traditional red palm oil processing; hands-on construction of an authentic village hut in a single day using earth, timber poles and thatch." }
+    },
+    {
+      "title": { "de": "Exkursionen & Natur", "en": "Excursions & Wildlife" },
+      "desc": { "de": "Wanderung durch tropische Ananasplantagen, Baden in sauberen Flüssen, Tagesbergwanderung bei Makeni und Besuch des Tacugama-Schimpansen-Schutzreservats bei Freetown.", "en": "Trek through pineapple plantations, swimming in natural rivers, a day hike up a mountain near Makeni, and a visit to Tacugama Chimpanzee Sanctuary near Freetown." }
+    },
+    {
+      "title": { "de": "Dorfgemeinschaft & Sport", "en": "Village Community & Sports" },
+      "desc": { "de": "Freundschaftsfußballspiele gegen lokale Dorfmannschaften in Masingbi, gemeinsame Feste mit traditioneller Musik und herzlichem Kulturaustausch.", "en": "Friendly soccer matches against local village clubs in Masingbi, festive community celebrations with traditional music and dance." }
+    },
+    {
+      "title": { "de": "Kulinarik & Alltagsreflexion", "en": "Cuisine & Reflection" },
+      "desc": { "de": "Kochen mit lokalen Grundnahrungsmitteln (Cassava, Reis, Erdnuss-Saucen, Trockenfisch) und bewusste Auseinandersetzung mit Nahrungsmittelherkunft und Privilegien.", "en": "Cooking local staples (cassava, sweet potatoes, peanut sauces, dried fish) combined with guided reflection on resource distribution and global privilege." }
+    }
+  ],
+  "safetyAndHealth": {
+    "approvals": {
+      "de": "Vor jeder Reise erfolgen eine formelle Registrierung beim lokalen Polizeichef sowie die Einholung der offiziellen Reiseerlaubnis des Paramount Chiefs (oberster Stammesführer).",
+      "en": "Prior to each journey, formal clearance is filed with the local Police Chief and official travel permission is granted by the Paramount Chief."
+    },
+    "transport": {
+      "de": "Die gesamte Gruppe reist durchgehend in einem privat angemieteten, zuverlässigen Reisebus mit erfahrenem einheimischem Fahrer.",
+      "en": "The delegation travels exclusively in a privately chartered bus operated by an experienced local driver."
+    },
+    "accommodations": {
+      "de": "Übernachtungen in Freetown (2–3 Nächte), Makeni und Magburaka in sicheren Unterkünften; alle Schlafplätze sind ausnahmslos mit Moskitonetzen gegen Malaria ausgestattet.",
+      "en": "Stays in Freetown (2–3 nights), Makeni, and Magburaka in vetted guesthouses; all sleeping berths are equipped with protective mosquito nets."
+    },
+    "medicalProximity": {
+      "de": "Immer in Reichweite medizinischer Versorgung: Das Regionalkrankenhaus Makeni liegt nur ca. 25 Minuten entfernt; die Hauptstadtkliniken in Freetown sind maximal 3 Stunden erreichbar. Eine umfangreiche Notfall-Reiseapotheke wird mitgeführt.",
+      "en": "Always close to medical care: Makeni Regional Hospital is approx. 25 minutes away; capital hospitals in Freetown within 3 hours. A comprehensive medical trauma kit is carried."
+    },
+    "supervisionRatio": {
+      "de": "Feste Betreuungsquote von mindestens 1 Lehrkraft bzw. Erwachsenem pro 10 Schülerinnen und Schüler.",
+      "en": "Strict supervision ratio of at least 1 educator or adult per 10 students."
+    },
+    "vaccinations": {
+      "de": "Pflichtimpfung: Gelbfieber (internationaler Nachweis erforderlich). Empfohlen: Hepatitis A/B, Tetanus, Diphtherie, Polio, Tollwut, Malariaprophylaxe. Beratungsempfehlung: Tropenmediziner Bernhard & Kollegen (Friedrich-Wilhelm-Platz, Berlin).",
+      "en": "Mandatory: Yellow Fever (proof required). Recommended: Hepatitis A/B, Tetanus, Diphtheria, Polio, Rabies, Malaria prophylaxis. Medical partner advice: Bernhard & Kollegen (Berlin)."
+    }
+  },
+  "travelFunding": {
+    "totalCost": "ca. 1.500 € pro Teilnehmer:in",
+    "flightCost": "ca. 750 € (Turkish Airlines via Istanbul oder KLM/Brussels Airlines)",
+    "localCosts": "ca. 650 € für Busmiete, Treibstoff, Unterkünfte und Vollverpflegung",
+    "localSupport": "ca. 100 € Aufwandsentschädigung für lokale Begleiter und Guides vor Ort",
+    "insurance": "Auslandskrankenversicherung (~20 €) und Reiserücktrittsversicherung (~70 €) empfohlen",
+    "zeroDonationGuarantee": {
+      "de": "100 % Selbstzahlerbasis: Alle Reise- und Verpflegungskosten werden ausnahmslos von den Teilnehmenden privat getragen. Kein einziger Cent aus Spendengeldern fließt in Reisekosten.",
+      "en": "100% self-funded: All travel, lodging and food expenses are paid out-of-pocket by participants. Exactly zero cents from charitable donations are spent on travel."
+    }
+  },
+  "packingList": [
+    { "category": "Wesentlich", "item": "Reisepass (mind. 6 Monate gültig)" },
+    { "category": "Wesentlich", "item": "Visum für Sierra Leone (ausgedruckt)" },
+    { "category": "Wesentlich", "item": "Gelbfieber-Impfpass (Original)" },
+    { "category": "Wesentlich", "item": "Auslandskrankenversicherung & Versichertenkarte" },
+    { "category": "Wesentlich", "item": "Smartphone (mit physischem SIM-Slot) & Ladekabel" },
+    { "category": "Wesentlich", "item": "Bargeld in kleinen USD-Scheinen (für Tausch vor Ort)" },
+    { "category": "Wesentlich", "item": "Stabiler, günstiger Reisekoffer oder Reisetasche" },
+    { "category": "Kleidung", "item": "4 langärmlige Hemden / Shirts (Sonnenschutz & Mückenschutz)" },
+    { "category": "Kleidung", "item": "2 lange, leichte Hosen" },
+    { "category": "Kleidung", "item": "7 Unterhosen & 7 Paar Socken" },
+    { "category": "Kleidung", "item": "Festes Schuhwerk (Wanderschuhe / Sneakers)" },
+    { "category": "Kleidung", "item": "Robuste Sandalen & Badesachen" },
+    { "category": "Kleidung", "item": "Schnelltrocknendes Mikrofaser-Reisehandtuch" },
+    { "category": "Gesundheit & Apotheke", "item": "Erste-Hilfe-Set, Pflaster & Wunddesinfektionsmittel" },
+    { "category": "Gesundheit & Apotheke", "item": "Mückenspray mit DEET" },
+    { "category": "Gesundheit & Apotheke", "item": "Ibuprofen & Kohletabletten gegen Durchfall" },
+    { "category": "Gesundheit & Apotheke", "item": "Händedesinfektionsmittel & persönliche Medikamente" },
+    { "category": "Gesundheit & Apotheke", "item": "Malaria-Prophylaxe (z. B. Malarone, optional)" },
+    { "category": "Schutz & Sonne", "item": "Sonnencreme (hoher LSF), Sonnenbrille & Hut/Cap" },
+    { "category": "Schutz & Sonne", "item": "Reise-Moskitonetz (mit Klebehaken/Aufhängung)" },
+    { "category": "Elektronik", "item": "Solar-Powerbank (wichtig für kleine Dörfer ohne Strom)" },
+    { "category": "Elektronik", "item": "Reiseadapter Typ G (Commonwealth / UK-Dreipolstecker)" },
+    { "category": "Elektronik", "item": "Kopfhörer & ggf. Kamera" },
+    { "category": "Hygiene", "item": "Feste Seife, Deo, Zahnbürste/Zahnpasta" },
+    { "category": "Hygiene", "item": "Kompostierbare Feuchttücher & Lippenbalsam" },
+    { "category": "Praktisches", "item": "Kleiner Tagesrucksack (Daypack)" },
+    { "category": "Praktisches", "item": "Kleine TSA-Zahlenschlösser für Gepäcksicherung" },
+    { "category": "Praktisches", "item": "Ohrstöpsel & Müsliriegel/Snacks für unterwegs" },
+    { "category": "Freigepäck & Spenden", "item": "2x 23 kg Freigepäck (wir nutzen freien Raum für Spielzeug & Schulspenden)" }
   ],
   "contactPerson": {
     "name": "Philipp Herzberg",
     "role": {
-      "de": "Vereinsvorsitzender & Schulleiter, Koordinator Bildungsreisen",
-      "en": "Board Chairman & School Principal, Educational Trips Coordinator"
+      "de": "Vorsitzender & Schulleiter, Initiator Bildungsreisen",
+      "en": "Board Chair & School Principal, Educational Trips Coordinator"
     },
     "email": "bmh.sierraleone@gmail.com",
     "note": {
-      "de": "Haben Sie Interesse, an einer künftigen Bildungsreise teilzunehmen oder möchten Sie mehr über Ablauf und Voraussetzungen erfahren? Wenden Sie sich direkt an Philipp Herzberg.",
-      "en": "Are you interested in participating in a future educational trip or learning more about the itinerary and prerequisites? Contact Philipp Herzberg directly."
+      "de": "Möchten Sie an der nächsten Bildungsreise teilnehmen oder unverbindlich beraten werden? Wenden Sie sich direkt an Philipp Herzberg.",
+      "en": "Would you like to join our next educational trip or get personal advice? Reach out directly to Philipp Herzberg."
     }
   },
   "upcomingTrip": {
     "title": {
-      "de": "Nächste Bildungsreise (2027)",
-      "en": "Next Educational Journey (2027)"
+      "de": "Bewerbung für die nächste Bildungsreise",
+      "en": "Applications for the Next Educational Journey"
     },
     "status": {
-      "de": "In Vorbereitung — Informationen folgen in Kürze",
-      "en": "In Planning — Information Coming Soon"
+      "de": "Bewerbungsphase ab sofort geöffnet",
+      "en": "Application Phase Open Now"
     },
     "desc": {
-      "de": "Detaillierte Informationen zur Vorbereitung (Impfungen, Visum, Ausrüstung), den geschätzten Reisekosten (Flug, Transport und Unterkunft auf reiner Selbstzahlerbasis) und den genauen Terminen für 2027 werden hier in Kürze veröffentlicht. Voranmeldungen und Fragen nimmt Philipp Herzberg schon jetzt entgegen.",
-      "en": "Comprehensive preparation guidelines (vaccines, visas, gear), transparent cost estimates (flight, transport and guesthouse on a strict self-funded basis) and exact 2027 dates will be published here shortly. Early expressions of interest are welcome."
+      "de": "Die nächste Bildungsreise nach Sierra Leone befindet sich in aktiver Vorbereitung. Interessierte Schülerinnen und Schüler, Eltern sowie Lehrkräfte können sich ab sofort direkt bei Philipp Herzberg bewerben oder unverbindlich ihr Interesse bekunden. In persönlichen Vorbereitungsgesprächen und Eltern-Infoabenden informieren wir ausführlich über Programm, Impfprophylaxe, Flugbuchung und Sicherheitsleitlinien.",
+      "en": "The next educational journey to Sierra Leone is in active preparation. Interested students, parents, and educators can apply directly with Philipp Herzberg or submit an expression of interest. Detailed guidance on flights, health protocols, visas and preparation sessions will be provided individually."
+    },
+    "ctaText": {
+      "de": "Jetzt bei Philipp Herzberg bewerben →",
+      "en": "Apply with Philipp Herzberg Now →"
     }
   },
   "faq": [
@@ -102,15 +238,15 @@
     },
     {
       "q": { "de": "Wer darf an den Bildungsreisen teilnehmen?", "en": "Who can participate in educational journeys?" },
-      "a": { "de": "Vorrangig Schüler:innen, Lehrkräfte und engagierte Eltern unserer Partnerschulen. Die Plätze sind streng limitiert, um den respektvollen dörflichen Rahmen nicht zu überfordern.", "en": "Primarily students, teachers and parents from our partner educational institutions. Spots are strictly limited to protect village balance." }
+      "a": { "de": "Schülerinnen und Schüler (ab Klasse 10/11), Lehrkräfte sowie engagierte Eltern. Die Plätze sind limitiert, um eine persönliche Betreuung und einen respektvollen dörflichen Rahmen zu sichern.", "en": "Students (from grades 10/11 upwards), educators, and parents. Spots are limited to maintain an intimate, respectful community setting." }
     },
     {
       "q": { "de": "Wo wird übernachtet?", "en": "What are the accommodation arrangements?" },
-      "a": { "de": "In Masingbi im Gästehaus der Familie von Yoni Sesay sowie in Zelten direkt in den Dorfgemeinschaften vor Ort.", "en": "At the Sesay family guesthouse in Masingbi and in tents in the respective village communities." }
+      "a": { "de": "In Freetown, Makeni und Magburaka in sicheren Unterkünften sowie in Zelten und einfachen Gästehäusern direkt in den Dorfgemeinschaften. Alle Schlafplätze verfügen über Moskitonetze.", "en": "In vetted lodgings in Freetown, Makeni, and Magburaka, as well as tents and community guesthouses in the villages. All beds feature mosquito netting." }
     },
     {
       "q": { "de": "Wie ist die medizinische und sicherheitstechnische Vorsorge geregelt?", "en": "What health and safety preparations are required?" },
-      "a": { "de": "Verpflichtende Gelbfieber-Impfung, strikte Malariaprophylaxe, Auslandskrankenversicherung mit Rückholgarantie sowie Begleitung durch ortskundige Guides.", "en": "Mandatory yellow fever vaccination, strict malaria prophylaxis, evacuation medical insurance, and experienced local guides." }
+      "a": { "de": "Pflicht-Gelbfieber-Impfung, empfohlene Malariaprophylaxe, Auslandskrankenversicherung, Begleitung durch vertraute lokale Guides (Yoni Sesay & Team) sowie Anmeldung bei Polizei und Paramount Chief.", "en": "Mandatory yellow fever vaccination, recommended malaria prophylaxis, international health insurance, trusted local guides (Yoni Sesay & team), and registration with police and tribal chiefs." }
     }
   ]
 }

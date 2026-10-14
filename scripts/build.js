@@ -543,6 +543,83 @@ function renderGovernanceDocsSection(lang = 'de') {
   `;
 }
 
+// Reusable Packing List Generator
+function renderPackingList(lang = 'de') {
+  const categories = {};
+  travel.packingList.forEach(item => {
+    if (!categories[item.category]) {
+      categories[item.category] = [];
+    }
+    categories[item.category].push(item.item);
+  });
+
+  const categoryTranslations = {
+    'Wesentlich': { de: 'Wesentliche Dokumente & Finanzen', en: 'Essential Documents & Cash' },
+    'Kleidung': { de: 'Kleidung & Schuhe', en: 'Clothing & Footwear' },
+    'Gesundheit & Apotheke': { de: 'Gesundheit, Apotheke & Hygiene', en: 'Health, First Aid & Sanitation' },
+    'Schutz & Sonne': { de: 'Sonnenschutz & Insektenschutz', en: 'Sun & Insect Protection' },
+    'Elektronik': { de: 'Elektronik & Strom (Inselnetze)', en: 'Electronics & Off-Grid Power' },
+    'Hygiene': { de: 'Körperpflege & Hygiene', en: 'Personal Care & Hygiene' },
+    'Praktisches': { de: 'Praktisches für unterwegs', en: 'Practical Gear & Travel Daypack' },
+    'Freigepäck & Spenden': { de: 'Freigepäck & Spendenmitnahme', en: 'Luggage Allowance & Donations' }
+  };
+
+  return `
+    <div class="packing-grid">
+      ${Object.entries(categories).map(([cat, items]) => {
+        const title = categoryTranslations[cat] ? categoryTranslations[cat][lang] : cat;
+        return `
+          <div class="packing-category-card">
+            <div class="packing-category-title">
+              <span>✓</span>
+              <span>${title}</span>
+            </div>
+            <ul class="packing-items-list">
+              ${items.map(it => `
+                <li class="packing-item-row">
+                  <span class="packing-item-check">•</span>
+                  <span>${it}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+// Reusable Video Gallery Generator
+function renderVideoGallery(lang = 'de') {
+  return `
+    <div class="videos-grid">
+      ${travel.videos.map(v => `
+        <div class="video-card">
+          <div class="video-card-title">${v.title[lang]}</div>
+          <div class="video-card-desc">${v.desc[lang]}</div>
+          <div class="video-responsive">
+            <iframe src="${v.url}" title="${v.title[lang]}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// Reusable Strategic Vision Generator
+function renderStrategicVision(lang = 'de') {
+  return `
+    <div class="vision-grid">
+      ${transparency.strategicVision.map(v => `
+        <div class="vision-card">
+          <h3 style="color:var(--color-terracotta);">${v.pillar[lang]}</h3>
+          <p>${v.desc[lang]}</p>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
 // 100% Symmetrical Project Detail Page Renderer
 function renderProjectDetailPage(p, lang = 'de') {
   const isDe = lang === 'de';
@@ -609,11 +686,15 @@ function renderProjectDetailPage(p, lang = 'de') {
             <p>
               <strong>${p.architect.name} (${p.architect.leadArchitect}):</strong> ${p.architect.notableDetails[lang]}
             </p>
+            <p style="background:var(--color-surface-muted); padding:0.75rem 1rem; border-radius:var(--radius-sm); font-size:0.9rem; margin-bottom:1rem;">
+              <strong>${isDe ? 'Persönlicher Einsatz' : 'Personal Contribution'}:</strong> 
+              ${isDe ? 'Sergei Tchoban bringt persönlich 14.000 USD privater Mittel in den Bau des Learning Hubs ein.' : 'Sergei Tchoban is contributing $14,000 USD of his own private funds into the learning hub.'}
+            </p>
             <p style="margin-bottom:1.5rem;">
               <em>${p.architect.siteVisit[lang]}</em>
             </p>
             <p>
-              <strong>${isDe ? 'Lokale Trägerschaft' : 'Local Leadership'}:</strong> ${p.localPartner.organization} (${p.localPartner.leader}).
+              <strong>${isDe ? 'Lokale Trägerschaft' : 'Local Leadership'}:</strong> ${p.localPartner.organization} (${p.localPartner.leader}, geboren in Mafabaneh).
             </p>
             <a href="${p.localPartner.strategicPlanDocument}" class="btn btn-secondary btn-sm" download>
               📄 ${isDe ? 'Strategieplan 2025–2030 herunterladen (PDF, 508 KB)' : 'Download Strategic Plan 2025-2030 (PDF, 508 KB)'}
@@ -622,8 +703,8 @@ function renderProjectDetailPage(p, lang = 'de') {
             <p>
               <strong>${p.localPartner.organization} (${p.localPartner.leader}):</strong> 
               ${isDe 
-                ? 'Juliet Fornah setzt sich seit Jahren in Makeni für Kinderrechte ein und leitet die Bauaufsicht vor Ort.' 
-                : 'Juliet Fornah advocates tirelessly for child welfare in Makeni and leads construction oversight on site.'}
+                ? 'Juliet Fornah setzt sich seit über zehn Jahren in Makeni für Kinderrechte ein und leitet die Bauaufsicht vor Ort.' 
+                : 'Juliet Fornah has advocated for child welfare in Makeni for over a decade and leads construction oversight on site.'}
             </p>
             <p style="margin-bottom:1.5rem;">
               <strong>${p.corporateSponsorship.sponsor}:</strong> 
@@ -636,6 +717,42 @@ function renderProjectDetailPage(p, lang = 'de') {
             </a>
           `}
         </div>
+
+        ${!isMafabaneh ? `
+          <!-- Mamoru School Operations & Academic Milestones -->
+          <div style="background:var(--color-surface); padding:2rem; border:2px solid var(--color-border); border-radius:var(--radius-lg); margin:2.5rem 0;">
+            <h3 style="margin-bottom:1rem; color:var(--color-slate-dark);">
+              ${isDe ? 'Schulbetrieb, Bildungssystem & Meilensteine' : 'School Operations, Academic System & Milestones'}
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+              <div style="background:var(--color-surface-muted); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.75rem; font-weight:800; color:var(--color-terracotta);">85</div>
+                <div style="font-weight:700; font-size:0.9rem;">${isDe ? 'Schüler:innen' : 'Pupils Enrolled'}</div>
+                <div style="font-size:0.8rem; color:var(--color-text-muted);">${isDe ? 'Aktuelle School Roll' : 'Active school roll'}</div>
+              </div>
+              <div style="background:var(--color-surface-muted); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.75rem; font-weight:800; color:var(--color-terracotta);">5</div>
+                <div style="font-weight:700; font-size:0.9rem;">${isDe ? 'Aktive Lehrkräfte' : 'Active Teachers'}</div>
+                <div style="font-size:0.8rem; color:var(--color-text-muted);">${isDe ? '12 Monate Gehälter gesichert' : '12-month salaries secured'}</div>
+              </div>
+              <div style="background:var(--color-surface-muted); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.75rem; font-weight:800; color:var(--color-terracotta);">Mai 2027</div>
+                <div style="font-weight:700; font-size:0.9rem;">${isDe ? 'NPSE-Prüfungsziel' : 'NPSE Exam Target'}</div>
+                <div style="font-size:0.8rem; color:var(--color-text-muted);">${isDe ? 'National Primary School Exam' : 'Primary graduation cohort'}</div>
+              </div>
+              <div style="background:var(--color-surface-muted); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.75rem; font-weight:800; color:var(--color-terracotta);">10 NLE</div>
+                <div style="font-weight:700; font-size:0.9rem;">${isDe ? 'Monatl. Elternbeitrag' : 'Monthly Parent Fee'}</div>
+                <div style="font-size:0.8rem; color:var(--color-text-muted);">${isDe ? 'Lokale Eigenverantwortung' : 'Local community ownership'}</div>
+              </div>
+            </div>
+            <p style="font-size:0.92rem; color:var(--color-text-muted); margin-bottom:0;">
+              ${isDe 
+                ? 'Die Grundschule Mamoru unterrichtet nach dem staatlichen <strong>6-3-3-4-System</strong> Sierra Leones (6 Jahre Grundschule). Ein restrukturiertes lokales <em>Education Committee</em> sichert die transparente operative Begleitung vor Ort. Um die letzten Arbeiten (Wandverputz, Zementestrich und Außentüren) abzuschließen, fehlen noch exakt <strong>6.000 USD (ca. 5.500 €)</strong>.' 
+                : 'Mamoru Primary operates under Sierra Leone’s national <strong>6-3-3-4 educational framework</strong> (6 years of primary schooling). A restructured local <em>Education Committee</em> oversees daily operations. To conclude protective plastering, concrete screed floors and security doors, an exact remaining sum of <strong>$6,000 USD (approx. €5,500)</strong> is required.'}
+            </p>
+          </div>
+        ` : ''}
 
         <!-- Features / Specifics -->
         ${isMafabaneh ? `
@@ -1114,6 +1231,12 @@ function buildSite() {
           </table>
         </div>
 
+        <h2 style="margin-top:3.5rem;">Langfristige Vision & Technologie</h2>
+        <p class="lead" style="max-width:720px;">
+          Bildung als Motor für lokale Wirtschaftskraft: Wir schaffen Zukunftsperspektiven vor Ort durch nachhaltige Schulinfrastruktur und Digital Leapfrogging.
+        </p>
+        ${renderStrategicVision('de')}
+
         <div style="margin-top:3rem;">
           ${renderBankQuickCard('de')}
         </div>
@@ -1145,7 +1268,7 @@ function buildSite() {
 
         <h2>Geschichte & Motivation</h2>
         <p>
-          Yoni Sesay und Philipp Herzberg lernten sich als Kollegen an einer Schule in London kennen. 
+          Yoni Sesay und Philipp Herzberg lernten sich als Lehrerkollegen an einer Schule in London kennen. 
           Yoni stammt aus Sierra Leone und nahm Philipp eines Sommers mit in seine Heimat. Sie reisten gemeinsam durch das Land, 
           schliefen in kleinen Dörfern und besuchten Schulen, die unter einfachsten Bedingungen unterrichteten.
         </p>
@@ -1154,15 +1277,34 @@ function buildSite() {
           sondern als verlässliche Freunde auf Augenhöhe beizustehen, gründeten sie die Initiative <em>Bildung mit Herz Sierra Leone e.V.</em>
         </p>
 
-        <h2 style="margin-top:2.5rem;">Der Vorstand</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin:1.5rem 0;">
+        <h2 style="margin-top:2.5rem;">Der Vorstand & Initiatoren</h2>
+        <div style="display:grid; gap:1.5rem; margin:1.5rem 0;">
           ${org.board.map(b => `
-            <div style="background:var(--color-surface); padding:1.5rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
-              <h3 style="margin-bottom:0.25rem; font-size:1.25rem;">${b.name}</h3>
-              <p style="color:var(--color-terracotta); font-weight:600; font-size:0.85rem; margin-bottom:0.5rem;">${b.role}</p>
-              <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom:0;">${b.title}</p>
+            <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+                <h3 style="margin-bottom:0; font-size:1.3rem;">${b.name}</h3>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${b.role}</span>
+              </div>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">${b.profession}</p>
+              <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${b.bio.de}</p>
             </div>
           `).join('')}
+
+          ${org.coFounders.map(c => `
+            <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+                <h3 style="margin-bottom:0; font-size:1.3rem;">${c.name}</h3>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${c.role}</span>
+              </div>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">${c.profession}</p>
+              <p style="color:var(--color-text-muted); font-size:0.85rem; margin-bottom:0.75rem;"><em>📍 ${c.origin}</em></p>
+              <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${c.bio.de}</p>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="background:var(--color-surface-muted); padding:1.25rem 1.5rem; border-radius:var(--radius-md); border:1px solid var(--color-border); margin:2rem 0;">
+          <strong>Gründungsmitglieder:</strong> ${org.foundingCircle.de}
         </div>
 
         <h2 style="margin-top:2.5rem;">Unsere Partner vor Ort</h2>
@@ -1213,33 +1355,46 @@ function buildSite() {
 
         <img src="/assets/images/travel-masingbi.jpg" alt="Teilnehmende der Bildungsreise in Sierra Leone" style="border-radius:var(--radius-lg); margin-bottom:2.5rem; box-shadow:var(--shadow-md); width:100%; object-fit:cover; max-height:480px;">
 
-        <h2>Unser Reiseansatz</h2>
+        <h2>Unser Reiseansatz: Horizonterweiterung durch Kontrast</h2>
         <p>${travel.philosophy.de}</p>
 
-        <!-- Video Documentary Section (DE & EN) -->
-        <div style="margin:3rem 0;">
-          <h2>Video-Dokumentation unserer Bildungsreise</h2>
-          <p class="lead" style="margin-bottom:1rem;">
-            Erleben Sie authentische Eindrücke unserer Bildungsreisen direkt im Video.
-          </p>
-
-          <div style="display:grid; grid-template-columns:1fr; gap:2rem;">
-            <div>
-              <h3 style="font-size:1.15rem; margin-bottom:0.5rem; color:var(--color-terracotta);">${travel.videos.de.title}</h3>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0.75rem;">${travel.videos.de.desc}</p>
-              <div class="video-responsive">
-                <iframe src="${travel.videos.de.url}" title="${travel.videos.de.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-
-            <div>
-              <h3 style="font-size:1.15rem; margin-bottom:0.5rem; color:var(--color-terracotta);">${travel.videos.en.title}</h3>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0.75rem;">${travel.videos.en.desc}</p>
-              <div class="video-responsive">
-                <iframe src="${travel.videos.en.url}" title="${travel.videos.en.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
+        <!-- Upcoming Trip Application Box (Strictly Open Call without 2026/27 alliance/dates) -->
+        <div style="background:linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%); border:2px solid #fde68a; border-radius:var(--radius-lg); padding:2rem; margin:2.5rem 0; box-shadow:var(--shadow-sm);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <h3 style="margin:0; color:#78350f;">${travel.upcomingTrip.title.de}</h3>
+            <span style="font-size:0.8rem; background:#92400e; color:#ffffff; padding:0.25rem 0.65rem; border-radius:var(--radius-full); font-weight:700;">
+              ${travel.upcomingTrip.status.de}
+            </span>
           </div>
+          <p style="color:#78350f; line-height:1.6; margin-bottom:1.25rem;">
+            ${travel.upcomingTrip.desc.de}
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+            <a href="mailto:${travel.contactPerson.email}?subject=Bewerbung%20Bildungsreise%20Sierra%20Leone" class="btn btn-primary btn-sm">
+              ${travel.upcomingTrip.ctaText.de}
+            </a>
+            <button type="button" class="btn btn-secondary btn-sm copy-btn" data-copy="${travel.contactPerson.email}">
+              E-Mail kopieren
+            </button>
+          </div>
+        </div>
+
+        <!-- Information Presentation Deck Link -->
+        <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.25rem 1.5rem; margin:2rem 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h4 style="margin-bottom:0.25rem;">📊 ${travel.presentationDeck.title.de}</h4>
+            <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0;">Detaillierte Präsentation zu Vorbereitung, Programm, Kostenkalkulation und Verhaltensleitlinien.</p>
+          </div>
+          <a href="${travel.presentationDeck.url}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Präsentation öffnen ↗</a>
+        </div>
+
+        <!-- Video Documentary Section (7 Videos) -->
+        <div style="margin:3rem 0;">
+          <h2>Video-Dokumentationen unserer Bildungsreisen</h2>
+          <p class="lead" style="margin-bottom:1rem;">
+            Erleben Sie authentische Eindrücke unserer Reisen: Vom Schulbau und Ziegelpressen über Schulbesuche bis hin zu den Begegnungen in den Dörfern.
+          </p>
+          ${renderVideoGallery('de')}
         </div>
 
         <!-- 3 Past Expeditions Showcase -->
@@ -1253,24 +1408,86 @@ function buildSite() {
               <div class="trip-card-body">
                 <span class="trip-card-badge">${trip.year} • ${trip.location}</span>
                 <h3 class="trip-card-title">${trip.title.de}</h3>
+                <div style="font-size:0.82rem; font-weight:700; color:var(--color-terracotta); margin-bottom:0.5rem;">
+                  👥 ${trip.participants.de}
+                </div>
                 <p class="trip-card-desc">${trip.desc.de}</p>
               </div>
             </div>
           `).join('')}
         </div>
 
-        <!-- Upcoming 2027 Trip Info -->
-        <div style="background:var(--color-surface); border:2px solid var(--color-border); border-radius:var(--radius-lg); padding:2rem; margin:3rem 0;">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-            <h3 style="margin:0; color:var(--color-terracotta);">${travel.upcomingTrip.title.de}</h3>
-            <span style="font-size:0.8rem; background:#fef3c7; color:#92400e; padding:0.25rem 0.65rem; border-radius:3px; font-weight:700;">
-              ${travel.upcomingTrip.status.de}
-            </span>
-          </div>
-          <p style="color:var(--color-text-muted); line-height:1.55; margin-bottom:0;">
-            ${travel.upcomingTrip.desc.de}
-          </p>
+        <!-- Activities Section -->
+        <h2 style="margin-top:3.5rem;">Aktivitäten & Alltag vor Ort</h2>
+        <p class="lead">Das Reiseprogramm wird in enger Absprache mit Yoni Sesay und den Dorfgemeinschaften gestaltet:</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin:1.5rem 0;">
+          ${travel.activities.map(act => `
+            <div style="background:var(--color-surface); padding:1.5rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <h3 style="font-size:1.1rem; color:var(--color-terracotta); margin-bottom:0.5rem;">${act.title.de}</h3>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); line-height:1.55; margin-bottom:0;">${act.desc.de}</p>
+            </div>
+          `).join('')}
         </div>
+
+        <!-- Safety, Health & Supervision -->
+        <div style="background:var(--color-surface); padding:2rem; border:2px solid var(--color-border); border-radius:var(--radius-lg); margin:3rem 0;">
+          <h2 style="margin-top:0;">Sicherheit, Gesundheit & Organisation</h2>
+          <p class="lead" style="margin-bottom:1.5rem;">
+            Maximale Sicherheit durch vertraute lokale Netzwerke, offizielle Genehmigungen und klare Protokolle:
+          </p>
+
+          <div style="display:grid; gap:1rem;">
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>👑 Paramout Chief & Polizeiregistrierung:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.approvals.de}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🚌 Eigener Reisebus & Transport:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.transport.de}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🏨 Sichere Unterkünfte & Mückenschutz:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.accommodations.de}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🏥 Medizinische Nähe & Notfallapotheke:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.medicalProximity.de}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🧑‍🏫 Betreuungsquote:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.supervisionRatio.de}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>💉 Impfungen & Tropenmedizin:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.vaccinations.de}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel Funding & Zero-Donation Guarantee -->
+        <div style="background:var(--color-surface); padding:2rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); margin:3rem 0;">
+          <h2 style="margin-top:0;">Reisekosten & 100% Direkt-Garantie</h2>
+          <p style="font-size:0.95rem; color:var(--color-text-main); margin-bottom:1rem;">
+            <strong>Gesamtkosten:</strong> ${travel.travelFunding.totalCost}
+          </p>
+          <ul style="color:var(--color-text-muted); font-size:0.9rem; margin-left:1.25rem; margin-bottom:1.5rem; line-height:1.6;">
+            <li><strong>Flugkosten:</strong> ${travel.travelFunding.flightCost}</li>
+            <li><strong>Kosten vor Ort:</strong> ${travel.travelFunding.localCosts}</li>
+            <li><strong>Begleiter & Guides:</strong> ${travel.travelFunding.localSupport}</li>
+            <li><strong>Versicherungen:</strong> ${travel.travelFunding.insurance}</li>
+          </ul>
+          <div style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1px solid #86efac; border-radius:var(--radius-md); padding:1.25rem;">
+            <strong style="color:#166534;">🛡️ Keine Spendengelder für Reisen:</strong>
+            <p style="font-size:0.9rem; color:#166534; margin-bottom:0; margin-top:0.25rem;">
+              ${travel.travelFunding.zeroDonationGuarantee.de}
+            </p>
+          </div>
+        </div>
+
+        <!-- Packing List Section -->
+        <h2 style="margin-top:3.5rem;">Packliste für Sierra Leone</h2>
+        <p class="lead">Erprobte Ausrüstungs- und Bekleidungsliste für das Landesinnere von Sierra Leone:</p>
+        ${renderPackingList('de')}
 
         <!-- Contact Box for Philipp Herzberg -->
         <div style="background:linear-gradient(135deg, #fcf9f5 0%, #f7f0e6 100%); border:2px solid var(--color-terracotta); border-radius:var(--radius-lg); padding:2.25rem; text-align:center; margin:3rem 0;">
@@ -1825,6 +2042,38 @@ function buildSite() {
           `).join('')}
         </div>
 
+        <h2 style="margin-top:3rem;">Annual Fund Utilization Overviews</h2>
+        <div style="overflow-x:auto; margin:1.5rem 0;">
+          <table style="width:100%; border-collapse:collapse; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
+            <thead>
+              <tr style="background:var(--color-surface-muted); text-align:left; border-bottom:1px solid var(--color-border);">
+                <th style="padding:0.75rem 1rem;">Year</th>
+                <th style="padding:0.75rem 1rem;">Donations Received</th>
+                <th style="padding:0.75rem 1rem;">Invested in Projects</th>
+                <th style="padding:0.75rem 1rem;">Admin Overhead</th>
+                <th style="padding:0.75rem 1rem;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${transparency.annualFinancialOverview.map(row => `
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:0.75rem 1rem; font-weight:700;">${row.year}</td>
+                  <td style="padding:0.75rem 1rem;">${row.totalDonations.toLocaleString('en-US')} €</td>
+                  <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements.toLocaleString('en-US')} €</td>
+                  <td style="padding:0.75rem 1rem;">0 € (100% honorary)</td>
+                  <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="margin-top:3.5rem;">Strategic Vision & Technology</h2>
+        <p class="lead" style="max-width:720px;">
+          Education as a catalyst for local economic vitality: Fostering sustainable school infrastructure and digital leapfrogging.
+        </p>
+        ${renderStrategicVision('en')}
+
         <div style="margin-top:3rem;">
           ${renderBankQuickCard('en')}
         </div>
@@ -1854,15 +2103,34 @@ function buildSite() {
         <h2>History & Motivation</h2>
         <p>Philipp Herzberg and Yoni Sesay met while teaching together at a school in London. That summer, Yoni invited Philipp to visit his home country, Sierra Leone. Traveling through rural villages and witnessing community resilience inspired them to create an association built on mutual dignity and long-term partnership.</p>
 
-        <h2 style="margin-top:2.5rem;">Board of Directors</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin:1.5rem 0;">
+        <h2 style="margin-top:2.5rem;">Board of Directors & Initiators</h2>
+        <div style="display:grid; gap:1.5rem; margin:1.5rem 0;">
           ${org.board.map(b => `
-            <div style="background:var(--color-surface); padding:1.5rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
-              <h3 style="margin-bottom:0.25rem; font-size:1.25rem;">${b.name}</h3>
-              <p style="color:var(--color-terracotta); font-weight:600; font-size:0.85rem; margin-bottom:0.5rem;">${b.role}</p>
-              <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom:0;">${b.title}</p>
+            <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+                <h3 style="margin-bottom:0; font-size:1.3rem;">${b.name}</h3>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${b.role}</span>
+              </div>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">${b.profession}</p>
+              <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${b.bio.en}</p>
             </div>
           `).join('')}
+
+          ${org.coFounders.map(c => `
+            <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+                <h3 style="margin-bottom:0; font-size:1.3rem;">${c.name}</h3>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${c.role}</span>
+              </div>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">${c.profession}</p>
+              <p style="color:var(--color-text-muted); font-size:0.85rem; margin-bottom:0.75rem;"><em>📍 ${c.origin}</em></p>
+              <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${c.bio.en}</p>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="background:var(--color-surface-muted); padding:1.25rem 1.5rem; border-radius:var(--radius-md); border:1px solid var(--color-border); margin:2rem 0;">
+          <strong>Founding Circle:</strong> ${org.foundingCircle.en}
         </div>
 
         <h2 style="margin-top:2.5rem;">Our Local Partners</h2>
@@ -1903,31 +2171,53 @@ function buildSite() {
           <p class="lead">${travel.tagline.en}</p>
         </div>
         <img src="/assets/images/travel-masingbi.jpg" alt="Educational Journey Participants in Sierra Leone" style="border-radius:var(--radius-lg); margin-bottom:2.5rem; width:100%; object-fit:cover; max-height:480px;">
+        
+        <h2>Our Educational Approach: Widening Horizons Through Contrast</h2>
         <p>${travel.philosophy.en}</p>
 
-        <!-- Video Documentary Section -->
+        <!-- Upcoming Trip Application Box (Strictly Open Call without 2026/27 alliance/dates) -->
+        <div style="background:linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%); border:2px solid #fde68a; border-radius:var(--radius-lg); padding:2rem; margin:2.5rem 0; box-shadow:var(--shadow-sm);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <h3 style="margin:0; color:#78350f;">${travel.upcomingTrip.title.en}</h3>
+            <span style="font-size:0.8rem; background:#92400e; color:#ffffff; padding:0.25rem 0.65rem; border-radius:var(--radius-full); font-weight:700;">
+              ${travel.upcomingTrip.status.en}
+            </span>
+          </div>
+          <p style="color:#78350f; line-height:1.6; margin-bottom:1.25rem;">
+            ${travel.upcomingTrip.desc.en}
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+            <a href="mailto:${travel.contactPerson.email}?subject=Application%20Educational%20Trip%20Sierra%20Leone" class="btn btn-primary btn-sm">
+              ${travel.upcomingTrip.ctaText.en}
+            </a>
+            <button type="button" class="btn btn-secondary btn-sm copy-btn" data-copy="${travel.contactPerson.email}">
+              Copy Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Information Presentation Deck Link -->
+        <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.25rem 1.5rem; margin:2rem 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h4 style="margin-bottom:0.25rem;">📊 ${travel.presentationDeck.title.en}</h4>
+            <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0;">Comprehensive presentation on travel preparation, route, cost breakdown and guidelines.</p>
+          </div>
+          <a href="${travel.presentationDeck.url}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Open Presentation Deck ↗</a>
+        </div>
+
+        <!-- Video Documentary Section (7 Videos) -->
         <div style="margin:3rem 0;">
           <h2>Video Documentary of Our Journeys</h2>
-          <div style="display:grid; grid-template-columns:1fr; gap:2rem;">
-            <div>
-              <h3 style="font-size:1.15rem; margin-bottom:0.5rem; color:var(--color-terracotta);">${travel.videos.en.title}</h3>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0.75rem;">${travel.videos.en.desc}</p>
-              <div class="video-responsive">
-                <iframe src="${travel.videos.en.url}" title="${travel.videos.en.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div>
-              <h3 style="font-size:1.15rem; margin-bottom:0.5rem; color:var(--color-terracotta);">${travel.videos.de.title}</h3>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0.75rem;">${travel.videos.de.desc}</p>
-              <div class="video-responsive">
-                <iframe src="${travel.videos.de.url}" title="${travel.videos.de.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
+          <p class="lead" style="margin-bottom:1rem;">
+            Experience genuine impressions from our field journeys: from school construction and brick-making to classroom visits and village life.
+          </p>
+          ${renderVideoGallery('en')}
         </div>
 
         <!-- 3 Expeditions Overview -->
         <h2 style="margin-top:3.5rem;">Past Educational Expeditions</h2>
+        <p class="lead">Three journeys that forged enduring bonds of mutual trust:</p>
+        
         <div class="trips-grid">
           ${travel.trips.map(trip => `
             <div class="trip-card">
@@ -1935,24 +2225,86 @@ function buildSite() {
               <div class="trip-card-body">
                 <span class="trip-card-badge">${trip.year} • ${trip.location}</span>
                 <h3 class="trip-card-title">${trip.title.en}</h3>
+                <div style="font-size:0.82rem; font-weight:700; color:var(--color-terracotta); margin-bottom:0.5rem;">
+                  👥 ${trip.participants.en}
+                </div>
                 <p class="trip-card-desc">${trip.desc.en}</p>
               </div>
             </div>
           `).join('')}
         </div>
 
-        <!-- Upcoming 2027 Journey Box -->
-        <div style="background:var(--color-surface); border:2px solid var(--color-border); border-radius:var(--radius-lg); padding:2rem; margin:3rem 0;">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-            <h3 style="margin:0; color:var(--color-terracotta);">${travel.upcomingTrip.title.en}</h3>
-            <span style="font-size:0.8rem; background:#fef3c7; color:#92400e; padding:0.25rem 0.65rem; border-radius:3px; font-weight:700;">
-              ${travel.upcomingTrip.status.en}
-            </span>
-          </div>
-          <p style="color:var(--color-text-muted); line-height:1.55; margin-bottom:0;">
-            ${travel.upcomingTrip.desc.en}
-          </p>
+        <!-- Activities Section -->
+        <h2 style="margin-top:3.5rem;">Field Activities & Village Routines</h2>
+        <p class="lead">Our travel itinerary is planned in close collaboration with Yoni Sesay and the village communities:</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin:1.5rem 0;">
+          ${travel.activities.map(act => `
+            <div style="background:var(--color-surface); padding:1.5rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <h3 style="font-size:1.1rem; color:var(--color-terracotta); margin-bottom:0.5rem;">${act.title.en}</h3>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); line-height:1.55; margin-bottom:0;">${act.desc.en}</p>
+            </div>
+          `).join('')}
         </div>
+
+        <!-- Safety, Health & Supervision -->
+        <div style="background:var(--color-surface); padding:2rem; border:2px solid var(--color-border); border-radius:var(--radius-lg); margin:3rem 0;">
+          <h2 style="margin-top:0;">Safety, Health & Field Protocols</h2>
+          <p class="lead" style="margin-bottom:1.5rem;">
+            Prioritizing participant well-being through trusted local networks, official permits, and established medical channels:
+          </p>
+
+          <div style="display:grid; gap:1rem;">
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>👑 Paramount Chief & Police Registration:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.approvals.en}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🚌 Private Chartered Coach:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.transport.en}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🏨 Vetted Lodging & Mosquito Netting:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.accommodations.en}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🏥 Medical Proximity & First-Aid Trauma Kit:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.medicalProximity.en}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>🧑‍🏫 Chaperone Supervision Ratio:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.supervisionRatio.en}</p>
+            </div>
+            <div style="background:var(--color-surface-muted); padding:1rem 1.25rem; border-radius:var(--radius-md);">
+              <strong>💉 Immunizations & Medical Consultation:</strong>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0; margin-top:0.25rem;">${travel.safetyAndHealth.vaccinations.en}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel Funding & Zero-Donation Guarantee -->
+        <div style="background:var(--color-surface); padding:2rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); margin:3rem 0;">
+          <h2 style="margin-top:0;">Travel Costs & 100% Self-Funded Guarantee</h2>
+          <p style="font-size:0.95rem; color:var(--color-text-main); margin-bottom:1rem;">
+            <strong>Estimated Total Cost:</strong> ${travel.travelFunding.totalCost}
+          </p>
+          <ul style="color:var(--color-text-muted); font-size:0.9rem; margin-left:1.25rem; margin-bottom:1.5rem; line-height:1.6;">
+            <li><strong>International Flights:</strong> ${travel.travelFunding.flightCost}</li>
+            <li><strong>On-the-ground Expenses:</strong> ${travel.travelFunding.localCosts}</li>
+            <li><strong>Local Guides & Logistics:</strong> ${travel.travelFunding.localSupport}</li>
+            <li><strong>Travel Insurance:</strong> ${travel.travelFunding.insurance}</li>
+          </ul>
+          <div style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1px solid #86efac; border-radius:var(--radius-md); padding:1.25rem;">
+            <strong style="color:#166534;">🛡️ Zero Donations Used for Travel:</strong>
+            <p style="font-size:0.9rem; color:#166534; margin-bottom:0; margin-top:0.25rem;">
+              ${travel.travelFunding.zeroDonationGuarantee.en}
+            </p>
+          </div>
+        </div>
+
+        <!-- Packing List Section -->
+        <h2 style="margin-top:3.5rem;">Packing Checklist for Sierra Leone</h2>
+        <p class="lead">Field-tested gear, health essentials and clothing list for rural Sierra Leone:</p>
+        ${renderPackingList('en')}
 
         <!-- Contact Box for Philipp Herzberg -->
         <div style="background:linear-gradient(135deg, #fcf9f5 0%, #f7f0e6 100%); border:2px solid var(--color-terracotta); border-radius:var(--radius-lg); padding:2.25rem; text-align:center; margin:3rem 0;">
@@ -1961,7 +2313,7 @@ function buildSite() {
             ${travel.contactPerson.note.en}
           </p>
           <div style="display:inline-flex; align-items:center; gap:0.75rem; background:#ffffff; padding:0.75rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--color-border); flex-wrap:wrap; justify-content:center;">
-            <span><strong>${travel.contactPerson.name}</strong>:</span>
+            <span><strong>${travel.contactPerson.name}</strong> (${travel.contactPerson.role.en}):</span>
             <code style="font-size:1.05rem; font-weight:700;">${travel.contactPerson.email}</code>
             <button type="button" class="copy-btn" data-copy="${travel.contactPerson.email}">
               Copy Email

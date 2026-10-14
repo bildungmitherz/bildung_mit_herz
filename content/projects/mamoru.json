@@ -28,9 +28,17 @@
     "officialAddress": "13 Yaide Street, Makeni, Bombali District",
     "partnerDocument": "/assets/documents/WelfareAlert.pdf"
   },
+  "schoolMetrics": {
+    "schoolRoll": 85,
+    "teachers": 5,
+    "system": "6-3-3-4 Bildungssystem (Sierra Leone)",
+    "npseTarget": "Mai 2027 (Erster Abschlussjahrgang zur National Primary School Examination)",
+    "parentContribution": "10 NLE pro Schüler:in monatlich als lokaler Trägerbeitrag",
+    "governance": "Restrukturiertes lokales Education Committee (Bildungskomitee)"
+  },
   "impactSummary": {
-    "de": "Zuvor saßen über 100 Schulkinder auf dem nackten Steinboden einer maroden ehemaligen Kirchenhalle, wo ein einzelner Lehrer drei Klassenstufen parallel an unterschiedlichen Wänden unterrichten musste. Heute steht ein massives Schulgebäude mit fünf separaten Klassenräumen für über 150 Kinder.",
-    "en": "Previously, more than 100 school children sat on the bare stone floor of a dilapidated church hall, where a single teacher had to teach three grade levels simultaneously on different walls. Today, a solid school building with five distinct classrooms stands on the site, educating over 150 children."
+    "de": "Aktuell besuchen 85 Schülerinnen und Schüler die Grundschule Mamoru. Zuvor saßen die Kinder auf dem nackten Steinboden einer baufälligen Kirchenhalle. Heute stehen 5 feste Klassenräume, 5 Lehrkräfte unterrichten nach dem 6-3-3-4-System und werden durch Spenden (u. a. AcadeMedia) und einen Elternbeitrag von 10 NLE unterstützt. Im Mai 2027 wird der erste Jahrgang an den nationalen NPSE-Abschlussprüfungen teilnehmen.",
+    "en": "Currently, 85 pupils attend Mamoru Primary School. Previously, children sat on the bare floor of a makeshift church hall. Today, 5 permanent classrooms stand, 5 teachers teach the national 6-3-3-4 curriculum, supported by sponsor funding (including AcadeMedia) and a local 10 NLE parent contribution. In May 2027, the inaugural cohort will sit the national NPSE examinations."
   },
   "corporateSponsorship": {
     "sponsor": "AcadeMedia Education GmbH",
@@ -90,23 +98,23 @@
     }
   ],
   "finances": {
-    "totalEstimatedBudget": { "amount": 22000, "currency": "EUR", "status": "verified", "asOfDate": "2026-03-01", "sourceNote": "Gesamtkosten Rohbau + Ausstattung + Gehälter" },
-    "securedFunding": { "amount": 17200, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Spenden & AcadeMedia Sponsoring" },
-    "outstandingNeed": { "amount": 4800, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Finaler KVA für Verputz, Estrich und Türen" },
+    "totalEstimatedBudget": { "amount": 22700, "currency": "EUR", "status": "verified", "asOfDate": "2026-03-01", "sourceNote": "Gesamtkosten Rohbau + 1-Jahres-Lehrergehälter + finale Ausbauarbeiten" },
+    "securedFunding": { "amount": 17200, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Spenden & AcadeMedia Sponsoring (Möbel + Gehälter)" },
+    "outstandingNeed": { "amount": 5500, "currency": "EUR", "status": "verified", "asOfDate": "2026-10-01", "sourceNote": "Exakt 6.000 USD (ca. 5.500 €) für Verputz, Türen und Estrichboden" },
     "corporateFundingPackages": [
       {
         "title": { "de": "Innen- und Außenverputz der Klassenräume", "en": "Interior and Exterior Wall Plastering" },
-        "amount": 2200,
+        "amount": 2500,
         "description": { "de": "Schutz des Mauerwerks vor Auswaschung in der tropischen Regenzeit.", "en": "Essential moisture protection against monsoon rains." }
       },
       {
         "title": { "de": "Feste Zementestrich-Böden", "en": "Durable Concrete Screed Flooring" },
-        "amount": 1600,
+        "amount": 1800,
         "description": { "de": "Staubfreie, glatte Böden für hygienische und saubere Lernbedingungen.", "en": "Hygienic, dust-free concrete flooring for clean learning." }
       },
       {
         "title": { "de": "Abschließbare Außentüren & Fensterläden", "en": "Lockable Security Doors & Shutters" },
-        "amount": 1000,
+        "amount": 1200,
         "description": { "de": "Schutz für Unterrichtsmaterialien, Lehrbücher und Schulausstattung.", "en": "Safe storage for textbooks, teaching materials and assets." }
       }
     ]

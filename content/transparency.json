@@ -70,5 +70,28 @@
       "adminCosts": 0,
       "sourceNote": "Laufendes Geschäftsjahr (Stand: August 2026, ungeprüft)"
     }
+  ],
+  "strategicVision": [
+    {
+      "pillar": { "de": "Bleibeperspektiven durch lokale Wirtschaftskraft", "en": "Local Livelihoods & Retaining Talent" },
+      "desc": {
+        "de": "Unser Ziel ist der Aufbau einer tragfähigen lokalen Wirtschaft, damit junge Menschen in Sierra Leone bleiben und sich dort eine erfüllte Zukunft aufbauen können. Dies schließt Mikrokredite (Microfinancing) und Gründungsberatung für Absolventen ein.",
+        "en": "Our mission is strengthening local economic opportunities so youth thrive in Sierra Leone rather than facing hazardous migration. This includes microfinancing and business incubation for graduates."
+      }
+    },
+    {
+      "pillar": { "de": "Digital Leapfrogging: Solar, Starlink & KI", "en": "Digital Leapfrogging: Solar, Starlink & AI" },
+      "desc": {
+        "de": "Autonome Solar-Inselnetze bringen Licht und Strom in netzferne Dörfer. Über Starlink-Satelliteninternet und moderne KI-gestützte Bildungswerkzeuge erhalten Schüler:innen und Lehrkräfte unbegrenzten, kostengünstigen Zugang zum weltweiten Wissensschatz.",
+        "en": "Decentralized off-grid solar micro-grids deliver power to remote villages. Starlink satellite internet and AI-assisted educational tools democratize access to global knowledge."
+      }
+    },
+    {
+      "pillar": { "de": "Pädagogisches Capacity Building", "en": "Teacher Capacity Building" },
+      "desc": {
+        "de": "Nachhaltiger Bildungserfolg erfordert qualifizierte und verlässlich entlohnte Lehrkräfte. Wir unterstützen die Weiterbildung der Lehrer:innen entlang des 6-3-3-4-Bildungssystems bis zur nationalen NPSE-Prüfungsreife.",
+        "en": "Lasting educational success requires certified and stably compensated teachers. We fund continuous teacher training along the national 6-3-3-4 curriculum towards NPSE excellence."
+      }
+    }
   ]
 }

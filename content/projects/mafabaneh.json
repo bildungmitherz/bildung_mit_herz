@@ -21,16 +21,22 @@
     "/assets/images/mafabaneh-bricks.jpg",
     "/assets/images/hero-home.jpg"
   ],
+  "capacity": {
+    "students": 240,
+    "classrooms": 5,
+    "staffRooms": 1
+  },
   "architect": {
     "name": "Tchoban Voss Architekten",
     "leadArchitect": "Sergei Tchoban",
+    "personalContribution": "14.000 USD Eigenmittel von Sergei Tchoban",
     "notableDetails": {
-      "de": "Träger des European Prize for Architecture 2018. Ehrenamtlicher Entwurf eines modularen Rundbaus mit passiver Querlüftung ohne Stromnetz.",
-      "en": "Laureate of the European Prize for Architecture 2018. Pro bono design of a circular modular pavilion featuring passive ventilation without electric grid dependency."
+      "de": "Träger des European Prize for Architecture 2018 und Gewinner des German Design Award 2027. Ehrenamtlicher Entwurf eines modularen Rundbaus mit passiver Querlüftung ohne Stromnetz.",
+      "en": "Laureate of the European Prize for Architecture 2018 and German Design Award 2027 Winner. Pro bono circular pavilion design featuring passive cross-ventilation without power grid reliance."
     },
     "siteVisit": {
-      "de": "Zwei Architekten aus dem Büro Tchoban Voss begleiten den Bau 2026 direkt vor Ort in Sierra Leone.",
-      "en": "Two architects from Tchoban Voss are supervising construction on the ground in Sierra Leone in 2026."
+      "de": "Victor und Vasilii, zwei Architekten aus dem Büro Tchoban Voss, flogen im April 2026 nach Sierra Leone, um gemeinsam mit dem lokalen Architekten und Bauingenieur die Feinplanung und Statik vor Ort abzustimmen.",
+      "en": "Victor and Vasilii, two architects from Tchoban Voss, traveled to Sierra Leone in April 2026 to coordinate detailed structural engineering and blueprint execution on-site with local professionals."
     }
   },
   "localPartner": {
@@ -45,11 +51,11 @@
   "constructionFeatures": [
     {
       "title": { "de": "Organische Rundbauweise", "en": "Circular Pavilion Design" },
-      "desc": { "de": "Modelliert nach traditionellen Rundbauten für optimale Statik und Gemeinschaftsgefühl.", "en": "Modeled after traditional circular dwellings for optimal structural stability and community cohesion." }
+      "desc": { "de": "Modelliert nach traditionellen Rundbauten für optimale Statik, 5 Klassenzimmer und 1 Lehrerzimmer für 240 Kinder.", "en": "Modeled after traditional circular architecture with 5 classrooms and 1 staff room for 240 pupils." }
     },
     {
-      "title": { "de": "2.000 handgefertigte Lehmziegel", "en": "2,000 Handmade Mud Bricks" },
-      "desc": { "de": "Vor Ort von der Dorfgemeinschaft mit Holzformen gemischt und sonnengetrocknet.", "en": "Locally mixed and sun-dried by the community using handcrafted wooden molds." }
+      "title": { "de": "Eigene Ziegelsteinpresse vor Ort", "en": "On-Site Interlocking Brick Press" },
+      "desc": { "de": "Anschaffung einer mobilen Ziegelpresse, mit der die Dorfgemeinschaft hochbelastbare, maßhaltige Lehmsteine direkt vor Ort presst.", "en": "Dedicated mechanical brick press acquired to produce high-durability, weather-stabilized interlocking earth blocks on site." }
     },
     {
       "title": { "de": "Passive Klimatisierung", "en": "Passive Climate Control" },
@@ -68,43 +74,43 @@
       "source": "Tchoban Voss Architekten"
     },
     {
-      "date": "Januar 2026",
-      "title": { "de": "Herstellung von 2.000 Ziegeln & Grundsteinlegung", "en": "Production of 2,000 Bricks & Foundation Stone Ceremony" },
+      "date": "Februar 2026",
+      "title": { "de": "Grundsteinlegung & Anschaffung der Ziegelpresse", "en": "Foundation Ceremony & Brick Press Acquisition" },
       "completed": true,
       "source": "Bildungsreise Dokumentation 2026"
     },
     {
-      "date": "2026",
-      "title": { "de": "Mauerwerk & Dachkonstruktion (Phase 1)", "en": "Masonry & Roof Structure (Phase 1)" },
-      "completed": false,
-      "source": "Kaprr Yoni Hub Bauzeitplan"
+      "date": "April 2026",
+      "title": { "de": "Detailplanung vor Ort durch Victor & Vasilii (Tchoban Voss)", "en": "On-Site Detail Engineering by Victor & Vasilii (Tchoban Voss)" },
+      "completed": true,
+      "source": "Bürobericht Tchoban Voss"
     },
     {
-      "date": "2027",
-      "title": { "de": "Ausbau Sanitärtrakt, Büros & Sportplatz", "en": "Sanitation, Administration & Sports Ground" },
+      "date": "2026/2027",
+      "title": { "de": "Mauerwerk, Dachkonstruktion & Fertigstellung (Phase 1)", "en": "Masonry, Timber Roof & Phase 1 Completion" },
       "completed": false,
-      "source": "Strategieplan 2025-2030"
+      "source": "Kaprr Yoni Hub Bauzeitplan"
     }
   ],
   "finances": {
-    "totalEstimatedBudget": { "amount": 35000, "currency": "EUR", "status": "estimated", "asOfDate": "2026-03-01", "sourceNote": "Vorläufige Gesamtkostenschätzung Phase 1" },
-    "securedFunding": { "amount": 14200, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Spendenkonto & Vereinskasse" },
-    "outstandingNeed": { "amount": 20800, "currency": "EUR", "status": "estimated", "asOfDate": "2026-08-31", "sourceNote": "Materialtranchen Mauerwerk, Dachstuhl & Holzbau" },
+    "totalEstimatedBudget": { "amount": 23000, "currency": "EUR", "status": "verified", "asOfDate": "2026-03-01", "sourceNote": "14.000 USD Sergei Tchoban + 10.000 EUR Förderverein-Sammelziel" },
+    "securedFunding": { "amount": 13000, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "14.000 USD Privatmittel von Sergei Tchoban" },
+    "outstandingNeed": { "amount": 10000, "currency": "EUR", "status": "verified", "asOfDate": "2026-10-01", "sourceNote": "Exakt 10.000 € offener Restbedarf für schlüsselfertige Fertigstellung Phase 1" },
     "corporateFundingPackages": [
       {
         "title": { "de": "Dachstuhl & Wellblecheindeckung", "en": "Timber Roof Structure & Metal Sheeting" },
-        "amount": 7500,
+        "amount": 5000,
         "description": { "de": "Finanzierung des witterungsfesten Dachstuhls für den gesamten Rundbau.", "en": "Funding the weather-resistant timber roof structure for the circular pavilion." }
       },
       {
         "title": { "de": "Solide Türen, Fenster & Holzläden", "en": "Security Doors, Windows & Shutters" },
-        "amount": 3800,
+        "amount": 3000,
         "description": { "de": "Schutz vor Schlagregen und sichere Verwahrung der Unterrichtsmaterialien.", "en": "Protection against heavy rain and secure storage for learning equipment." }
       },
       {
         "title": { "de": "Schulbänke & Klassenraumausstattung", "en": "Desks, Benches & Classroom Fittings" },
-        "amount": 2500,
-        "description": { "de": "Ausstattung mit langlebigen Holztischen und Bänken für 50 Schüler:innen.", "en": "Furnishing with durable wooden tables and benches for 50 pupils." }
+        "amount": 2000,
+        "description": { "de": "Ausstattung mit langlebigen Holztischen und Bänken für Schüler:innen.", "en": "Furnishing with durable wooden tables and benches for pupils." }
       }
     ]
   }
