@@ -21,6 +21,7 @@ const corporate = loadJson('corporate.json');
 const travel = loadJson('travel.json');
 const news = loadJson('news.json');
 const materials = loadJson('materials.json');
+const sierraLeone = loadJson('sierra_leone.json');
 
 // Only active projects (Madina removed per instruction)
 const projects = [
@@ -71,6 +72,8 @@ function renderHtmlPage({
     '/ueber-uns/': '/en/about/',
     '/bildungsreisen/': '/en/travel/',
     '/bildungsreisen/reiseberichte/': '/en/travel/',
+    '/sierra-leone/': '/en/sierra-leone/',
+    '/faq/': '/en/faq/',
     '/spenden/': '/en/donate/',
     '/impressum/': '/impressum/',
     '/datenschutz/': '/datenschutz/',
@@ -617,6 +620,219 @@ function renderStrategicVision(lang = 'de') {
         </div>
       `).join('')}
     </div>
+  `;
+}
+
+// Reusable Categorized FAQ Component
+function renderCategorizedFaq(lang = 'de') {
+  const isDe = lang === 'de';
+  const categories = {};
+  travel.faq.forEach(item => {
+    const catName = item.category ? item.category[lang] : (isDe ? 'Allgemeine Fragen' : 'General Questions');
+    if (!categories[catName]) {
+      categories[catName] = [];
+    }
+    categories[catName].push(item);
+  });
+
+  return `
+    <div class="faq-container">
+      ${Object.entries(categories).map(([catName, items]) => `
+        <div class="faq-category-section">
+          <h3 class="faq-category-title">
+            <span>📌</span>
+            <span>${catName}</span>
+          </h3>
+          <div class="faq-grid">
+            ${items.map(item => `
+              <div class="faq-card">
+                <div class="faq-q">
+                  <span class="faq-q-icon">?</span>
+                  <span>${item.q[lang]}</span>
+                </div>
+                <p class="faq-a">${item.a[lang]}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// Standalone FAQ Page Renderer
+function renderFaqStandalonePage(lang = 'de') {
+  const isDe = lang === 'de';
+
+  return `
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-header">
+          <div class="section-tag">${isDe ? 'Fragen & Antworten' : 'Questions & Answers'}</div>
+          <h1>${isDe ? 'Häufige Fragen zu Bildungsreisen & Vorbereitung' : 'Frequently Asked Questions & Trip Preparation'}</h1>
+          <p class="lead">
+            ${isDe 
+              ? 'Wichtige Antworten zu Impfpflichten, Visum, Malariaprophylaxe, Reisesicherheit, SIM-Karten und dem Alltag vor Ort.' 
+              : 'Detailed answers on vaccinations, visas, malaria prophylaxis, safety, SIM cards, and on-the-ground routines.'}
+          </p>
+        </div>
+
+        <div style="background:var(--color-surface-muted); padding:1.25rem 1.75rem; border-radius:var(--radius-md); border:1px solid var(--color-border); margin-bottom:2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <strong>${isDe ? 'Persönliche Beratung & Vorbereitungsgespräche' : 'Personal Guidance & Preparation Briefings'}</strong>
+            <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0;">
+              ${isDe ? 'Philipp Herzberg beantwortet Ihre individuellen Fragen gerne persönlich per Mail oder Telefon.' : 'Philipp Herzberg answers individual questions directly by email or phone.'}
+            </p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm copy-btn" data-copy="${travel.contactPerson.email}">
+            ${isDe ? 'E-Mail kopieren' : 'Copy Email'}
+          </button>
+        </div>
+
+        ${renderCategorizedFaq(lang)}
+
+        <div style="margin-top:3.5rem; text-align:center;">
+          <a href="${isDe ? '/bildungsreisen/' : '/en/travel/'}" class="btn btn-primary">
+            ${isDe ? '← Zur Übersicht Bildungsreisen' : '← Back to Educational Trips Overview'}
+          </a>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+// Sierra Leone Country Page Renderer
+function renderSierraLeonePage(lang = 'de') {
+  const isDe = lang === 'de';
+  const sl = sierraLeone;
+
+  return `
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-header">
+          <div class="sl-hero-badge">
+            <span>⭐</span>
+            <span>${isDe ? 'Länderporträt & Wirkungskontext' : 'Country Profile & Impact Context'}</span>
+          </div>
+          <h1>${sl.title[lang]}</h1>
+          <p class="lead">${sl.tagline[lang]}</p>
+        </div>
+
+        <img src="/assets/images/hero-home.jpg" alt="Sierra Leone Land und Leute" style="border-radius:var(--radius-lg); margin-bottom:2.5rem; width:100%; object-fit:cover; max-height:460px; box-shadow:var(--shadow-md);">
+
+        <p style="font-size:1.05rem; line-height:1.75; color:var(--color-text-main);">
+          ${sl.summary[lang]}
+        </p>
+
+        <!-- Key Metrics Grid -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin:2.5rem 0;">
+          ${sl.demographicsAndRuralReality.metrics.map(m => `
+            <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
+              <div style="font-size:2rem; font-weight:800; color:var(--color-terracotta); line-height:1.1; margin-bottom:0.25rem;">${m.val}</div>
+              <div style="font-weight:700; font-size:0.9rem; color:var(--color-slate-dark);">${m.label[lang]}</div>
+              <div style="font-size:0.78rem; color:var(--color-text-muted); margin-top:0.2rem;">${m.sub[lang]}</div>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Section 1: Governance Highlights (IIAG) -->
+        <div style="margin:3.5rem 0;">
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+            <span style="font-size:1.5rem;">🏆</span>
+            <span class="section-tag" style="margin-bottom:0;">${isDe ? 'Reformdynamik' : 'Reform Momentum'}</span>
+          </div>
+          <h2>${sl.governance.title[lang]}</h2>
+          <p class="lead" style="margin-bottom:1.5rem;">
+            ${isDe 
+              ? 'Wissenschaftlich belegt: Sierra Leone hebt sich durch konsequente Reformschritte und messbare Bildungsfortschritte im afrikanischen Vergleich deutlich ab.' 
+              : 'Empirically verified: Sierra Leone stands out through rigorous governance reforms and historic education milestones.'}
+          </p>
+
+          <div class="sl-gov-grid">
+            ${sl.governance.highlights.map(h => `
+              <div class="sl-gov-card">
+                <span class="sl-gov-badge">${h.badge[lang]}</span>
+                <div class="sl-gov-metric">${h.metric}</div>
+                <h3 class="sl-gov-title">${h.title[lang]}</h3>
+                <p class="sl-gov-desc">${h.desc[lang]}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Section 2: Rural Reality & Income Comparison for Donors -->
+        <div style="background:var(--color-surface); padding:2.25rem; border:2px solid var(--color-border); border-radius:var(--radius-lg); margin:3.5rem 0;">
+          <h2 style="margin-top:0; color:var(--color-slate-dark);">${sl.demographicsAndRuralReality.incomeAndLivelihoods.title[lang]}</h2>
+          ${sl.demographicsAndRuralReality.incomeAndLivelihoods.paragraphs[lang].map(p => `
+            <p style="font-size:0.95rem; color:var(--color-text-main); line-height:1.7; margin-bottom:1rem;">${p}</p>
+          `).join('')}
+        </div>
+
+        <!-- Section 3: Continental Comparison -->
+        <div style="margin:3.5rem 0;">
+          <h2>${sl.continentalComparison.title[lang]}</h2>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin:1.5rem 0;">
+            ${sl.continentalComparison.cards.map(c => `
+              <div style="background:var(--color-surface); padding:1.5rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+                <h3 style="font-size:1.1rem; color:var(--color-terracotta); margin-bottom:0.5rem;">${c.title[lang]}</h3>
+                <p style="font-size:0.9rem; color:var(--color-text-muted); line-height:1.55; margin-bottom:0;">${c.desc[lang]}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Section 4: Information for Travelers (Safety, Roads, Climate, Currency) -->
+        <div style="margin:3.5rem 0;">
+          <h2>${sl.travelerInfo.title[lang]}</h2>
+          <p class="lead" style="margin-bottom:1.5rem;">
+            ${isDe 
+              ? 'Wichtige Orientierung für Teilnehmende unserer Bildungsreisen und Gäste vor Ort:' 
+              : 'Essential guidance for participants of our educational journeys and visitors:'}
+          </p>
+
+          <!-- Auswärtiges Amt Safety Box -->
+          <div style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:2px solid #86efac; border-radius:var(--radius-lg); padding:1.75rem; margin-bottom:1.75rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
+              <span style="font-size:1.35rem;">🛡️</span>
+              <h3 style="margin:0; font-size:1.15rem; color:#166534;">${sl.travelerInfo.safetyAuswaertigesAmt.title[lang]}</h3>
+            </div>
+            ${sl.travelerInfo.safetyAuswaertigesAmt.paragraphs[lang].map(p => `
+              <p style="font-size:0.92rem; color:#166534; line-height:1.6; margin-bottom:0.75rem;">${p}</p>
+            `).join('')}
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+            <div class="sl-travel-card">
+              <h4>🚗 ${sl.travelerInfo.roadsAndMobility.title[lang]}</h4>
+              <p>${sl.travelerInfo.roadsAndMobility.desc[lang]}</p>
+            </div>
+            <div class="sl-travel-card">
+              <h4>☀️ ${sl.travelerInfo.climateAndSeason.title[lang]}</h4>
+              <p>${sl.travelerInfo.climateAndSeason.desc[lang]}</p>
+            </div>
+            <div class="sl-travel-card">
+              <h4>💶 ${sl.travelerInfo.currencyAndPayment.title[lang]}</h4>
+              <p>${sl.travelerInfo.currencyAndPayment.desc[lang]}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions / Navigation helper -->
+        <div style="background:var(--color-surface-muted); padding:2rem; border-radius:var(--radius-lg); border:1px solid var(--color-border); text-align:center; margin-top:3.5rem;">
+          <h3>${isDe ? 'Möchten Sie Sierra Leone selbst erleben oder unterstützen?' : 'Experience or Support Sierra Leone'}</h3>
+          <p style="color:var(--color-text-muted); max-width:600px; margin:0.5rem auto 1.5rem;">
+            ${isDe 
+              ? 'Erfahren Sie mehr über unsere Bildungsreisen auf Augenhöhe oder unterstützen Sie konkrete Schulbauprojekte vor Ort.' 
+              : 'Learn more about our educational journeys or support grassroots school construction directly.'}
+          </p>
+          <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+            <a href="${isDe ? '/bildungsreisen/' : '/en/travel/'}" class="btn btn-primary">${isDe ? 'Zu den Bildungsreisen' : 'View Educational Trips'}</a>
+            <a href="${isDe ? '/faq/' : '/en/faq/'}" class="btn btn-secondary">${isDe ? 'Häufige Fragen (FAQ)' : 'Read FAQ'}</a>
+            <a href="${isDe ? '/spenden/' : '/en/donate/'}" class="btn btn-outline">${isDe ? 'Schulbau unterstützen' : 'Donate'}</a>
+          </div>
+        </div>
+      </div>
+    </section>
   `;
 }
 
@@ -1510,14 +1726,13 @@ function buildSite() {
           <a href="/bildungsreisen/reiseberichte/" class="btn btn-primary">Zum Reisebericht 2026 →</a>
         </div>
 
-        <h2 style="margin-top:3rem;">Häufige Fragen (FAQ)</h2>
-        <div style="display:grid; gap:1rem; margin:1.5rem 0;">
-          ${travel.faq.map(item => `
-            <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
-              <h4 style="margin-bottom:0.35rem;">${item.q.de}</h4>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">${item.a.de}</p>
-            </div>
-          `).join('')}
+        <h2 style="margin-top:3.5rem;">Häufige Fragen (FAQ) & Reisevorbereitung</h2>
+        <p class="lead" style="margin-bottom:1.5rem;">
+          Wichtige Antworten zu Impfpflichten, Visum, Malariaprophylaxe, Reisesicherheit, SIM-Karten und dem Alltag vor Ort:
+        </p>
+        ${renderCategorizedFaq('de')}
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="/faq/" class="btn btn-secondary btn-sm">Alle Fragen auf der FAQ-Übersichtsseite ansehen →</a>
         </div>
       </div>
     </section>
@@ -1584,6 +1799,28 @@ function buildSite() {
     description: 'Erfahrungsbericht der Bildungsreise 2026 nach Sierra Leone von Philipp Herzberg.',
     canonicalPath: '/bildungsreisen/reiseberichte/',
     content: travelReportDe
+  }));
+
+  // ==========================================
+  // 7.2 HÄUFIGE FRAGEN (FAQ) (DEUTSCH)
+  // ==========================================
+  writeRoute('/faq', renderHtmlPage({
+    lang: 'de',
+    title: 'Häufige Fragen zu Bildungsreisen & Vorbereitung (FAQ)',
+    description: 'Antworten zu Impfpflichten (Gelbfieber), Visum, Malariaprophylaxe, Reisesicherheit, SIM-Karten und Reiseorganisation nach Sierra Leone.',
+    canonicalPath: '/faq/',
+    content: renderFaqStandalonePage('de')
+  }));
+
+  // ==========================================
+  // 7.3 ÜBER SIERRA LEONE (DEUTSCH)
+  // ==========================================
+  writeRoute('/sierra-leone', renderHtmlPage({
+    lang: 'de',
+    title: 'Sierra Leone im Überblick: Fakten, Reformen & Reisesicherheit',
+    description: 'Objektive Länderinformationen: Ibrahim Index of African Governance (IIAG), Bildungsreformen, ländliche Einkommen und Sicherheitshinweise.',
+    canonicalPath: '/sierra-leone/',
+    content: renderSierraLeonePage('de')
   }));
 
   // ==========================================
@@ -2321,14 +2558,13 @@ function buildSite() {
           </div>
         </div>
 
-        <h2 style="margin-top:3rem;">Frequently Asked Questions (FAQ)</h2>
-        <div style="display:grid; gap:1rem; margin:1.5rem 0;">
-          ${travel.faq.map(item => `
-            <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
-              <h4 style="margin-bottom:0.35rem;">${item.q.en}</h4>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">${item.a.en}</p>
-            </div>
-          `).join('')}
+        <h2 style="margin-top:3.5rem;">Frequently Asked Questions (FAQ)</h2>
+        <p class="lead" style="margin-bottom:1.5rem;">
+          Important information on mandatory immunizations, visas, malaria prophylaxis, connectivity, and field safety:
+        </p>
+        ${renderCategorizedFaq('en')}
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="/en/faq/" class="btn btn-secondary btn-sm">View Standalone FAQ Page →</a>
         </div>
       </div>
     </section>
@@ -2340,6 +2576,24 @@ function buildSite() {
     description: 'Immersive educational travel to rural Sierra Leone for students and teachers on an equal footing.',
     canonicalPath: '/en/travel/',
     content: travelEn
+  }));
+
+  // 12.8.1 FAQ (EN)
+  writeRoute('/en/faq', renderHtmlPage({
+    lang: 'en',
+    title: 'Frequently Asked Questions (FAQ)',
+    description: 'Comprehensive answers on vaccinations, visas, malaria prevention, safety, SIM cards and daily routine in Sierra Leone.',
+    canonicalPath: '/en/faq/',
+    content: renderFaqStandalonePage('en')
+  }));
+
+  // 12.8.2 SIERRA LEONE (EN)
+  writeRoute('/en/sierra-leone', renderHtmlPage({
+    lang: 'en',
+    title: 'Spotlight on Sierra Leone: Governance, Facts & Travel Advice',
+    description: 'Objective overview of Sierra Leone: Ibrahim Index of African Governance (IIAG), educational momentum, rural livelihoods and safety.',
+    canonicalPath: '/en/sierra-leone/',
+    content: renderSierraLeonePage('en')
   }));
 
   // 12.9 DONATE (EN)
@@ -2419,10 +2673,14 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
 /transparenz              /transparenz/ 301
 /ueber-uns                /ueber-uns/ 301
 /bildungsreisen           /bildungsreisen/ 301
+/sierra-leone             /sierra-leone/ 301
+/faq                      /faq/ 301
 /spenden                  /spenden/ 301
 /impressum                /impressum/ 301
 /datenschutz              /datenschutz/ 301
 /widerruf                 /widerruf/ 301
+/en/sierra-leone          /en/sierra-leone/ 301
+/en/faq                   /en/faq/ 301
 `;
 
   fs.writeFileSync(path.join(DIST_DIR, '_redirects'), redirectsContent.trim() + '\n', 'utf8');
@@ -2440,6 +2698,8 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/ueber-uns/',
     '/bildungsreisen/',
     '/bildungsreisen/reiseberichte/',
+    '/sierra-leone/',
+    '/faq/',
     '/spenden/',
     '/impressum/',
     '/datenschutz/',
@@ -2452,6 +2712,8 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/en/transparency/',
     '/en/about/',
     '/en/travel/',
+    '/en/sierra-leone/',
+    '/en/faq/',
     '/en/donate/'
   ];
 

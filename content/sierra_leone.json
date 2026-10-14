@@ -1,0 +1,188 @@
+{
+  "title": {
+    "de": "Sierra Leone im Überblick",
+    "en": "Spotlight on Sierra Leone"
+  },
+  "tagline": {
+    "de": "Reformdynamik, Governance-Fortschritte und die Realität im ländlichen Raum.",
+    "en": "Governance progress, educational reform momentum, and rural reality."
+  },
+  "summary": {
+    "de": "Sierra Leone verzeichnet heute einige der bemerkenswertesten Governance- und Bildungsfortschritte auf dem afrikanischen Kontinent. Gleichzeitig steht das Land im ländlichen Raum vor enormen Herausforderungen: Ohne Stromnetze und feste Schulbauten schaffen wir genau dort Perspektiven, wo der Hebel am größten ist.",
+    "en": "Sierra Leone is experiencing some of the most notable governance and educational improvements in Africa. Concurrently, rural communities face immense infrastructural deficits: without electrical grids or permanent classrooms, our partnerships create maximum leverage where need is greatest."
+  },
+  "governance": {
+    "title": {
+      "de": "Ibrahim Index of African Governance (IIAG) & Reformdynamik",
+      "en": "Ibrahim Index of African Governance (IIAG) & Reforms"
+    },
+    "highlights": [
+      {
+        "badge": { "de": "Kontinentaler Spitzenwert", "en": "Continental Benchmark" },
+        "metric": "16 / 16",
+        "title": {
+          "de": "Verbesserung in allen 16 Governance-Teilkategorien",
+          "en": "Improvement across all 16 governance subcategories"
+        },
+        "desc": {
+          "de": "Sierra Leone ist neben den Seychellen das einzige von 54 Ländern auf dem afrikanischen Kontinent, das sich im aktuellen Ibrahim Index of African Governance in ausnahmslos allen 16 Unterkategorien nachhaltig verbessern konnte.",
+          "en": "Alongside Seychelles, Sierra Leone is one of only two nations among all 54 African countries to record verified improvements across all 16 subcategories of the Ibrahim Index of African Governance."
+        }
+      },
+      {
+        "badge": { "de": "Afrikanisches Ranking", "en": "Continental Ranking" },
+        "metric": "Rang 23",
+        "title": {
+          "de": "Platz 23 kontinental – noch vor Ägypten",
+          "en": "Ranked #23 in Africa – ahead of Egypt"
+        },
+        "desc": {
+          "de": "Mit einem Overall Governance Score im oberen Mittelfeld liegt Sierra Leone vor etablierten Volkswirtschaften wie Ägypten und unterstreicht seine Stabilität und Reformbereitschaft.",
+          "en": "With an Overall Governance Score in the upper quartile, Sierra Leone ranks ahead of established economies like Egypt, demonstrating political stability and structural reforms."
+        }
+      },
+      {
+        "badge": { "de": "Bildungssektor #1", "en": "Education Sector #1" },
+        "metric": "#1 in Afrika",
+        "title": {
+          "de": "Größter Bildungsfortschritt Afrikas (2014–2023)",
+          "en": "Largest education progress in Africa (2014–2023)"
+        },
+        "desc": {
+          "de": "Im Zehnjahresvergleich erzielte kein afrikanisches Land größere Zuwächse im Bildungsbereich als Sierra Leone. Die staatliche Reform 'Free Quality School Education' (FQSE) hat Millionen Kindern erstmals den Schulbesuch ermöglicht.",
+          "en": "Over the 2014–2023 decade, no African nation achieved greater gains in education access and indicators. The landmark 'Free Quality School Education' (FQSE) initiative brought millions into schooling."
+        }
+      },
+      {
+        "badge": { "de": "Rechte & Gleichstellung", "en": "Rights & Equality" },
+        "metric": "Vorreiter",
+        "title": {
+          "de": "Messbare Fortschritte in Geschlechtergleichstellung",
+          "en": "Pioneering progress in gender equality"
+        },
+        "desc": {
+          "de": "Durch den 'Gender Equality and Women’s Empowerment Act' sowie das gesetzliche Verbot von Kinderehen wurden Rechte von Mädchen und Frauen gestärkt; schwangere Schülerinnen dürfen nun uneingeschränkt am Unterricht und an Abschlussprüfungen teilnehmen.",
+          "en": "Through the Gender Equality and Women’s Empowerment Act and nationwide child marriage prohibitions, rights of girls have been strengthened; pregnant students are fully guaranteed the right to schooling and national exams."
+        }
+      }
+    ]
+  },
+  "demographicsAndRuralReality": {
+    "title": {
+      "de": "Demografie & Ländliche Wirklichkeit",
+      "en": "Demographics & Rural Livelihoods"
+    },
+    "population": "8,8 Millionen",
+    "ruralShare": "55 %",
+    "metrics": [
+      {
+        "val": "8,8 Mio.",
+        "label": { "de": "Gesamtbevölkerung", "en": "Total Population" },
+        "sub": { "de": "Sehr junge Gesellschaft (Medianalter: 19 Jahre)", "en": "Youthful demographic (median age: 19 years)" }
+      },
+      {
+        "val": "55 %",
+        "label": { "de": "Ländliche Bevölkerung", "en": "Rural Population" },
+        "sub": { "de": "Leben in Dorfgemeinschaften & Kleinbauernhöfen", "en": "Living in rural villages and agrarian communities" }
+      },
+      {
+        "val": "81 %",
+        "label": { "de": "Ländlich ohne Strom", "en": "Rural Off-Grid" },
+        "sub": { "de": "Kein Zugang zum öffentlichen Stromnetz", "en": "No access to public electrical power grids" }
+      },
+      {
+        "val": "80 %",
+        "label": { "de": "Lernarmut im Grundschulalter", "en": "Learning Poverty Gap" },
+        "sub": { "de": "Kinder mit Defiziten in Lesen & Rechnen vor Ort", "en": "Children lacking foundational literacy/numeracy by age 10" }
+      }
+    ],
+    "incomeAndLivelihoods": {
+      "title": {
+        "de": "Einkommen & Kaufkraft auf dem Land (Objektive Einordnung)",
+        "en": "Rural Incomes & Purchasing Power (Objective Context)"
+      },
+      "paragraphs": {
+        "de": [
+          "Um die Situation in Sierra Leone ohne verklärende Mitleidsrhetorik sachlich zu verstehen, hilft ein Blick auf die realen Verdienste: Im ländlichen Raum erwirtschaften Familien durch Subsistenzlandwirtschaft (Reis, Maniok, Palmöl) und handwerkliche Gelegenheitsarbeit typischerweise ein Einkommen von umgerechnet ca. 30 bis 60 Euro pro Monat (oft unter 1,50 bis 2 USD pro Tag). Der gesetzliche Mindestlohn in Sierra Leone liegt bei 800 New Leone (NLE), was etwa 35 bis 40 Euro entspricht.",
+          "In diesen dörflichen Strukturen gibt es kaum staatliche Gelder für Schulinstandhaltung. Dorfgemeinschaften bauen Schulen oft zunächst aus Bambus, Palmwedeln oder ungebrannten Lehmziegeln, die jedem Starkregen ausgesetzt sind. Vor diesem wirtschaftlichen Hintergrund entfaltet jeder privat finanzierte Euro eine enorme Hebelwirkung: Ein Monatsgehalt für eine Lehrkraft von ca. 100 Euro oder 15.000 Euro für einen massiven, sturmfesten Schulneubau schaffen über Generationen hinweg verlässliche Perspektiven."
+        ],
+        "en": [
+          "To understand Sierra Leone objectively without paternalistic pity, concrete economic data is essential: In rural areas, families relying on subsistence farming (rice, cassava, palm oil) and day labor typically earn an income equivalent to €30 to €60 per month (often under $1.50 to $2.00 USD per day). The national statutory minimum wage is set at 800 New Leone (NLE), approximately €35 to €40.",
+          "Under these local conditions, municipal funding for rural school buildings is practically non-existent. Communities often start schools under temporary thatch or unbaked mud structures vulnerable to tropical storms. Against this economic backdrop, charitable funding achieves extraordinary leverage: a teacher stipend of €100/month or €15,000 for permanent engineered masonry classrooms transforms an entire village across generations."
+        ]
+      }
+    }
+  },
+  "continentalComparison": {
+    "title": {
+      "de": "Sierra Leone im afrikanischen Direktvergleich",
+      "en": "Sierra Leone in African Continental Comparison"
+    },
+    "cards": [
+      {
+        "title": { "de": "Frieden & Demokratische Stabilität", "en": "Peace & Democratic Stability" },
+        "desc": {
+          "de": "Seit dem offiziellen Ende des Bürgerkriegs 2002 hat Sierra Leone mehrere friedliche Regierungswechsel durch demokratische Wahlen vollzogen. Im Vergleich zu vielen Nachbarländern in Westafrika (Sahel-Zone) gibt es keine Militärputsche und keine extremistischen Gruppierungen.",
+          "en": "Since 2002, Sierra Leone has achieved peaceful transfers of power through regular democratic elections. Unlike neighboring Sahel regions, the country experiences zero military coups and zero insurgent violence."
+        }
+      },
+      {
+        "title": { "de": "Weltweites Vorbild für religiöse Harmonie", "en": "Global Role Model for Religious Harmony" },
+        "desc": {
+          "de": "Sierra Leone gilt international als Paradebeispiel für gelebte religiöse Toleranz: Muslime (ca. 77 %) und Christen (ca. 22 %) leben in völligem Frieden zusammen. Mischehen sind der Standard; Festtage wie Weihnachten und Eid werden von der gesamten Dorfgemeinschaft gemeinsam gefeiert.",
+          "en": "Sierra Leone is recognized globally as a model of interfaith harmony: Muslims (approx. 77%) and Christians (approx. 22%) live side by side in deep cohesion. Intermarriages are widespread; Christian and Muslim celebrations are shared community festivals."
+        }
+      },
+      {
+        "title": { "de": "Hoher Reformwille vs. Infrastrukturlücke", "en": "Reform Drive vs. Infrastructure Gap" },
+        "desc": {
+          "de": "Während in vielen Ländern Bildungsreformen an politischem Unwillen scheitern, investiert die Regierung Sierra Leones über 20 % ihres Staatshaushalts in Bildung. Die Lücke liegt primär in der ländlichen Bauinfrastruktur – genau hier greifen unsere Schulbauprojekte unterstützend ein.",
+          "en": "While educational reforms in many nations stall from lack of political will, Sierra Leone's government allocates over 20% of its national budget to education. The primary bottleneck is physical rural infrastructure—the exact gap filled by our school projects."
+        }
+      }
+    ]
+  },
+  "travelerInfo": {
+    "title": {
+      "de": "Praktische Länderinformationen für Bildungsreisende",
+      "en": "Practical Information for Travelers & Delegations"
+    },
+    "safetyAuswaertigesAmt": {
+      "title": {
+        "de": "Sicherheitslage & Reisehinweise (Auswärtiges Amt)",
+        "en": "Safety & Travel Advice (German Federal Foreign Office)"
+      },
+      "paragraphs": {
+        "de": [
+          "Das deutsche Auswärtige Amt stuft Reisen nach Sierra Leone grundsätzlich als sicher und möglich ein. Sierra Leone gehört zu den gastfreundlichsten und friedlichsten Ländern Westafrikas. Es gibt keine landesspezifischen Reise- oder Teilreisewarnungen.",
+          "Wie in allen Entwicklungsländern empfiehlt das Auswärtige Amt die Beachtung grundlegender Sicherheitsregeln: Wertgegenstände sollten nicht offen zur Schau gestellt werden, Überlandfahrten bei Dunkelheit sind wegen unbeleuchteter Fahrzeuge und Straßenschäden zu vermeiden. Unsere Bildungsreisen finden ausnahmslos in enger Abstimmung mit den lokalen Stammesführern (Paramount Chiefs) und den zuständigen Polizeibehörden statt; die Gruppe reist in einem festen Minibus mit ortskundigem Berufskraftfahrer."
+        ],
+        "en": [
+          "The German Federal Foreign Office (Auswärtiges Amt) evaluates travel to Sierra Leone as safe and viable. Sierra Leone is among the warmest, most hospitable, and peaceful countries in West Africa, with no country-specific travel bans in place.",
+          "Standard precautions for developing regions apply: Avoid displaying valuables openly, and avoid rural road transit at night due to unlit vehicles and potholed surfaces. Our educational journeys are conducted in full coordination with Paramount Chiefs and regional police, using dedicated chartered minibuses and veteran professional drivers."
+        ]
+      }
+    },
+    "roadsAndMobility": {
+      "title": { "de": "Straßenverhältnisse & Infrastruktur", "en": "Road Conditions & Infrastructure" },
+      "desc": {
+        "de": "Die Hauptverbindungsachsen zwischen Freetown, Makeni und Magburaka sind modern asphaltiert und in gutem Zustand. Die Abzweigungen in die ländlichen Dörfer (wie Mafabaneh oder Mamoru) bestehen aus unbefestigten Laterit-Pisten. In der Trockenzeit sind diese Pisten staubig, aber mit unseren Minibussen problemlos befahrbar.",
+        "en": "Primary arterial highways connecting Freetown, Makeni, and Magburaka are paved and in solid condition. Secondary rural village tracks (such as to Mafabaneh or Mamoru) consist of unpaved red laterite earth. During the dry season, these roads are dusty but fully navigable by our chartered coaches."
+      }
+    },
+    "climateAndSeason": {
+      "title": { "de": "Klima & Reisezeit (Trockenzeit)", "en": "Climate & Season (Dry Season)" },
+      "desc": {
+        "de": "Sierra Leone hat ein tropisches Klima mit einer ausgeprägten Trockenzeit (November bis April/Mai) und einer Regenzeit (Juni bis Oktober). Wir reisen bewusst in der Trockenzeit: Tagsüber herrschen sonnige 28 bis 34 °C bei angenehmer nächtlicher Abkühlung. Ein trocken-heißer Wüstenwind (Harmattan) sorgt im Landesinneren für geringe Luftfeuchtigkeit.",
+        "en": "Sierra Leone has a tropical climate marked by a dry season (November to May) and a rainy season (June to October). We travel strictly during the dry season: daytime temperatures range between 28°C and 34°C with pleasant evening cooling. The dry continental Harmattan wind lowers humidity in the interior."
+      }
+    },
+    "currencyAndPayment": {
+      "title": { "de": "Währung & Bargeld (New Leone - NLE)", "en": "Currency & Cash (New Leone - NLE)" },
+      "desc": {
+        "de": "Die Landeswährung ist der New Leone (NLE). Sierra Leone ist eine reine Bargeldwirtschaft. Kreditkarten werden nur in wenigen internationalen Hotels in Freetown akzeptiert. Geldautomaten (ATMs) sind im Landesinneren kaum vorhanden oder unzuverlässig. Wir tauschen Bargeld (EUR oder USD in kleinen, unbeschädigten Scheinen) unkompliziert vor Ort über verlässliche lokale Partner.",
+        "en": "The national currency is the New Leone (NLE). Sierra Leone operates almost entirely on cash. Credit cards are accepted only in a handful of Freetown hotels. ATMs in rural areas are scarce. We exchange cash (crisp, undamaged EUR or USD bills) seamlessly on arrival through verified partners."
+      }
+    }
+  }
+}

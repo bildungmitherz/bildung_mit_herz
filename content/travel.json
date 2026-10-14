@@ -233,20 +233,125 @@
   },
   "faq": [
     {
-      "q": { "de": "Tritt der Verein als Reiseveranstalter auf?", "en": "Is the association a commercial tour operator?" },
-      "a": { "de": "Nein. Der Verein 'Bildung mit Herz Sierra Leone e.V.' ist kein gewerblicher Reiseveranstalter. Die Reisen werden privat organisiert und die Reisekosten von allen Teilnehmenden selbst getragen.", "en": "No. The association is not a commercial travel provider. Expeditions are privately coordinated and fully self-funded by individual travelers." }
+      "category": { "de": "Einreise & Formalitäten", "en": "Entry & Formalities" },
+      "q": {
+        "de": "Ist eine Gelbfieber-Impfung für die Einreise nach Sierra Leone verpflichtend?",
+        "en": "Is a yellow fever vaccination mandatory for entry into Sierra Leone?"
+      },
+      "a": {
+        "de": "Ja, ausnahmslos. Die Gelbfieber-Impfung ist für die Einreise nach Sierra Leone gesetzlich vorgeschrieben (Pflichtimpfung). Ohne den offiziellen Nachweis im gelben internationalen Impfpass wird Ihnen die Fluggesellschaft bereits beim Check-in den Zutritt zum Flugzeug verweigern und die Einreisebehörde weist Sie ab. Die Impfung muss mindestens 10 Tage vor Reiseantritt erfolgen und bietet lebenslangen Schutz.",
+        "en": "Yes, without exception. Yellow fever immunization is legally mandatory for entering Sierra Leone. Without official certification in your international yellow certificate, airlines will deny boarding at check-in and border authorities will refuse entry. The vaccination must be administered at least 10 days before departure and confers lifelong protection."
+      }
     },
     {
-      "q": { "de": "Wer darf an den Bildungsreisen teilnehmen?", "en": "Who can participate in educational journeys?" },
-      "a": { "de": "Schülerinnen und Schüler (ab Klasse 10/11), Lehrkräfte sowie engagierte Eltern. Die Plätze sind limitiert, um eine persönliche Betreuung und einen respektvollen dörflichen Rahmen zu sichern.", "en": "Students (from grades 10/11 upwards), educators, and parents. Spots are limited to maintain an intimate, respectful community setting." }
+      "category": { "de": "Einreise & Formalitäten", "en": "Entry & Formalities" },
+      "q": {
+        "de": "Wer kümmert sich um das Visum und was kostet es?",
+        "en": "Who organizes the visa and what is the cost?"
+      },
+      "a": {
+        "de": "Um das Visum für Sierra Leone kümmert sich Philipp Herzberg zentral für alle Mitreisenden der Gruppe. Das spart Ihnen Behördengänge. Die offiziellen Visagebühren belaufen sich derzeit auf ca. 80 bis 100 US-Dollar pro Person. Alle notwendigen Passkopien und Dokumente fordern wir rechtzeitig vorab bei Ihnen an.",
+        "en": "Philipp Herzberg handles the visa application process centrally for all participants in our group. The official consular fee is currently between $80 and $100 USD per traveler. We collect all necessary passport scans and details in good time prior to departure."
+      }
     },
     {
-      "q": { "de": "Wo wird übernachtet?", "en": "What are the accommodation arrangements?" },
-      "a": { "de": "In Freetown, Makeni und Magburaka in sicheren Unterkünften sowie in Zelten und einfachen Gästehäusern direkt in den Dorfgemeinschaften. Alle Schlafplätze verfügen über Moskitonetze.", "en": "In vetted lodgings in Freetown, Makeni, and Magburaka, as well as tents and community guesthouses in the villages. All beds feature mosquito netting." }
+      "category": { "de": "Gesundheit & Impfungen", "en": "Health & Vaccinations" },
+      "q": {
+        "de": "Welche weiteren Impfungen werden empfohlen und wer berät mich individuell?",
+        "en": "What additional vaccinations are recommended and where do I receive medical advice?"
+      },
+      "a": {
+        "de": "Neben Gelbfieber werden dringend Schutzimpfungen gegen Polio (Kinderlähmung), Hepatitis A, Tetanus und Diphtherie empfohlen. Da der bisherige Impfstatus bei jedem Menschen unterschiedlich ist, muss die reisemedizinische Beratung zwingend individualisiert sein. Philipp Herzberg empfiehlt hierfür spezialisierte Tropenmediziner – in Berlin berät beispielsweise die renommierte Praxis Bernhard & Kollegen (Friedrich-Wilhelm-Platz). Philipp stellt gerne den direkten Kontakt her.",
+        "en": "In addition to yellow fever, booster vaccines against Polio, Hepatitis A, Tetanus, and Diphtheria are strongly recommended. Because personal immunization records vary widely, medical travel counseling must always be individualized. Philipp Herzberg recommends consulting certified tropical medicine specialists (in Berlin, our partner clinic Bernhard & Kollegen at Friedrich-Wilhelm-Platz). We gladly assist in coordinating appointments."
+      }
     },
     {
-      "q": { "de": "Wie ist die medizinische und sicherheitstechnische Vorsorge geregelt?", "en": "What health and safety preparations are required?" },
-      "a": { "de": "Pflicht-Gelbfieber-Impfung, empfohlene Malariaprophylaxe, Auslandskrankenversicherung, Begleitung durch vertraute lokale Guides (Yoni Sesay & Team) sowie Anmeldung bei Polizei und Paramount Chief.", "en": "Mandatory yellow fever vaccination, recommended malaria prophylaxis, international health insurance, trusted local guides (Yoni Sesay & team), and registration with police and tribal chiefs." }
+      "category": { "de": "Gesundheit & Impfungen", "en": "Health & Vaccinations" },
+      "q": {
+        "de": "Wie schützen wir uns vor Malaria?",
+        "en": "What precautions should we take against malaria?"
+      },
+      "a": {
+        "de": "Gegen Malaria gibt es keine klassische Schutzimpfung. Der Schutz erfolgt medikamentös durch Tabletten zur Chemoprophylaxe, üblicherweise Malarone (oder Atovaquon/Proguanil). Man beginnt die Einnahme kurz vor der Abreise, nimmt täglich eine Tablette während des Aufenthalts und setzt dies noch einige Tage nach Rückkehr fort. Wichtig: Obwohl wir bewusst in der Trockenzeit reisen (wo das Mückenaufkommen wesentlich geringer ist als zur Regenzeit), ist ganz Sierra Leone Malariagebiet. Wir empfehlen allen Teilnehmenden dringend, ein eigenes Reise-Moskitonetz (mit Schnur/Klebehaken) mitzubringen, um es nachts über das Bett zu spannen.",
+        "en": "There is no conventional vaccine against malaria. Prevention relies on chemoprophylaxis tablets, standardly Malarone (or generic Atovaquone/Proguanil). Treatment starts shortly before flying, continues with one daily tablet in-country, and concludes a few days after returning. Note: Even though we travel during the dry season—when mosquito activity is substantially lower than during monsoon months—Sierra Leone is malaria-endemic. We strongly advise everyone to pack a personal travel mosquito net to suspend over beds at night."
+      }
+    },
+    {
+      "category": { "de": "Gesundheit & Impfungen", "en": "Health & Vaccinations" },
+      "q": {
+        "de": "Ist eine Tollwut-Impfung ratsam?",
+        "en": "Is a rabies vaccination recommended?"
+      },
+      "a": {
+        "de": "In den Dörfern und Straßen laufen viele freilaufende Hunde umher. Die Wahrscheinlichkeit, gebissen zu werden, ist zwar gering, da wir vorsichtig sind. Da eine ausgebrochene Tollwut-Erkrankung jedoch zu 100 % tödlich (fatal) verläuft, wird eine präventive Tollwut-Impfung vor der Reise dringend empfohlen. Sie bietet maximale Sicherheit im Ernstfall.",
+        "en": "Many free-roaming and community dogs live in local villages and streets. While the likelihood of being bitten is low because we keep a safe distance, rabies is a 100% fatal disease once clinical symptoms develop. A preventative pre-exposure rabies vaccine course is therefore strongly recommended for complete peace of mind."
+      }
+    },
+    {
+      "category": { "de": "Gesundheit & Impfungen", "en": "Health & Vaccinations" },
+      "q": {
+        "de": "Brauche ich eine Auslandskrankenversicherung?",
+        "en": "Do I need international travel health insurance?"
+      },
+      "a": {
+        "de": "Ja, der Abschluss einer weltweiten Auslandskrankenversicherung mit Notfallrücktransport ist für alle Teilnehmenden verpflichtend. Solche Policen sind sehr preiswert (in der Regel ca. 15 bis 25 Euro pro Jahr) und sichern eventuelle Arztbesuche, Klinikaufenthalte oder einen medizinischen Rücktransport lückenlos ab.",
+        "en": "Yes, international health insurance covering emergency medical treatment and repatriation is mandatory for all travelers. These policies are inexpensive (usually €15 to €25 annually) and ensure comprehensive medical care and emergency evacuation if required."
+      }
+    },
+    {
+      "category": { "de": "Technik & Kommunikation", "en": "Tech & Connectivity" },
+      "q": {
+        "de": "Gibt es mobiles Internet und welche SIM-Karte benötige ich?",
+        "en": "Will I have mobile internet access and what SIM card is needed?"
+      },
+      "a": {
+        "de": "Vor Ort stellt unser Team für jeden Teilnehmenden eine lokale physische SIM-Karte bereit. Datenvolumen und Telefonie sind in Sierra Leone extrem günstig (wenige Euro für mehrere Gigabyte). Wichtige technische Voraussetzung: Ihr Smartphone muss zwingend über einen physischen Nano-SIM-Kartenslot verfügen! Reine eSIM-Smartphones (wie einige US-Modelle) können vor Ort mit den lokalen Netzkarten nicht betrieben werden.",
+        "en": "Our team provides a local physical SIM card for every traveler upon arrival. Mobile data and voice packages are extremely cheap (a few euros for multiple gigabytes). Crucial technical requirement: Your smartphone must possess a physical nano-SIM slot. Pure eSIM-only phones cannot currently use local prepaid SIMs in Sierra Leone."
+      }
+    },
+    {
+      "category": { "de": "Transport & Alltag", "en": "Transport & Routine" },
+      "q": {
+        "de": "Mit welchen Fahrzeugen reisen wir vor Ort?",
+        "en": "What vehicles do we use during the trip?"
+      },
+      "a": {
+        "de": "Wir reisen durchgehend in fest für unsere Gruppe angemieteten Minibussen (Toyota Coaster), in die circa 20 Personen plus Reisegepäck bequem hineinpassen. Die Fahrzeuge werden von erfahrenen einheimischen Berufskraftfahrern gesteuert, die mit allen Straßen- und Brückenverhältnissen bestens vertraut sind.",
+        "en": "We travel exclusively in privately chartered minibuses (Toyota Coasters) accommodating approximately 20 passengers plus luggage. The vehicles are steered by experienced local professional drivers who know all road, bridge, and piste conditions intimately."
+      }
+    },
+    {
+      "category": { "de": "Teilnahme & Unterkünfte", "en": "Participation & Lodging" },
+      "q": {
+        "de": "Wer darf an den Bildungsreisen teilnehmen?",
+        "en": "Who can participate in educational journeys?"
+      },
+      "a": {
+        "de": "Schülerinnen und Schüler (ab Klasse 10/11), Lehrkräfte sowie engagierte Eltern. Die Plätze sind limitiert, um eine persönliche Betreuung und einen respektvollen dörflichen Rahmen zu sichern.",
+        "en": "Students (from grades 10/11 upwards), educators, and parents. Spots are limited to maintain an intimate, respectful community setting."
+      }
+    },
+    {
+      "category": { "de": "Teilnahme & Unterkünfte", "en": "Participation & Lodging" },
+      "q": {
+        "de": "Wo wird während der Reise übernachtet?",
+        "en": "Where do we stay overnight during the journey?"
+      },
+      "a": {
+        "de": "In Freetown, Makeni und Magburaka übernachten wir in geprüften, sicheren Gästehäusern. Bei den Dorfaufenthalten schlafen wir in Dorfhütten, Gemeinschaftsräumen oder Zelten. Alle festen Schlafplätze sind mit Moskitonetzen geschützt.",
+        "en": "In Freetown, Makeni, and Magburaka we lodge in verified, safe guesthouses. During village immersions, we stay in community rooms, local homes, or tents. All beds are protected by mosquito netting."
+      }
+    },
+    {
+      "category": { "de": "Verein & Finanzierung", "en": "Nonprofit & Funding" },
+      "q": {
+        "de": "Tritt der Verein als Reiseveranstalter auf?",
+        "en": "Is the association a commercial tour operator?"
+      },
+      "a": {
+        "de": "Nein. Der Verein 'Bildung mit Herz Sierra Leone e.V.' ist kein gewerblicher Reiseveranstalter. Die Reisen werden privat organisiert und die Reisekosten von allen Teilnehmenden zu 100 % selbst getragen. Kein einziger Cent aus Spendengeldern fließt in Reisekosten.",
+        "en": "No. The association is not a commercial travel provider. Expeditions are privately coordinated and fully self-funded by individual travelers. Exactly zero cents from charitable donations are spent on travel costs."
+      }
     }
   ]
 }

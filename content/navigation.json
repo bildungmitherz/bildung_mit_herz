@@ -13,12 +13,23 @@
           { "title": "Grundschule Mamoru", "url": "/projekte/mamoru/" }
         ]
       },
-      { "title": "Bildungsreisen", "url": "/bildungsreisen/" },
+      {
+        "title": "Bildungsreisen",
+        "url": "/bildungsreisen/",
+        "children": [
+          { "title": "Reiseübersicht", "url": "/bildungsreisen/" },
+          { "title": "Häufige Fragen (FAQ)", "url": "/faq/" },
+          { "title": "Reisebericht 2026", "url": "/bildungsreisen/reiseberichte/" }
+        ]
+      },
+      { "title": "Sierra Leone", "url": "/sierra-leone/" },
       { "title": "Transparenz", "url": "/transparenz/" },
       { "title": "Für Unternehmen", "url": "/fuer-unternehmen/" }
     ],
     "cta": { "title": "Spenden", "url": "/spenden/" },
     "footerLegal": [
+      { "title": "Häufige Fragen (FAQ)", "url": "/faq/" },
+      { "title": "Über Sierra Leone", "url": "/sierra-leone/" },
       { "title": "Impressum", "url": "/impressum/" },
       { "title": "Datenschutz", "url": "/datenschutz/" },
       { "title": "Widerrufsbelehrung", "url": "/widerruf/" }
@@ -38,12 +49,23 @@
           { "title": "Mamoru Primary School", "url": "/en/projects/mamoru/" }
         ]
       },
-      { "title": "Educational Trips", "url": "/en/travel/" },
+      {
+        "title": "Educational Trips",
+        "url": "/en/travel/",
+        "children": [
+          { "title": "Trip Overview", "url": "/en/travel/" },
+          { "title": "Frequently Asked Questions (FAQ)", "url": "/en/faq/" },
+          { "title": "Field Report 2026", "url": "/bildungsreisen/reiseberichte/" }
+        ]
+      },
+      { "title": "Sierra Leone", "url": "/en/sierra-leone/" },
       { "title": "Transparency", "url": "/en/transparency/" },
       { "title": "For Companies", "url": "/en/corporate/" }
     ],
     "cta": { "title": "Donate", "url": "/en/donate/" },
     "footerLegal": [
+      { "title": "FAQ", "url": "/en/faq/" },
+      { "title": "About Sierra Leone", "url": "/en/sierra-leone/" },
       { "title": "Legal Notice", "url": "/impressum/" },
       { "title": "Privacy Policy", "url": "/datenschutz/" }
     ]
