@@ -55,6 +55,228 @@
       }
     ]
   },
+  "videos": [
+    {
+      "id": "Oh38F0LFiew",
+      "url": "https://www.youtube-nocookie.com/embed/Oh38F0LFiew",
+      "title": {
+        "de": "Grundsteinlegung: Traditionelles Ritual & Handschlag mit dem Dorfvorsteher",
+        "en": "Laying the Foundational Stone: Sacred Ritual & Handshake with the Village Chief"
+      },
+      "desc": {
+        "de": "Philipp Herzberg (Vereinsvorsitzender) im feierlichen Handschlag mit dem Dorfvorsteher von Mamoru. Mitgründer Yoni Sesay erläutert das traditionelle Ritual zur Einweihung und Segnung des Baugrundes vor der versammelten Dorfgemeinschaft.",
+        "en": "Philipp Herzberg shakes hands with the village chief of Mamoru. Co-founder Yoni Sesay explains the sacred ritual dedicating and blessing the school ground before the assembled village community."
+      }
+    },
+    {
+      "id": "SDXB4AJdDjE",
+      "url": "https://www.youtube-nocookie.com/embed/SDXB4AJdDjE",
+      "title": {
+        "de": "Bauzustand März 2026: Fünf Klassenräume unter Dach – Die finalen Schritte",
+        "en": "Construction Status March 2026: Five Classrooms Standing – Final Finishing Needs"
+      },
+      "desc": {
+        "de": "Ortsbegehung im März 2026: Die fünf Klassenräume stehen solide unter dem schützenden Wellblechdach. Der Rundgang dokumentiert direkt vor Ort, was für den vollendeten Schulbetrieb noch benötigt wird: wetterfester Zementverputz gegen den Monsunregen, glatt gegossene Beton-Estrichböden und abschließbare Außentüren.",
+        "en": "Field walkthrough in March 2026: all five classrooms are structurally erected under a solid metal roof. The video reveals the exact remaining needs: weather-resistant cement wall plastering against driving monsoon rains, poured concrete screed floors, and lockable security doors."
+      }
+    },
+    {
+      "id": "Iy8OfE8CqOs",
+      "url": "https://www.youtube-nocookie.com/embed/Iy8OfE8CqOs",
+      "title": {
+        "de": "Herzlicher Empfang durch die Dorfgemeinschaft Mamoru",
+        "en": "Heartfelt Welcoming Ceremony by the Mamoru Community"
+      },
+      "desc": {
+        "de": "Traditioneller Empfang mit feierlichem Gesang, Trommeln und Tanz bei der Ankunft unserer Bildungsreisegruppe. Mamoru ist ein fester Bestandteil aller unserer Bildungsreisen und wird jedes Jahr besucht.",
+        "en": "Joyous reception with traditional singing, drumming, and dancing upon our educational travel group's arrival. Mamoru is an essential annual stop on every educational journey."
+      }
+    }
+  ],
+  "constructionDiary2025": [
+    {
+      "step": 1,
+      "date": "26. Februar 2025",
+      "dateIso": "2025-02-26",
+      "title": {
+        "de": "Fundamentaushub & Streifenfundamente",
+        "en": "Trench Excavation & Strip Foundations"
+      },
+      "desc": {
+        "de": "Gemeinsam mit lokalen Maurern und Helfern aus dem Dorf werden die tiefen Streifenfundamente für alle fünf Klassenräume im Baugrund verankert.",
+        "en": "Working hand-in-hand with local masons and community volunteers, deep strip foundations for all five classrooms are anchored into the ground."
+      },
+      "image": "/assets/images/mamoru/construction/01-2025-02-26-fundamente.jpg"
+    },
+    {
+      "step": 2,
+      "date": "10. März 2025",
+      "dateIso": "2025-03-10",
+      "title": {
+        "de": "Beginn der Mauerarbeiten & Sockelzone",
+        "en": "Masonry Starts & Plinth Construction"
+      },
+      "desc": {
+        "de": "Die ersten Schichten massiver Zementblocksteine werden gesetzt und bilden den tragfähigen Sockel für den gesamten Gebäudekomplex.",
+        "en": "The first courses of solid cement blocks are laid, creating the heavy-duty structural base for the school wing."
+      },
+      "image": "/assets/images/mamoru/construction/02-2025-03-10-mauerwerk-sockel.jpg"
+    },
+    {
+      "step": 3,
+      "date": "04. April 2025",
+      "dateIso": "2025-04-04",
+      "title": {
+        "de": "Aufmauerung der Klassenzimmer-Trennwände",
+        "en": "Erecting Classroom Partition Walls"
+      },
+      "desc": {
+        "de": "Die Raumaufteilung der fünf separaten Unterrichtsräume nimmt Kontur an. Die massiven Mauern wachsen zügig in die Höhe.",
+        "en": "The floor layout of five individual classrooms takes physical shape as solid block walls rise steadily."
+      },
+      "image": "/assets/images/mamoru/construction/03-2025-04-04-klassenraumwaende-1.jpg"
+    },
+    {
+      "step": 4,
+      "date": "04. April 2025",
+      "dateIso": "2025-04-04",
+      "title": {
+        "de": "Flucht und Ausrichtung der Längsachsen",
+        "en": "Stringline Alignment of Long Wall Runs"
+      },
+      "desc": {
+        "de": "Exakte Überprüfung der Mauerfluchten entlang des über 30 Meter langen Baukörpers.",
+        "en": "Precise check of alignment and level across the entire 30+ meter building length."
+      },
+      "image": "/assets/images/mamoru/construction/04-2025-04-04-klassenraumwaende-2.jpg"
+    },
+    {
+      "step": 5,
+      "date": "07. April 2025",
+      "dateIso": "2025-04-07",
+      "title": {
+        "de": "Großzügige Fensteröffnungen für Querlüftung",
+        "en": "Framing Large Windows for Cross-Ventilation"
+      },
+      "desc": {
+        "de": "Große Fensterlaibungen sorgen im tropischen Klima für stetige Luftzirkulation und blendfreies Tageslicht.",
+        "en": "Wide window openings ensure continuous cooling breeze and pleasant natural daylight in tropical heat."
+      },
+      "image": "/assets/images/mamoru/construction/05-2025-04-07-fensteroeffnungen-1.jpg"
+    },
+    {
+      "step": 6,
+      "date": "07. April 2025",
+      "dateIso": "2025-04-07",
+      "title": {
+        "de": "Erreichen der Fensterbrüstungshöhe",
+        "en": "Parapet Level Reached Across All Rooms"
+      },
+      "desc": {
+        "de": "Alle fünf Klassenzimmertrakte erreichen gleichzeitig die Brüstungshöhe. Dorfbewohner helfen unermüdlich beim Wassertragen und Mörtelmischen.",
+        "en": "All five classroom blocks reach windowsill level simultaneously with community volunteers mixing mortar and hauling water."
+      },
+      "image": "/assets/images/mamoru/construction/06-2025-04-07-fensteroeffnungen-2.jpg"
+    },
+    {
+      "step": 7,
+      "date": "18. April 2025",
+      "dateIso": "2025-04-18",
+      "title": {
+        "de": "Mauerabschluss & Vorbereitung des Ringankers",
+        "en": "Wall Top-Out & Ring Beam Preparation"
+      },
+      "desc": {
+        "de": "Die Mauerkronen sind vollendet. Verankerungen für den Dachstuhl werden eingegossen, um Sturmfestigkeit zu gewährleisten.",
+        "en": "Masonry reaches its final height. Heavy-duty roof tie points are prepared to withstand tropical storm gusts."
+      },
+      "image": "/assets/images/mamoru/construction/07-2025-04-18-ringanker-giebel.jpg"
+    },
+    {
+      "step": 8,
+      "date": "06. Mai 2025",
+      "dateIso": "2025-05-06",
+      "title": {
+        "de": "Anlieferung & Zuschnitt des schweren Bauholzes",
+        "en": "Timber Delivery & Structural Framing"
+      },
+      "desc": {
+        "de": "Massive Holzbalken für den Dachstuhl werden angeliefert, fachgerecht imprägniert und passgenau zugesägt.",
+        "en": "Solid timber rafters are delivered to site, treated against pests, and measured for assembly."
+      },
+      "image": "/assets/images/mamoru/construction/08-2025-05-06-dachstuhl-holzbalken-1.jpg"
+    },
+    {
+      "step": 9,
+      "date": "06. Mai 2025",
+      "dateIso": "2025-05-06",
+      "title": {
+        "de": "Aufrichten der Hauptdachbinder",
+        "en": "Erecting Main Roof Trusses"
+      },
+      "desc": {
+        "de": "Zimmerleute heben die schweren Firstpfetten und Binder empor und montieren das tragende Dachtragwerk.",
+        "en": "Skilled carpenters and volunteers raise ridge beams into place, locking the roof geometry."
+      },
+      "image": "/assets/images/mamoru/construction/09-2025-05-06-dachstuhl-holzbalken-2.jpg"
+    },
+    {
+      "step": 10,
+      "date": "07. Mai 2025",
+      "dateIso": "2025-05-07",
+      "title": {
+        "de": "Verstrebung & Querlattung der Dachflächen",
+        "en": "Cross-Bracing & Roof Batten Installation"
+      },
+      "desc": {
+        "de": "Präzise Verlattung im Abstand der Wellblechbahnen verleiht dem Dachstuhl maximale Steifigkeit.",
+        "en": "Roof battens are nailed across rafters at uniform intervals, providing structural stability."
+      },
+      "image": "/assets/images/mamoru/construction/10-2025-05-07-dachkonstruktion-sparren.jpg"
+    },
+    {
+      "step": 11,
+      "date": "12. Mai 2025",
+      "dateIso": "2025-05-12",
+      "title": {
+        "de": "Eindeckung mit verzinkten Wellblechplatten",
+        "en": "Laying Galvanized Corrugated Metal Sheets"
+      },
+      "desc": {
+        "de": "Das Aufbringen der widerstandsfähigen Wellblechplatten beginnt – ein entscheidender Schritt kurz vor Einsetzen der schweren Regenfälle.",
+        "en": "Installation of durable corrugated zinc sheets gets underway, securing the building right before the rainy season."
+      },
+      "image": "/assets/images/mamoru/construction/11-2025-05-12-welldach-montage-1.jpg"
+    },
+    {
+      "step": 12,
+      "date": "12. Mai 2025",
+      "dateIso": "2025-05-12",
+      "title": {
+        "de": "Vollständiger Dachüberstand & Wetterschutz",
+        "en": "Generous Roof Overhang for Monsoon Protection"
+      },
+      "desc": {
+        "de": "Weite Dachüberstände halten Schlagregen zuverlässig von den Mauern und späteren Fensteröffnungen fern.",
+        "en": "Wide overhangs ensure driving rain drains away from block walls and future open windows."
+      },
+      "image": "/assets/images/mamoru/construction/12-2025-05-12-welldach-montage-2.jpg"
+    },
+    {
+      "step": 13,
+      "date": "24. Juni 2025",
+      "dateIso": "2025-06-24",
+      "title": {
+        "de": "Der Rohbau steht wetterfest in der Regenzeit",
+        "en": "Completed Structural Shell Standing Strong in the Rains"
+      },
+      "desc": {
+        "de": "Fünf Klassenräume stehen trocken und geschützt unter Dach. Die erste große Bauphase ist erfolgreich abgeschlossen.",
+        "en": "Five classrooms stand dry and secure under a permanent roof. Phase 1 of construction is triumphantly complete."
+      },
+      "image": "/assets/images/mamoru/construction/13-2025-06-24-fertiger-rohbau-regenzeit.jpg"
+    }
+  ],
   "milestones": [
     {
       "date": "2017–2023",
@@ -66,8 +288,8 @@
     },
     {
       "date": "2024",
-      "title": { "de": "Fundamentlegung & Errichtung der Blockstein-Mauern", "en": "Foundation & Masonry Wall Construction" },
-      "desc": { "de": "Gemeinsam mit lokalen Maurern und der Dorfgemeinschaft werden die massiven Wände für 5 Klassenräume errichtet.", "en": "Local masons and community members construct the solid structural walls for 5 classrooms." },
+      "title": { "de": "Grundsteinlegung & Vorbereitung des Baufeldes", "en": "Foundational Stone Laying & Site Preparation" },
+      "desc": { "de": "Gemeinsam mit dem Dorfvorsteher und der Dorfgemeinschaft wird die Grundsteinlegung gefeiert.", "en": "Together with the village chief and the community, the cornerstone laying ceremony is celebrated." },
       "image": "/assets/images/madina-site.jpg",
       "completed": true,
       "source": "Bautagebuch 2024"

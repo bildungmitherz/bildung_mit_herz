@@ -983,6 +983,56 @@ function renderProjectDetailPage(p, lang = 'de') {
           </div>
         ` : ''}
 
+        <!-- Mamoru Videos Section -->
+        ${p.videos && p.videos.length > 0 ? `
+          <h2 style="margin-top:3.5rem;">${isDe ? 'Videodokumentation: Von der Grundsteinlegung bis zum Rohbau' : 'Video Documentation: From Cornerstone to Structural Shell'}</h2>
+          <p class="lead">${isDe ? 'Erleben Sie die entscheidenden Momente des Schulbaus in Mamoru in Bild und Ton:' : 'Experience the pivotal moments of the school construction in Mamoru through original video footage:'}</p>
+          <div class="videos-grid">
+            ${p.videos.map(v => `
+              <div class="video-card">
+                <div class="video-card-title">${v.title[lang]}</div>
+                <div class="video-card-desc">${v.desc[lang]}</div>
+                <div class="video-responsive">
+                  <iframe src="${v.url}" title="${v.title[lang]}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        <!-- Mamoru 2025 Photo Construction Diary (Sequential 13-step evolution) -->
+        ${p.constructionDiary2025 && p.constructionDiary2025.length > 0 ? `
+          <div style="margin-top:3.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem;">
+              <h2>${isDe ? 'Bautagebuch 2025: Die fünf Klassenräume Schritt für Schritt' : '2025 Construction Diary: Five Classrooms Built Step by Step'}</h2>
+              <span style="font-size:0.85rem; background:var(--color-terracotta); color:#ffffff; padding:0.25rem 0.65rem; border-radius:var(--radius-full); font-weight:700;">
+                ${isDe ? '13 Bauphasen im Bild' : '13 Sequential Field Photos'}
+              </span>
+            </div>
+            <p class="lead" style="margin-bottom:1rem;">
+              ${isDe 
+                ? 'Originale Bilddokumentation von den ersten Fundamentgräben im Februar bis zum regendichten Rohbau im Juni 2025:' 
+                : 'Original photo sequence documenting all 13 construction phases from foundation trench excavation in February to the monsoon-proof shell in June 2025:'}
+            </p>
+            
+            <div class="construction-diary-grid">
+              ${p.constructionDiary2025.map(item => `
+                <div class="construction-diary-card">
+                  <img src="${item.image}" alt="${item.title[lang]} - Grundschule Mamoru (${item.date})" class="construction-diary-img" loading="lazy">
+                  <div class="construction-diary-body">
+                    <div class="construction-diary-meta">
+                      <span class="construction-diary-step">${isDe ? `Schritt ${item.step} von 13` : `Step ${item.step} of 13`}</span>
+                      <span class="construction-diary-date">📅 ${item.date}</span>
+                    </div>
+                    <div class="construction-diary-title">${item.title[lang]}</div>
+                    <p class="construction-diary-desc">${item.desc[lang]}</p>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
         <!-- Chronological Progress & Construction Milestones -->
         <h2 style="margin-top:3rem;">${isDe ? 'Chronologischer Baufortschritt & Meilensteine' : 'Chronological Construction Progress & Milestones'}</h2>
         <div style="margin:1.5rem 0;">
@@ -1772,10 +1822,18 @@ function buildSite() {
             mit dem Nachbardorf Magbashai – die Schule wurde zum Symbol des Friedens.
           </p>
 
-          <h3 style="margin-top:2rem;">5 fertige Klassenräume in Mamoru</h3>
+          <h3 style="margin-top:2rem;">5 fertige Klassenräume in Mamoru & Herzlicher Empfang</h3>
           <p>
             In Mamoru konnten wir die fünf fertig errichteten Klassenräume besichtigen, die wir zusammen mit Juliet Fornah und der Unterstützung 
-            der AcadeMedia Education GmbH realisiert haben. Kinder, die zuvor auf dem Lehmboden saßen, lernen nun an festen Tischen.
+            der AcadeMedia Education GmbH realisiert haben. Kinder, die zuvor auf dem nackten Lehmboden saßen, lernen nun an festen Schultischen.
+            Mamoru ist ein unverrückbarer, fester Bestandteil jeder unserer Bildungsreisen und wird von uns in jedem Jahr besucht. 
+            Mit welcher überwältigenden Gastfreundschaft, Freude, Trommeln und Gesang unsere Gruppe im Dorf willkommen geheißen wurde, zeigt das folgende Video:
+          </p>
+          <div class="video-responsive" style="margin:1.5rem 0;">
+            <iframe src="https://www.youtube-nocookie.com/embed/Iy8OfE8CqOs" title="Herzlicher Empfang durch die Dorfgemeinschaft Mamoru" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p style="font-size:0.9rem; color:var(--color-text-muted); font-style:italic; margin-top:-0.5rem; margin-bottom:1.5rem;">
+            Traditioneller Festempfang mit Gesang, Trommeln und Tanz bei der Ankunft unserer Bildungsreisegruppe im Dorf Mamoru.
           </p>
 
           <h3 style="margin-top:2rem;">Treffen mit der Ministerin für Tourismus</h3>
