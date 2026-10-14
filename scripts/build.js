@@ -71,7 +71,7 @@ function renderHtmlPage({
     '/transparenz/': '/en/transparency/',
     '/ueber-uns/': '/en/about/',
     '/bildungsreisen/': '/en/travel/',
-    '/bildungsreisen/reiseberichte/': '/en/travel/',
+    '/bildungsreisen/reiseberichte/': '/en/travel/report/',
     '/sierra-leone/': '/en/sierra-leone/',
     '/faq/': '/en/faq/',
     '/spenden/': '/en/donate/',
@@ -836,6 +836,104 @@ function renderSierraLeonePage(lang = 'de') {
   `;
 }
 
+// In-Depth Travel Report Renderer (10 Thematic Chapters)
+function renderTravelReportPage(lang = 'de') {
+  const isDe = lang === 'de';
+  const rep = travel.detailedReport2026;
+
+  return `
+    <section class="section">
+      <div class="container container-narrow">
+        <a href="${isDe ? '/bildungsreisen/' : '/en/travel/'}" class="btn btn-secondary btn-sm" style="margin-bottom:1.5rem;">
+          ${isDe ? '← Zurück zu Bildungsreisen' : '← Back to Educational Trips'}
+        </a>
+
+        <div class="section-header">
+          <div class="section-tag">${isDe ? 'Ausführlicher Reisebericht • Januar 2026' : 'In-Depth Travel Report • January 2026'}</div>
+          <h1>${rep.title[lang]}</h1>
+          <p class="lead">
+            ${isDe 
+              ? 'Ein umfassender Erfahrungs- und Reflexionsbericht von Philipp Herzberg über die Bildungsreise 2026 durch Sierra Leone: Vom dörflichen Alltag in Masingbi über Schulbaustellen bis zum diplomatischen Austausch in Freetown.' 
+              : 'A comprehensive pedagogical and reflective account by Philipp Herzberg following the 2026 educational expedition through Sierra Leone: from village immersion in Masingbi to school construction and diplomatic dialogue in Freetown.'}
+          </p>
+        </div>
+
+        <img src="/assets/images/hero-home.jpg" alt="${isDe ? 'Teilnehmende der Bildungsreise 2026 in Sierra Leone' : 'Participants of the 2026 Educational Journey in Sierra Leone'}" style="border-radius:var(--radius-lg); margin-bottom:2.5rem; width:100%; object-fit:cover; max-height:480px; box-shadow:var(--shadow-md);">
+
+        <!-- Featured Documentary Video -->
+        <div style="background:var(--color-surface); border:2px solid var(--color-border); border-radius:var(--radius-lg); padding:2rem; margin-bottom:3rem;">
+          <h3 style="margin-top:0; color:var(--color-slate-dark);">
+            🎬 ${isDe ? 'Dokumentarfilm zur Bildungsreise 2026' : 'Documentary Film: Educational Journey 2026'}
+          </h3>
+          <p style="font-size:0.95rem; color:var(--color-text-muted); margin-bottom:1.25rem;">
+            ${isDe 
+              ? 'Erleben Sie die Reise in bewegten Bildern: Authentische Momentaufnahmen von Schulbauten, Straßen, Dörfern und Begegnungen vor Ort.' 
+              : 'Experience the journey in motion: authentic footage of school builds, rural roads, village encounters, and cultural exchange.'}
+          </p>
+          <div class="video-responsive" style="margin-bottom:0;">
+            <iframe src="https://www.youtube-nocookie.com/embed/${rep.leadVideo}" title="Sierra Leone Bildungsreise 2026 Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- 10 Detailed Report Chapters -->
+        <div class="travel-report-body" style="font-size:1.02rem; line-height:1.75; color:var(--color-text-main);">
+          ${rep.sections.map((s, idx) => `
+            <article id="${s.id}" style="margin-bottom:3.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--color-border);">
+              <h2 style="font-size:1.45rem; color:var(--color-slate-dark); margin-bottom:1rem;">
+                ${s.title[lang]}
+              </h2>
+
+              ${s.content ? `<p style="margin-bottom:1.5rem;">${s.content[lang]}</p>` : ''}
+
+              ${s.pillars ? `
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin:1.75rem 0;">
+                  ${s.pillars.map(p => `
+                    <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+                      <h4 style="font-size:1.02rem; color:var(--color-terracotta); margin-bottom:0.4rem;">${p.name[lang]}</h4>
+                      <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0; line-height:1.5;">${p.desc[lang]}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+
+              ${s.videos && s.videos.length > 0 ? `
+                <div style="margin-top:1.5rem; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+                  ${s.videos.map(vidId => {
+                    const vObj = travel.videos.find(v => v.id === vidId);
+                    if (!vObj) return '';
+                    return `
+                      <div class="video-card" style="padding:1rem;">
+                        <div class="video-card-title" style="font-size:0.95rem;">${vObj.title[lang]}</div>
+                        <div class="video-card-desc" style="font-size:0.82rem; margin-bottom:0.5rem;">${vObj.desc[lang]}</div>
+                        <div class="video-responsive" style="margin:0;">
+                          <iframe src="${vObj.url}" title="${vObj.title[lang]}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              ` : ''}
+            </article>
+          `).join('')}
+        </div>
+
+        <!-- Substack Box -->
+        <div style="margin-top:3rem; padding:2rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); text-align:center;">
+          <h3 style="margin-top:0;">${isDe ? 'Laufende Reiseberichte auf Substack' : 'Ongoing Travel Journals on Substack'}</h3>
+          <p style="color:var(--color-text-muted); max-width:540px; margin:0 auto 1.25rem;">
+            ${isDe 
+              ? 'Philipp Herzberg veröffentlicht regelmäßig persönliche Tagebucheinträge und Hintergrundberichte während der Reisen auf unserem Substack-Kanal.' 
+              : 'Philipp Herzberg publishes regular field journals and reflective background essays during expeditions on our Substack channel.'}
+          </p>
+          <a href="${org.socialLinks.substack}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+            ${isDe ? 'Substack-Publikation lesen ↗' : 'Read Substack Publication ↗'}
+          </a>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 // 100% Symmetrical Project Detail Page Renderer
 function renderProjectDetailPage(p, lang = 'de') {
   const isDe = lang === 'de';
@@ -983,10 +1081,10 @@ function renderProjectDetailPage(p, lang = 'de') {
           </div>
         ` : ''}
 
-        <!-- Mamoru Videos Section -->
+        <!-- Project Videos Section -->
         ${p.videos && p.videos.length > 0 ? `
-          <h2 style="margin-top:3.5rem;">${isDe ? 'Videodokumentation: Von der Grundsteinlegung bis zum Rohbau' : 'Video Documentation: From Cornerstone to Structural Shell'}</h2>
-          <p class="lead">${isDe ? 'Erleben Sie die entscheidenden Momente des Schulbaus in Mamoru in Bild und Ton:' : 'Experience the pivotal moments of the school construction in Mamoru through original video footage:'}</p>
+          <h2 style="margin-top:3.5rem;">${isDe ? (isMafabaneh ? 'Drohnenaufnahme & Baufeld' : 'Videodokumentation: Von der Grundsteinlegung bis zur Ausstattung') : (isMafabaneh ? 'Drone Aerial Footage & Site' : 'Video Documentation: From Cornerstone to Furnishing')}</h2>
+          <p class="lead">${isDe ? (isMafabaneh ? 'Erleben Sie das Dorf Mafabaneh und das Baufeld des Learning Hubs aus der Vogelperspektive:' : 'Erleben Sie die entscheidenden Momente des Schulbaus in Mamoru in Bild und Ton:') : (isMafabaneh ? 'Experience the village of Mafabaneh and the building site from an aerial perspective:' : 'Experience pivotal moments of the school construction in Mamoru through original video footage:')}</p>
           <div class="videos-grid">
             ${p.videos.map(v => `
               <div class="video-card">
@@ -1401,6 +1499,14 @@ function buildSite() {
         <div class="callout" style="margin-top:3rem;">
           <div class="callout-title">Erfolgsbeispiel: AcadeMedia Education GmbH</div>
           <p>${corporate.existingSuccessStory.quote}</p>
+          ${corporate.existingSuccessStory.video ? `
+            <div class="video-responsive" style="margin:1.25rem 0 0.5rem;">
+              <iframe src="${corporate.existingSuccessStory.video}" title="AcadeMedia Schulausstattung Mamoru" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p style="font-size:0.85rem; color:var(--color-text-muted); font-style:italic; margin-top:0.25rem; margin-bottom:0;">
+              Dokumentation vor Ort: Die durch AcadeMedia finanzierten Tische und Holzbänke in allen fünf Klassenräumen der Grundschule Mamoru.
+            </p>
+          ` : ''}
         </div>
 
         <!-- Corporate Contact Card (No weird mailto opening) -->
@@ -1797,66 +1903,12 @@ function buildSite() {
   }));
 
   // 7.1 REISEBERICHT 2026
-  const travelReportDe = `
-    <section class="section">
-      <div class="container container-narrow">
-        <a href="/bildungsreisen/" class="btn btn-secondary btn-sm" style="margin-bottom:1.5rem;">← Zurück zu Bildungsreisen</a>
-        <div class="section-header">
-          <div class="section-tag">Reisebericht • März 2026</div>
-          <h1>Zurück aus Sierra Leone: Was wir gebaut haben und was bleibt</h1>
-          <p class="lead">Ein persönlicher Bericht von Philipp Herzberg über die Bildungsreise im Januar 2026.</p>
-        </div>
-
-        <img src="/assets/images/hero-home.jpg" alt="Teilnehmende vor dem Schulbau" style="border-radius:var(--radius-lg); margin-bottom:2.5rem; width:100%; object-fit:cover; max-height:480px;">
-
-        <div style="font-size:1.05rem; line-height:1.75; color:var(--color-text-main);">
-          <p>
-            Im Januar 2026 reiste unsere bisher größte Gruppe von 26 Personen – bestehend aus Schülerinnen und Schülern, Eltern und Lehrkräften – 
-            nach Sierra Leone. Ziel war nicht der klassische Tourismus, sondern der gemeinsame Bau an Bildungsinfrastruktur und das tiefe Verständnis füreinander.
-          </p>
-
-          <h3 style="margin-top:2rem;">Grundsteinlegung in Mafabaneh & Friedensschluss</h3>
-          <p>
-            In Mafabaneh durften wir den Grundstein für den <em>Learning Hub</em> legen. Mehr als 2.000 handgepresste Lehmziegel 
-            wurden von Dorfbewohnern und Reisenden gemeinsam gefertigt. Durch das gemeinsame Bauprojekt endete ein jahrzehntelanger Landkonflikt 
-            mit dem Nachbardorf Magbashai – die Schule wurde zum Symbol des Friedens.
-          </p>
-
-          <h3 style="margin-top:2rem;">5 fertige Klassenräume in Mamoru & Herzlicher Empfang</h3>
-          <p>
-            In Mamoru konnten wir die fünf fertig errichteten Klassenräume besichtigen, die wir zusammen mit Juliet Fornah und der Unterstützung 
-            der AcadeMedia Education GmbH realisiert haben. Kinder, die zuvor auf dem nackten Lehmboden saßen, lernen nun an festen Schultischen.
-            Mamoru ist ein unverrückbarer, fester Bestandteil jeder unserer Bildungsreisen und wird von uns in jedem Jahr besucht. 
-            Mit welcher überwältigenden Gastfreundschaft, Freude, Trommeln und Gesang unsere Gruppe im Dorf willkommen geheißen wurde, zeigt das folgende Video:
-          </p>
-          <div class="video-responsive" style="margin:1.5rem 0;">
-            <iframe src="https://www.youtube-nocookie.com/embed/Iy8OfE8CqOs" title="Herzlicher Empfang durch die Dorfgemeinschaft Mamoru" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p style="font-size:0.9rem; color:var(--color-text-muted); font-style:italic; margin-top:-0.5rem; margin-bottom:1.5rem;">
-            Traditioneller Festempfang mit Gesang, Trommeln und Tanz bei der Ankunft unserer Bildungsreisegruppe im Dorf Mamoru.
-          </p>
-
-          <h3 style="margin-top:2rem;">Treffen mit der Ministerin für Tourismus</h3>
-          <p>
-            In Freetown wurden wir von Tourismusministerin Nabeela Tunis und dem deutschen Botschafter Dr. Pascal Richter empfangen. 
-            Beide würdigten den respektvollen, partnerschaftlichen Ansatz unserer Reisen.
-          </p>
-        </div>
-
-        <div style="margin-top:3rem; padding:2rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
-          <p style="margin-bottom:0.75rem;"><strong>Vollständigen Substack-Artikel lesen:</strong></p>
-          <a href="${org.socialLinks.substack}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Originalbericht auf Substack öffnen →</a>
-        </div>
-      </div>
-    </section>
-  `;
-
   writeRoute('/bildungsreisen/reiseberichte', renderHtmlPage({
     lang: 'de',
-    title: 'Reisebericht 2026: Was wir gebaut haben',
-    description: 'Erfahrungsbericht der Bildungsreise 2026 nach Sierra Leone von Philipp Herzberg.',
+    title: 'Ausführlicher Bildungsreisebericht 2026: Pädagogische Tiefe, Begegnungen & Meilensteine',
+    description: 'Erfahrungs- und Reflexionsbericht der Bildungsreise 2026 nach Sierra Leone von Philipp Herzberg: Von Masingbi und Mamoru bis Freetown.',
     canonicalPath: '/bildungsreisen/reiseberichte/',
-    content: travelReportDe
+    content: renderTravelReportPage('de')
   }));
 
   // ==========================================
@@ -2280,6 +2332,19 @@ function buildSite() {
           `).join('')}
         </div>
 
+        <div class="callout" style="margin-top:3rem;">
+          <div class="callout-title">Success Story: AcadeMedia Education GmbH</div>
+          <p>${corporate.existingSuccessStory.quote}</p>
+          ${corporate.existingSuccessStory.video ? `
+            <div class="video-responsive" style="margin:1.25rem 0 0.5rem;">
+              <iframe src="${corporate.existingSuccessStory.video}" title="AcadeMedia Classroom Desks Mamoru" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p style="font-size:0.85rem; color:var(--color-text-muted); font-style:italic; margin-top:0.25rem; margin-bottom:0;">
+              On-site field verification: custom-made wooden desks and benches funded by AcadeMedia across all five classrooms of Mamoru Primary.
+            </p>
+          ` : ''}
+        </div>
+
         <div style="margin-top:3rem; padding:2.5rem; background:var(--color-surface); border:2px solid var(--color-border); border-radius:var(--radius-lg); text-align:center;">
           <h2>Schedule an Executive Briefing</h2>
           <p class="lead" style="max-width:600px; margin:0.75rem auto 1.5rem;">Connect directly with co-founder and school principal Philipp Herzberg for tailored corporate partnership options.</p>
@@ -2616,6 +2681,12 @@ function buildSite() {
           </div>
         </div>
 
+        <div style="text-align:center; margin:2.5rem 0; padding:2rem; background:var(--color-surface-muted); border-radius:var(--radius-md); border:1px solid var(--color-border);">
+          <h3>In-Depth Educational Travel Report 2026</h3>
+          <p style="color:var(--color-text-muted); font-size:0.95rem; margin-bottom:1.25rem;">Read Philipp Herzberg’s full 10-chapter pedagogical field account, reflecting on community immersion, school development, and intercultural learning in Sierra Leone.</p>
+          <a href="/en/travel/report/" class="btn btn-primary">Read Full 2026 Travel Report →</a>
+        </div>
+
         <h2 style="margin-top:3.5rem;">Frequently Asked Questions (FAQ)</h2>
         <p class="lead" style="margin-bottom:1.5rem;">
           Important information on mandatory immunizations, visas, malaria prophylaxis, connectivity, and field safety:
@@ -2634,6 +2705,15 @@ function buildSite() {
     description: 'Immersive educational travel to rural Sierra Leone for students and teachers on an equal footing.',
     canonicalPath: '/en/travel/',
     content: travelEn
+  }));
+
+  // 12.8.0 TRAVEL REPORT (EN)
+  writeRoute('/en/travel/report', renderHtmlPage({
+    lang: 'en',
+    title: 'In-Depth Educational Travel Report 2026: Encounters & Educational Milestones',
+    description: 'Comprehensive pedagogical and field report on the 2026 educational expedition across Sierra Leone by Philipp Herzberg.',
+    canonicalPath: '/en/travel/report/',
+    content: renderTravelReportPage('en')
   }));
 
   // 12.8.1 FAQ (EN)
@@ -2739,6 +2819,7 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
 /widerruf                 /widerruf/ 301
 /en/sierra-leone          /en/sierra-leone/ 301
 /en/faq                   /en/faq/ 301
+/en/travel/report         /en/travel/report/ 301
 `;
 
   fs.writeFileSync(path.join(DIST_DIR, '_redirects'), redirectsContent.trim() + '\n', 'utf8');
@@ -2770,6 +2851,7 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/en/transparency/',
     '/en/about/',
     '/en/travel/',
+    '/en/travel/report/',
     '/en/sierra-leone/',
     '/en/faq/',
     '/en/donate/'

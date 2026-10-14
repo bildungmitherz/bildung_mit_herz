@@ -13,42 +13,241 @@
   },
   "videos": [
     {
+      "id": "6LH_RUZlGhk",
+      "url": "https://www.youtube-nocookie.com/embed/6LH_RUZlGhk",
+      "title": { "de": "Sierra Leone Bildungsreise 2026: Gesamtdokumentation", "en": "Sierra Leone Educational Journey 2026: Full Documentary" },
+      "desc": { "de": "Umfassende Film-Dokumentation der Bildungsreise 2026: Schulbauprojekte im Landesinneren, dörfliche Immersion in Masingbi, Naturerlebnisse und Dialog in Freetown.", "en": "Comprehensive documentary of the 2026 educational expedition: rural school projects, community immersion in Masingbi, wildlife sanctuaries and diplomacy in Freetown." },
+      "category": "documentary"
+    },
+    {
       "id": "5cqYvInke7I",
       "url": "https://www.youtube-nocookie.com/embed/5cqYvInke7I",
       "title": { "de": "Dokumentation Bildungsreise (Deutsch)", "en": "Educational Journey Documentary (German)" },
-      "desc": { "de": "Umfassender Einblick in die Bildungsreise, Begegnungen mit Dorfgemeinschaften und gemeinsame Bauprojekte.", "en": "Comprehensive insight into the educational journey, community encounters and school building." }
+      "desc": { "de": "Umfassender Einblick in die Bildungsreise, Begegnungen mit Dorfgemeinschaften und gemeinsame Bauprojekte.", "en": "Comprehensive insight into the educational journey, community encounters and school building." },
+      "category": "documentary"
     },
     {
       "id": "jBt4hURaXig",
       "url": "https://www.youtube-nocookie.com/embed/jBt4hURaXig",
       "title": { "de": "Educational Journey Documentary (English)", "en": "Educational Journey Documentary (English)" },
-      "desc": { "de": "Authentische Dokumentation der Reise aus internationaler Perspektive.", "en": "Authentic video documentary following our journey through Sierra Leonean communities." }
+      "desc": { "de": "Authentische Dokumentation der Reise aus internationaler Perspektive.", "en": "Authentic video documentary following our journey through Sierra Leonean communities." },
+      "category": "documentary"
+    },
+    {
+      "id": "9yS0TS3fl1Q",
+      "url": "https://www.youtube-nocookie.com/embed/9yS0TS3fl1Q",
+      "title": { "de": "1. Schulbesuch & Begegnung im Klassenzimmer", "en": "1. School Visit & Classroom Encounters" },
+      "desc": { "de": "Direkte Begegnungen im Klassenzimmer, Unterrichtsalltag und Austausch auf Augenhöhe zwischen Reisenden und lokalen Schüler:innen.", "en": "Direct classroom encounters, shared lessons and eye-level dialogue between international students and local classes." },
+      "category": "education"
     },
     {
       "id": "Iy8OfE8CqOs",
       "url": "https://www.youtube-nocookie.com/embed/Iy8OfE8CqOs",
-      "title": { "de": "Empfang durch die Dorfgemeinschaft Mamoru", "en": "Welcoming Ceremony in Mamoru Community" },
-      "desc": { "de": "Traditioneller Festempfang mit Gesang, Trommeln und Tanz bei der Ankunft unserer Bildungsreisegruppe. Ein authentischer Eindruck davon, wie herzlich das Dorf Gäste willkommen heißt – Mamoru wird von uns jedes Jahr besucht.", "en": "Joyous celebration with traditional singing, drumming and dancing upon arrival of our educational journey cohort. An authentic experience of village hospitality – Mamoru is visited every single year." }
+      "title": { "de": "2. Besuch in Mamoru: Kultureller Empfang", "en": "2. Welcoming Ceremony in Mamoru Community" },
+      "desc": { "de": "Traditioneller Festempfang mit Gesang, Trommeln und Tanz bei der Ankunft unserer Bildungsreisegruppe. Mamoru wird von uns jedes Jahr besucht.", "en": "Joyous celebration with traditional singing, drumming and dancing upon arrival. Mamoru is visited every single year." },
+      "category": "community"
     },
     {
       "id": "Oh38F0LFiew",
       "url": "https://www.youtube-nocookie.com/embed/Oh38F0LFiew",
-      "title": { "de": "Grundsteinlegung Mamoru: Traditionelles Ritual & Handschlag mit dem Dorfvorsteher", "en": "Laying the Foundational Stone: Sacred Ritual & Handshake with Village Chief" },
-      "desc": { "de": "Philipp Herzberg im feierlichen Handschlag mit dem Dorf-Chief von Mamoru. Mitgründer Yoni Sesay erläutert das traditionelle Ritual zur Einweihung des Baugrunds vor der versammelten Dorfgemeinschaft.", "en": "Philipp Herzberg shakes hands with the village chief of Mamoru; co-founder Yoni Sesay explains the traditional ground-blessing ritual before the gathered community." }
+      "title": { "de": "3. Schulbau & Grundsteinlegung in Mamoru", "en": "3. School Construction & Cornerstone Laying" },
+      "desc": { "de": "Philipp Herzberg im feierlichen Handschlag mit dem Dorfvorsteher; Yoni Sesay erläutert das traditionelle Baugrund-Ritual vor der Dorfgemeinschaft.", "en": "Philipp Herzberg shakes hands with the village chief; Yoni Sesay explains the traditional ground-blessing ritual." },
+      "category": "construction"
     },
     {
-      "id": "SDXB4AJdDjE",
-      "url": "https://www.youtube-nocookie.com/embed/SDXB4AJdDjE",
-      "title": { "de": "Bauzustand Mamoru März 2026: Fünf Klassenräume unter Dach – Die finalen Schritte", "en": "Mamoru School March 2026: Five Classrooms Under Roof – Final Works Needed" },
-      "desc": { "de": "Begehung der fünf Klassenräume: Das massive Gebäude steht wettergeschützt unter Dach. Was vor Ort noch fehlt: Wandverputz, gegossener Betonestrich und abschließbare Außentüren.", "en": "Walkthrough of five classrooms: structural shell is standing under the roof. What is still needed on site: protective wall plaster, concrete screed floors and lockable doors." }
+      "id": "6oc9QDcu6Go",
+      "url": "https://www.youtube-nocookie.com/embed/6oc9QDcu6Go",
+      "title": { "de": "4. Palmöl-Herstellung & Ananasernte", "en": "4. Red Palm Oil Craft & Pineapple Harvest" },
+      "desc": { "de": "Traditionelles Handwerk vor Ort: Auskochen und Stampfen von rotem Palmöl sowie gemeinsame Ernte auf den tropischen Ananasfeldern.", "en": "Hands-on traditional craft: boiling and pressing red palm oil and harvesting fresh pineapples on family-run farms." },
+      "category": "culture"
     },
     {
       "id": "iiM8gJwvpc8",
       "url": "https://www.youtube-nocookie.com/embed/iiM8gJwvpc8",
-      "title": { "de": "Ein typischer Tag im Dorf", "en": "A Typical Day in the Village" },
-      "desc": { "de": "Alltag im Landesinneren: Gemeinsames Kochen, Dorffeste, Fußballspiele und afrikanische Gastfreundschaft.", "en": "Everyday life in the interior: communal cooking, festivities, soccer matches and warm hospitality." }
+      "title": { "de": "5. Dorfleben in Masingbi & Freundschaftsspiel", "en": "5. Village Life in Masingbi & Community Match" },
+      "desc": { "de": "Alltag im Landesinneren: Kochen am Holzfeuer, Dorffeste, Fußballmatch gegen die lokale Dorfmannschaft und herzliche Gastfreundschaft.", "en": "Everyday village life: cooking on open fires, community celebrations, a friendly soccer match against local youth, and deep hospitality." },
+      "category": "community"
+    },
+    {
+      "id": "4VMQ7RSjnHY",
+      "url": "https://www.youtube-nocookie.com/embed/4VMQ7RSjnHY",
+      "title": { "de": "6. Artenschutz im Tacugama-Schimpansenreservat", "en": "6. Wildlife Protection at Tacugama Sanctuary" },
+      "desc": { "de": "Exkursion in das Schimpansen-Reservat in den Hügeln von Freetown: Rettung von Wildtieren, Schutz von Primaten und tropischer Regenwald-Erhalt.", "en": "Field visit to the primate rescue sanctuary in Freetown hills: rescuing chimpanzees from the illegal trade and preserving biodiversity." },
+      "category": "nature"
+    },
+    {
+      "id": "k6P_VgBddSQ",
+      "url": "https://www.youtube-nocookie.com/embed/k6P_VgBddSQ",
+      "title": { "de": "7. Gemeinsame Bergwanderung bei Makeni", "en": "7. Mountain Ridge Day Hike Near Makeni" },
+      "desc": { "de": "Tageswanderung auf den Bergrücken bei Makeni mit Schülern, Eltern und lokalen Guides: Ein atemberaubender Panoramablick über die Weite Sierra Leones.", "en": "Full-day mountain ridge hike near Makeni with students, parents and local guides: breathtaking panoramic vista of the interior." },
+      "category": "nature"
+    },
+    {
+      "id": "tDoSTRw_dgQ",
+      "url": "https://www.youtube-nocookie.com/embed/tDoSTRw_dgQ",
+      "title": { "de": "Drohnenflug Mafabaneh: Das Baufeld der Schule", "en": "Drone Aerial Flight Mafabaneh: School Building Site" },
+      "desc": { "de": "Aus der Luft zeigen sich die Umrisse des geplanten Learning Hubs und die Einbettung in das ländliche Dorf.", "en": "Aerial perspective showcasing the footprint of the planned Learning Hub nestled within rural village surroundings." },
+      "category": "construction"
+    },
+    {
+      "id": "DnkBu1MgH68",
+      "url": "https://www.youtube-nocookie.com/embed/DnkBu1MgH68",
+      "title": { "de": "Neue Schultische & Bänke für Mamoru", "en": "New School Desks & Benches for Mamoru" },
+      "desc": { "de": "Dank AcadeMedia konnten alle fünf Klassenräume voll möbliert werden – für 85 Kinder ein fester Lernplatz.", "en": "Thanks to AcadeMedia, all five rooms are furnished with durable wooden desks for 85 primary students." },
+      "category": "construction"
+    },
+    {
+      "id": "SDXB4AJdDjE",
+      "url": "https://www.youtube-nocookie.com/embed/SDXB4AJdDjE",
+      "title": { "de": "Bauzustand Mamoru März 2026: Fünf Klassenräume unter Dach", "en": "Mamoru School March 2026: Five Classrooms Under Roof" },
+      "desc": { "de": "Begehung der fünf Klassenräume: Das massive Gebäude steht wettergeschützt unter Dach. Was vor Ort noch fehlt: Wandverputz, gegossener Betonestrich und abschließbare Außentüren.", "en": "Walkthrough of five classrooms: structural shell is standing under the roof. What is still needed on site: protective wall plaster, concrete screed floors and lockable doors." },
+      "category": "construction"
     }
   ],
+  "detailedReport2026": {
+    "title": {
+      "de": "Ausführlicher Bildungsreisebericht 2026: Pädagogische Tiefe, Begegnungen & Meilensteine",
+      "en": "Sierra Leone Educational Journey 2026: In-Depth Account, Cultural Encounters & Milestones"
+    },
+    "leadVideo": "6LH_RUZlGhk",
+    "sections": [
+      {
+        "id": "overview",
+        "title": {
+          "de": "1. Leitidee & Pädagogischer Auftrag",
+          "en": "1. Core Philosophy & Educational Purpose"
+        },
+        "content": {
+          "de": "Die Bildungsreise 2026 nach Sierra Leone wurde konzipiert, um interkulturelles Verstehen durch unmittelbare Begegnungen mit Dorfgemeinschaften, aktive Teilnahme am alltäglichen dörflichen Leben und die direkte Mitwirkung an nachhaltigen Bildungsprojekten zu fördern. Organisiert von Bildung mit Herz Sierra Leone e.V., brachte die Reise internationale Gäste und einheimische Partner zusammen, um das Land jenseits des konventionellen Massentourismus zu erfahren. Im Mittelpunkt steht die Überzeugung, dass tragfähige internationale Beziehungen nicht durch passive Konsumbeobachtung entstehen, sondern durch gemeinsames Erleben, wechselseitiges Lernen und verlässliche, langfristige Kooperation auf Augenhöhe. Das Programm vereint drei untrennbar verknüpfte Zielachsen: 1. Interkulturelle Bildung (Verständnis für Alltag, Werte und Traditionen schaffen), 2. Nachhaltige Bildungsförderung (reale Schulbau-Infrastruktur gemeinsam mit den Dörfern stärken) und 3. Langfristige internationale Partnerschaften (echte menschliche Bindungen stiften).",
+          "en": "The 2026 educational journey to Sierra Leone was designed to foster intercultural understanding through direct encounters with local communities, participation in everyday village life, and engagement with ongoing educational development projects. Organized by Bildung mit Herz Sierra Leone e.V., the journey brought together international visitors and Sierra Leonean partners to experience the country beyond conventional tourism. At the heart of the initiative is the conviction that meaningful international relationships develop through shared experiences, mutual learning, and sustained cooperation on an equal footing, rather than observing communities from a distance. The program unites three interconnected pillars: 1. Intercultural education, 2. Sustainable educational development, and 3. Long-term international cooperation."
+        }
+      },
+      {
+        "id": "projects",
+        "title": {
+          "de": "2. Besuch der Bildungsprojekte: Schule als Beziehungswerk",
+          "en": "2. Visiting Educational Projects: Schools as Community Covenants"
+        },
+        "content": {
+          "de": "Ein zentraler Baustein der Reise war der Besuch der Bildungsprojekte in Mamoru und Mafabaneh. Diese Besuche verknüpfen die Bildungsreise mit greifbaren Fortschritten vor Ort: In Mamoru stehen heute fünf Klassenräume mit festem Dach und soliden Holzbänken für 85 Kinder (gefördert durch AcadeMedia). In Mafabaneh entsteht der vom Büro Tchoban Voss ehrenamtlich entworfene Learning Hub (prämiert mit dem German Design Award 2027), dessen Baufeld bereits abgesteckt und mit über 2.000 handgepressten Lehmsteinen vorbereitet wurde. Entscheidend ist der pädagogische Ansatz: Schulbau wird nicht als anonyme Bereitstellung von Gebäuden verstanden, sondern als kontinuierlicher Beziehungsaufbau zu Lehrkräften, Familien, Kindern und Ältesten.",
+          "en": "An essential component of the journey was visiting the educational communities of Mamoru and Mafabaneh. These visits linked the journey with tangible on-the-ground progress: in Mamoru, five solid classrooms stand with permanent roofs and sturdy wooden desks for 85 pupils (funded by AcadeMedia). In Mafabaneh, the visionary circular learning hub designed by Tchoban Voss Architekten (German Design Award 2027 Winner) is under way, with site perimeters marked and 2,000 interlocking earth bricks produced. School construction is fundamentally understood not merely as physical infrastructure, but as sustained relationship-building with teachers, families, and community elders."
+        },
+        "videos": ["tDoSTRw_dgQ", "DnkBu1MgH68"]
+      },
+      {
+        "id": "masingbi",
+        "title": {
+          "de": "3. Leben in Masingbi: Immersion im dörflichen Alltag",
+          "en": "3. Living in Masingbi: Immersion in Rural Village Life"
+        },
+        "content": {
+          "de": "Zu den prägendsten Erfahrungen zählte der rund einwöchige Aufenthalt in Masingbi. Statt in Hotelkomplexen wohnte die Gruppe im Gästehaus der Familie unseres Mitgründers Yoni Sesay. Für die jungen Reisenden erforderte das ungewohnte Umfeld zunächst Anpassung – etwa das Waschen mit Wassereimern ('Eimerduschen') statt gewohnter Mischbatterien. Sehr schnell traten diese Äußerlichkeiten jedoch völlig in den Hintergrund: Das Haus wurde zum warmen Gemeinschaftsort, beim Kochen am offenen Holzfeuer, gemeinsamen Gesprächen und unvergesslichen Sonnenuntergängen über den Dächern von Masingbi. Der Abschied nach einer Woche fiel vielen sichtlich schwer – ein Zeugnis echter Verbundenheit.",
+          "en": "One of the most transformative experiences was the approximately week-long immersion in Masingbi. Instead of staying in tourist hotels, the group lived in the family guesthouse of local co-founder Yoni Sesay. For younger travelers, unfamiliar conditions initially required adjustment, such as bucket bathing rather than modern showers. However, these physical inconveniences quickly faded as the guesthouse evolved into a welcoming shared home through communal open-fire cooking, evening conversations, and memorable rural sunsets. Leaving after the week proved genuinely emotional for participants on both sides."
+        },
+        "videos": ["iiM8gJwvpc8", "6oc9QDcu6Go"]
+      },
+      {
+        "id": "diplomacy",
+        "title": {
+          "de": "4. Diplomatischer & Politischer Dialog in Freetown",
+          "en": "4. Diplomatic & Official Dialogue in Freetown"
+        },
+        "content": {
+          "de": "In der Hauptstadt Freetown wurde die Reisegruppe von Tourismusministerin Nabeela Farida Tunis sowie dem deutschen Botschafter Dr. Pascal Richter empfangen. Ministerin Tunis hob den Wert dieses innovativen Modells hervor, das sich fundamental vom herkömmlichen Strand- und Ressorttourismus abhebt und das echte kulturelle Eintauchen in Dorfgemeinschaften ins Zentrum stellt. Botschafter Dr. Richter würdigte den respektvollen, partnerschaftlichen Ansatz zwischen Schulen beider Länder als gelebte Bürgerdiplomatie auf Augenhöhe.",
+          "en": "In the capital Freetown, the delegation was received by Sierra Leone's Tourism Minister, Nabeela Farida Tunis, and Germany's Ambassador, Dr. Pascal Richter. Minister Tunis strongly commended this innovative travel model, which deliberately departs from isolated resort tourism in favor of community immersion and cultural exchange. Ambassador Dr. Richter similarly lauded the respectful, people-to-people partnership between schools and communities as authentic cultural diplomacy."
+        }
+      },
+      {
+        "id": "freetown",
+        "title": {
+          "de": "5. Freetown: Urbane Kontraste & Überwindung von Klischees",
+          "en": "5. Freetown: Urban Contrasts & Beyond Stereotypes"
+        },
+        "content": {
+          "de": "Der Wechsel vom friedlichen Landesinneren in die Metropole Freetown machte die immensen Gegensätze des Landes greifbar: Der Westen der Halbinsel mit weitläufigen Atlantikstränden und Hotelbauten steht im scharfen Kontrast zum dichten, quirligen Leben im Osten der Stadt mit seinen bunten Straßenmärkten, lebhaftem Handel und dichtem Verkehr. Diese Erfahrung lehrte eine wesentliche Lektion: Sierra Leone lässt sich nicht auf ein einziges Stereotyp von Dorfidylle, Armut oder Safari reduzieren, sondern ist eine dynamische Gesellschaft mit facettenreichen Lebensrealitäten.",
+          "en": "Transitioning from the serene interior to metropolitan Freetown exposed participants to the dramatic contrasts of the country. The western peninsula with scenic beaches and coastal hotels contrasts sharply with the high density, bustling commercial markets, and bustling traffic of the eastern city districts. This experience taught a vital educational lesson: Sierra Leone cannot be reduced to a single stereotype of rural quietude, poverty, or wildlife, but is a vibrant, multi-layered society."
+        }
+      },
+      {
+        "id": "wildlife",
+        "title": {
+          "de": "6. Artenschutz: Tacugama Chimpanzee Sanctuary",
+          "en": "6. Wildlife Conservation: Tacugama Chimpanzee Sanctuary"
+        },
+        "content": {
+          "de": "Ein berührender Exkursionstag führte in das renommierte Tacugama-Schimpansenreservat in den Bergen von Freetown. Das Reservat rettet verwaiste und aus illegaler Gefangenschaft befreite Schimpansen und bereitet sie auf ein geschütztes Leben vor. Die Teilnehmenden erlebten die eindrucksvolle Kraft und sensible Intelligenz unserer nächsten tierischen Verwandten und lernten die komplexen Zusammenhänge zwischen Waldrodung, Lebensraumschutz und biologischer Vielfalt kennen.",
+          "en": "A deeply memorable field excursion led to the renowned Tacugama Chimpanzee Sanctuary in the rainforest hills of Freetown. The sanctuary rescues orphaned and illegally trafficked chimpanzees, providing rehabilitation in natural enclosures. Participants witnessed firsthand both the physical power and sensitive intelligence of humankind's closest living relatives, while exploring the vital links between biodiversity, habitat preservation, and human responsibility."
+        },
+        "videos": ["4VMQ7RSjnHY"]
+      },
+      {
+        "id": "history",
+        "title": {
+          "de": "7. Historische Verantwortung: Die Sklavenhandels-Ruinen von Kent & Banana Island",
+          "en": "7. Historical Education: Slave-Trade Ruins at Kent & Banana Island"
+        },
+        "content": {
+          "de": "Einer der emotional intensivsten Momente der Reise war der Besuch der historischen Stätten in Kent an der Südspitze der Freetown-Halbinsel. Hier besichtigten Schülerinnen, Schüler und Lehrkräfte die Ruinen ehemaliger Sklavendepots und erfuhren vor Ort, wie versklavte Menschen in Booten auf das vorgelagerte Banana Island verschifft wurden, bevor sie auf große Sklavenschiffe nach Amerika verbracht wurden. Dieser Ort machte das unermessliche Leid des transatlantischen Sklavenhandels unmittelbar fassbar – weit eindringlicher als jedes Geschichtsbuch – und vertiefte das Verständnis für die historischen Verflechtungen zwischen Europa und Westafrika.",
+          "en": "One of the most emotionally profound visits occurred at Kent on the southern tip of the Freetown Peninsula. Participants explored stone ruins directly connected to the transatlantic slave trade and learned about the forced transport of enslaved humans by small boats to Banana Island before boarding transatlantic vessels. Encountering these historical grounds made the human tragedy of the slave trade immediately tangible—far more compellingly than textbook pages—and deepened understanding of the historic ties connecting West Africa and Europe."
+        }
+      },
+      {
+        "id": "comfort",
+        "title": {
+          "de": "8. Rückkehr zum Gewohnten: Kritisches Reflektieren der eigenen Privilegien",
+          "en": "8. Returning to Comfort: Deep Reflection on Everyday Privileges"
+        },
+        "content": {
+          "de": "Vor dem Rückflug verbrachte die Gruppe die letzten Tage in einem Strandhotel in Freetown. Nach anderthalb Wochen einfachen Lebens im Landesinneren war die Rückkehr zu fließendem warmem Wasser, gekühlten Getränken und gewohntem Standard ein spürbarer Kontrast. Annehmlichkeiten, die im europäischen Alltag als selbstverständlich gelten, wurden plötzlich bewusst wahrgenommen. Diese bewusste Gegenüberstellung regte alle Mitreisenden dazu an, eigene Gewohnheiten, Konsummuster und globale Ungleichheiten nachhaltig zu reflektieren.",
+          "en": "Toward the conclusion of the journey, the delegation spent final days at a coastal hotel in Freetown. After ten days of simple village living in the interior, returning to running tap water, cold drinks, and familiar amenities presented a stark contrast. Comforts routinely taken for granted in European daily life became consciously appreciated, encouraging travelers to critically reflect on personal assumptions, consumer habits, and global distribution of resources."
+        }
+      },
+      {
+        "id": "pillars",
+        "title": {
+          "de": "9. Die sechs pädagogischen Kernsäulen der Reise",
+          "en": "9. Six Core Educational Dimensions"
+        },
+        "pillars": [
+          {
+            "name": { "de": "Handlungsorientiertes Lernen (Experiential Learning)", "en": "Experiential Learning" },
+            "desc": { "de": "Reale soziale und ökologische Bedingungen werden vor Ort durch eigenes Handeln (Mauern, Kochen, Ziegelpressen) unmittelbar erfahren.", "en": "Real social, cultural, and ecological realities are encountered directly through hands-on participation rather than abstract theory." }
+          },
+          {
+            "name": { "de": "Perspektivenwechsel (Perspective-Taking)", "en": "Perspective-Taking" },
+            "desc": { "de": "Das Miterleben anderer Lebensmodelle regt an, eigene Denkmuster, Vorurteile und Prioritäten grundlegend zu hinterfragen.", "en": "Living alongside people from different cultural and economic realities creates opportunities to examine assumptions and dismantle bias." }
+          },
+          {
+            "name": { "de": "Geschichtsbewusstsein (Historical Understanding)", "en": "Historical Understanding" },
+            "desc": { "de": "Die Auseinandersetzung mit den Stätten des Sklavenhandels stellt historische Kausalitäten zwischen Kolonialismus und Gegenwart her.", "en": "Direct engagement with slave-trade sites establishes tangible awareness of historical relationships between Europe and West Africa." }
+          },
+          {
+            "name": { "de": "Umwelt- & Artenschutz (Environmental Education)", "en": "Environmental Education" },
+            "desc": { "de": "Der Besuch im Tacugama-Schutzgebiet vermittelt die existenzielle Bedeutung von Biodiversität und globalem Artenschutz.", "en": "Visiting wildlife conservation projects raises awareness about biodiversity, habitat preservation, and ecological responsibility." }
+          },
+          {
+            "name": { "de": "Bürgerschaftliches Engagement (Civic Engagement)", "en": "Civic Engagement" },
+            "desc": { "de": "Schulbauprojekte beweisen, wie internationale Partnerschaften durch verlässliche Kooperation echte Wirkung entfalten.", "en": "Community development projects illustrate how grassroots international partnerships create meaningful local empowerment." }
+          },
+          {
+            "name": { "de": "Interkultureller Dialog (Intercultural Communication)", "en": "Intercultural Communication" },
+            "desc": { "de": "Begegnungen auf Augenhöhe mit Familien, Dorfvorstehern und Jugendlichen überwinden kulturelle und sprachliche Barrieren.", "en": "Eye-level dialogue with families, students, and leaders builds bridges across linguistic and cultural boundaries." }
+          }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": {
+          "de": "10. Fazit: Ein vielschichtiges Bild Sierra Leones auf Augenhöhe",
+          "en": "10. Conclusion: Sustained Cooperation on an Equal Footing"
+        },
+        "content": {
+          "de": "Die zentrale Erkenntnis der Bildungsreise 2026: Eine internationale Reise entfaltet ihren tiefen Sinn erst dann, wenn Besuchende aktiv am Gemeinschaftsleben teilnehmen und echte, persönliche Beziehungen zu den Menschen vor Ort knüpfen. Die Reise bewegte sich bewusst zwischen den Kontrasten – von den Lehmstraßen des Landesinneren über Schulbaustellen bis zu den Diplomatenempfängen und den belebten Straßen Freetowns. Sie überwand vereinfachende Stereotypen und zeigte Sierra Leone in seiner ganzen kulturellen Vitalität, Gastfreundschaft, historischen Tiefe und seinen Zukunftschancen.",
+          "en": "The central insight from the 2026 journey is that international travel becomes transformative when visitors immerse themselves in everyday community life and forge authentic relationships with local partners. Deliberately navigating contrasts—from rural clay tracks and construction sites to diplomatic audiences and urban markets—the journey replaced simplistic narratives with a nuanced understanding of Sierra Leone’s cultural vitality, deep warmth, and enduring resilience."
+        }
+      }
+    ]
+  },
   "presentationDeck": {
     "title": { "de": "Umfassende Informationspräsentation (PowerPoint)", "en": "Comprehensive Information Presentation (PowerPoint)" },
     "url": "https://potsdaminternationalschool-my.sharepoint.com/:p:/g/personal/p_herzberg_school-international_de/EUAVAWNw_1VMmCD86tE3BKkBkAAMxBXJA7BpIDG7TPSmbg?e=nBcuYM"

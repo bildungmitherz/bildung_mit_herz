@@ -21,6 +21,20 @@
     "/assets/images/mafabaneh-bricks.jpg",
     "/assets/images/hero-home.jpg"
   ],
+  "videos": [
+    {
+      "id": "tDoSTRw_dgQ",
+      "url": "https://www.youtube-nocookie.com/embed/tDoSTRw_dgQ",
+      "title": {
+        "de": "Drohnenflug Mafabaneh: Das abgesteckte Baufeld aus der Vogelperspektive",
+        "en": "Drone Aerial View of Mafabaneh: The Building Site from Above"
+      },
+      "desc": {
+        "de": "Spektakuläre Luftaufnahme des Dorfes Mafabaneh. Aus der Vogelperspektive zeichnen sich bereits die markanten Umrisse und das abgesteckte Baufeld ab, auf dem die vom Architekturbüro Tchoban Voss entworfene Schule (German Design Award 2027) entstehen wird.",
+        "en": "Spectacular aerial drone view of Mafabaneh. From above, the designated building perimeter and structural contours of the Tchoban Voss-designed circular school (German Design Award 2027 Winner) are clearly visible."
+      }
+    }
+  ],
   "capacity": {
     "students": 240,
     "classrooms": 5,

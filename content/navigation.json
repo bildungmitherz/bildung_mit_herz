@@ -55,7 +55,7 @@
         "children": [
           { "title": "Trip Overview", "url": "/en/travel/" },
           { "title": "Frequently Asked Questions (FAQ)", "url": "/en/faq/" },
-          { "title": "Field Report 2026", "url": "/bildungsreisen/reiseberichte/" }
+          { "title": "Field Report 2026", "url": "/en/travel/report/" }
         ]
       },
       { "title": "Sierra Leone", "url": "/en/sierra-leone/" },
