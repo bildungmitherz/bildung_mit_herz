@@ -546,5 +546,111 @@
         "en": "No. The association is not a commercial travel provider. Expeditions are privately coordinated and fully self-funded by individual travelers. Exactly zero cents from charitable donations are spent on travel costs."
       }
     }
+  ],
+  "fieldLocationsInstagram2026": [
+    {
+      "id": "masingbi",
+      "location": "Masingbi",
+      "region": { "de": "Northern Province", "en": "Northern Province" },
+      "category": { "de": "Dorfleben & Immersion", "en": "Village Life & Immersion" },
+      "title": { "de": "Masingbi: Einwöchige Dorfgemeinschaft & Alltag", "en": "Masingbi: Week-Long Community Immersion" },
+      "desc": {
+        "de": "Wohnen im Gästehaus der Familie von Mitgründer Yoni Sesay, Kochen am offenen Holzfeuer, Eimerduschen, Dorffeste und das Fußballmatch gegen die Jugendmannschaft vor Ort.",
+        "en": "Living in co-founder Yoni Sesay's family compound, open-fire cooking, bucket baths, village celebrations, and the community football match against local youth."
+      },
+      "instagramHashtag": "#masingbi",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "mamoru",
+      "location": "Mamoru",
+      "region": { "de": "Distrikt Bombali", "en": "Bombali District" },
+      "category": { "de": "Schulbau & Möblierung", "en": "School Construction & Furniture" },
+      "title": { "de": "Mamoru: Fünf Klassenräume & AcadeMedia-Schultische", "en": "Mamoru: Five Classrooms & AcadeMedia Desks" },
+      "desc": {
+        "de": "Feierlicher Empfang mit Gesang und Trommeln, Grundstein-Ritual mit dem Dorfältesten, Begehung des wetterfesten Rohbaus und Aufbau solider Holztische für 85 Kinder.",
+        "en": "Joyous reception with traditional drumming, sacred cornerstone ceremony with the village elder, inspection of the roofed school, and assembling wooden desks for 85 pupils."
+      },
+      "instagramHashtag": "#mamoru",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "mafabaneh",
+      "location": "Mafabaneh",
+      "region": { "de": "Northern Province", "en": "Northern Province" },
+      "category": { "de": "Baufeld & Ziegelproduktion", "en": "Building Footprint & Brick Production" },
+      "title": { "de": "Mafabaneh: 2.000 Lehmziegel & Friedensschluss", "en": "Mafabaneh: 2,000 Earth Bricks & Peace Covenant" },
+      "desc": {
+        "de": "Drohnenflüge über das kreisrunde Baufeld (German Design Award 2027), Arbeit an der manuellen Ziegelpresse und historische Aussöhnung mit dem Nachbardorf Magbashai.",
+        "en": "Drone aerial flights of the circular building footprint (German Design Award 2027), pressing earth blocks on site, and celebrating peace with neighboring Magbashai."
+      },
+      "instagramHashtag": "#mafabaneh",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "tacugama",
+      "location": "Tacugama Chimpanzee Sanctuary",
+      "region": { "de": "Freetown Peninsula", "en": "Freetown Peninsula" },
+      "category": { "de": "Regenwald & Artenschutz", "en": "Rainforest & Wildlife" },
+      "title": { "de": "Tacugama: Schimpansen-Rettung & Biodiversität", "en": "Tacugama: Chimpanzee Rescue & Biodiversity" },
+      "desc": {
+        "de": "Exkursion in das weltberühmte Schutzgebiet in den Regenwald-Bergen: Rettung vor Wilderei und Tierhandel, Aufklärung über Waldschutz und Verhaltensbiologie.",
+        "en": "Field visit to the renowned rainforest sanctuary in Freetown hills: rescuing chimpanzees from illegal poaching, habitat conservation, and primate behavior education."
+      },
+      "instagramHashtag": "#tacugama",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "kent",
+      "location": "Kent & Banana Island",
+      "region": { "de": "Südspitze Halbinsel", "en": "Southern Peninsula" },
+      "category": { "de": "Historische Bildung", "en": "Historical Education" },
+      "title": { "de": "Kent: Sklavenhandels-Ruinen & Bootstransfer", "en": "Kent: Slave-Trade Ruins & Boat Crossing" },
+      "desc": {
+        "de": "Begehung der steinernen Relikte kolonialer Sklavendepots, Bootsfahrt nach Banana Island und gemeinsame historische Reflexion über transatlantische Verflechtungen.",
+        "en": "Examining stone ruins of colonial slave depots, crossing by wooden boat to Banana Island, and reflecting on the human tragedy of transatlantic slavery."
+      },
+      "instagramHashtag": "#bananaisland",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "freetown",
+      "location": "Freetown",
+      "region": { "de": "Hauptstadt Sierra Leones", "en": "Capital City" },
+      "category": { "de": "Diplomatie & Urbane Realität", "en": "Diplomacy & Urban Life" },
+      "title": { "de": "Freetown: Tourismusministerium & Marktleben", "en": "Freetown: Ministry Audience & Vibrant Markets" },
+      "desc": {
+        "de": "Offizieller Empfang bei Tourismusministerin Nabeela Tunis und deutschem Botschafter Dr. Pascal Richter; bunte Straßenmärkte im Osten und Atlantikstrände im Westen.",
+        "en": "Official reception by Tourism Minister Nabeela Tunis and German Ambassador Dr. Pascal Richter; bustling East Freetown markets and Atlantic peninsula beaches."
+      },
+      "instagramHashtag": "#freetown",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "makeni-ridge",
+      "location": "Makeni Bergrücken",
+      "region": { "de": "Distrikt Bombali", "en": "Bombali District" },
+      "category": { "de": "Wanderung & Geografie", "en": "Trekking & Geography" },
+      "title": { "de": "Makeni: Bergwanderung mit Panoramablick", "en": "Makeni: Mountain Ridge Day Hike" },
+      "desc": {
+        "de": "Tageswanderung auf den Gebirgszug bei Makeni mit Schülern, Eltern und lokalen Guides: Weite Ausblicke über die tropische Baumsavanne des Landesinneren.",
+        "en": "Full-day ridge trek near Makeni with international students, parents, and local guides: expansive panoramic views across the interior savanna."
+      },
+      "instagramHashtag": "#makeni",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    },
+    {
+      "id": "agriculture",
+      "location": "Ländliche Plantagen",
+      "region": { "de": "Zentralregion", "en": "Central Region" },
+      "category": { "de": "Traditionelles Handwerk", "en": "Traditional Craft & Agriculture" },
+      "title": { "de": "Landwirtschaft: Palmöl-Presse & Ananasernte", "en": "Agriculture: Red Palm Oil & Pineapple Harvest" },
+      "desc": {
+        "de": "Praktisches Miterleben traditioneller Subsistenzwirtschaft: Auskochen der Ölpalmenfrüchte, Holzmörser und frische Ernte auf den Ananasplantagen.",
+        "en": "Hands-on participation in traditional rural subsistence: boiling oil palm fruits, mortar pounding, and harvesting ripe pineapples in community fields."
+      },
+      "instagramHashtag": "#sierraleone",
+      "instagramUrl": "https://www.instagram.com/bildung.mit.herz/"
+    }
   ]
 }

@@ -1,0 +1,74 @@
+{
+  "id": "madina",
+  "slug": "madina",
+  "title": {
+    "de": "Grundschule Madina",
+    "en": "Madina Primary School"
+  },
+  "tagline": {
+    "de": "Archiviertes Projekt — Wichtige Lehren für nachhaltige Bauweise",
+    "en": "Archived Project — Fundamental Lessons for Sustainable Engineering"
+  },
+  "status": "archived",
+  "statusLabel": {
+    "de": "Archiviert / Pausiert",
+    "en": "Archived / Inactive"
+  },
+  "location": "Madina, Northern Province, Sierra Leone",
+  "leadImage": "/assets/images/madina-community.jpg",
+  "galleryImages": [
+    "/assets/images/madina-community.jpg",
+    "/assets/images/madina-site.jpg"
+  ],
+  "archivedNotice": {
+    "de": "Dieses Projekt wird derzeit vom Verein Bildung mit Herz Sierra Leone e.V. nicht aktiv unterstützt. Sämtliche personellen und finanziellen Kapazitäten sind aktuell zu 100 % auf die Vollendung der Grundschule Mamoru und die Errichtung des Mafabaneh Learning Hubs fokussiert.",
+    "en": "This project is currently not actively supported by Bildung mit Herz Sierra Leone e.V. All our organizational and financial resources are currently 100% concentrated on finishing the Mamoru Primary School and constructing the Mafabaneh Learning Hub."
+  },
+  "honestHistory": {
+    "de": "Bei einem frühen Besuch vor einigen Jahren übergab der Verein der Dorfgemeinschaft rund 200 Dollar. Die Dorfbewohner versuchten daraufhin eigenständig und voller Tatkraft eine Schule zu errichten – jedoch ohne statische Berechnungen, ohne Fundamentbewehrung und ohne tragende Stahlbetonpfeiler. In der darauffolgenden heftigen Regenzeit stürzte das Gebäude ein. Für unseren Verein war dies ein schmerzhafter, aber heilsamer Wendepunkt: Wir haben die feste Maxime verankert: 'Wir bauen nachhaltig und ingenieurmäßig solid – oder gar nicht.' Bevor das Projekt Madina wiederbelebt werden kann, müssen eine vollständige ingenieurtechnische Statik, professionelle Bauleitung und eine abgesicherte Gesamtfinanzierung gewährleistet sein.",
+    "en": "During an early visit years ago, the association donated around $200 to the village elders. The community courageously attempted to construct a school independently—without structural calculations, reinforced foundations, or concrete load-bearing pillars. In the subsequent heavy monsoon rains, the structure collapsed. This painful event became a fundamental lesson and turned into our strict organizational rule: 'We build sustainably and with engineering excellence — or not at all.' Before Madina can be considered for reactivation, full certified engineering blueprints, professional construction oversight, and secured funding must be established."
+  },
+  "engineeringStandard": [
+    {
+      "title": { "de": "Nachhaltiges Bauprinzip", "en": "Sustainable Building Principle" },
+      "desc": { "de": "Kein Schulbau ohne statische Vorberechnung, wetterfeste Fundamente und bauliche Begleitung.", "en": "No school construction without structural engineering, monsoon-proof foundations, and expert oversight." }
+    },
+    {
+      "title": { "de": "Fokus auf Mamoru & Mafabaneh", "en": "Active Focus on Mamoru & Mafabaneh" },
+      "desc": { "de": "Konzentration aller Spendengelder auf die erfolgreiche Vollendung der beiden aktiven Schulbauten.", "en": "Concentration of all charitable funds on the successful completion of our two active school projects." }
+    },
+    {
+      "title": { "de": "Transparenz über Rückschläge", "en": "Radical Transparency on Lessons" },
+      "desc": { "de": "Wir verschweigen Herausforderungen nicht, sondern lernen offen und ehrlich aus Erfahrungen.", "en": "We do not conceal difficulties, but share lessons openly and honestly with our community." }
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2024 / 2025",
+      "title": { "de": "Eigeninitiative der Dorfgemeinschaft & Schadensanalyse", "en": "Community initiative & post-collapse structural assessment" },
+      "desc": { "de": "Dokumentation der Einsturzursache: Fehlende Stahlbewehrung führte bei Starkregen zum Einsturz.", "en": "Documentation of structural failure: unreinforced earthen blocks collapsed during heavy rainfall." },
+      "completed": true,
+      "source": "Reisedokumentation"
+    },
+    {
+      "date": "Januar 2026",
+      "title": { "de": "Verabschiedung der vereinsweiten Baustandards", "en": "Adoption of association-wide engineering standards" },
+      "desc": { "de": "Beschluss des Vorstands: Zukünftig nur noch ingenieurmäßig geprüfte Bauweisen mit professioneller Aufsicht.", "en": "Board decision: exclusively certified structural engineering with professional local supervision." },
+      "completed": true,
+      "source": "Vorstandsbeschluss"
+    },
+    {
+      "date": "Status Quo",
+      "title": { "de": "Projekt archiviert & pausiert", "en": "Project archived & paused" },
+      "desc": { "de": "Aktuell keine aktive Mittelverwendung oder Spendenaufrufe für Madina.", "en": "Currently no active fundraising or project expenditures for Madina." },
+      "completed": true,
+      "source": "Vereinsstatus"
+    }
+  ],
+  "finances": {
+    "totalEstimatedBudget": { "amount": 28000, "currency": "EUR", "status": "estimated", "asOfDate": "2026-03-01", "sourceNote": "Kostenschätzung für einen späteren normgerechten Neubau" },
+    "securedFunding": { "amount": 0, "currency": "EUR", "status": "verified", "asOfDate": "2026-08-31", "sourceNote": "Projekt aktuell pausiert (keine aktiven Spenden)" },
+    "outstandingNeed": { "amount": 28000, "currency": "EUR", "status": "estimated", "asOfDate": "2026-08-31", "sourceNote": "Mögliche spätere Gesamtfinanzierung" },
+    "corporateFundingPackages": []
+  }
+}

@@ -23,11 +23,16 @@ const news = loadJson('news.json');
 const materials = loadJson('materials.json');
 const sierraLeone = loadJson('sierra_leone.json');
 
-// Only active projects (Madina removed per instruction)
-const projects = [
+// Active projects and archived projects
+const activeProjects = [
   loadJson('projects/mafabaneh.json'),
   loadJson('projects/mamoru.json')
 ];
+const archivedProjects = [
+  loadJson('projects/madina.json')
+];
+const allProjects = [...activeProjects, ...archivedProjects];
+const projects = activeProjects;
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) {
@@ -67,6 +72,7 @@ function renderHtmlPage({
     '/projekte/': '/en/projects/',
     '/projekte/mafabaneh/': '/en/projects/mafabaneh/',
     '/projekte/mamoru/': '/en/projects/mamoru/',
+    '/projekte/madina/': '/en/projects/madina/',
     '/fuer-unternehmen/': '/en/corporate/',
     '/transparenz/': '/en/transparency/',
     '/ueber-uns/': '/en/about/',
@@ -459,6 +465,7 @@ function renderNewsSection(lang = 'de') {
         <div class="news-grid">
           ${news.map(item => {
             const itemLink = typeof item.link === 'object' ? item.link[lang] : item.link;
+            const itemDate = typeof item.date === 'object' ? item.date[lang] : item.date;
             const isExternal = itemLink.startsWith('http');
             return `
               <article class="news-card">
@@ -466,7 +473,7 @@ function renderNewsSection(lang = 'de') {
                 <div class="news-card-body">
                   <div class="news-card-meta">
                     <span class="news-card-pill">${item.category[lang]}</span>
-                    <span class="news-card-date">${item.date}</span>
+                    <span class="news-card-date">${itemDate}</span>
                   </div>
                   <h3 class="news-card-title">${item.title[lang]}</h3>
                   <p class="news-card-summary">${item.summary[lang]}</p>
@@ -620,6 +627,72 @@ function renderStrategicVision(lang = 'de') {
         </div>
       `).join('')}
     </div>
+  `;
+}
+
+// Reusable Instagram Field Location Showcase
+function renderInstagramLocationShowcase(lang = 'de') {
+  const isDe = lang === 'de';
+  const locs = travel.fieldLocationsInstagram2026 || [];
+  return `
+    <section class="section" style="padding-top:2.5rem; padding-bottom:3rem;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:2rem;">
+          <div class="section-tag" style="background:#fdf2f8; color:#be185d; border:1px solid #fbcfe8;">
+            📸 Instagram @bildung.mit.herz
+          </div>
+          <h2>${isDe ? 'Eindrücke aus Sierra Leone: Videos & Fotos vor Ort' : 'Field Impressions from Sierra Leone: Reels & Photos'}</h2>
+          <p class="lead" style="max-width:760px;">
+            ${isDe 
+              ? 'Für jeden Ort, den wir 2026 in Sierra Leone besucht haben, teilen wir authentische Videos, Stories und Fotodokumentationen auf unserem offiziellen Instagram-Kanal <strong>@bildung.mit.herz</strong>:' 
+              : 'For every single location visited across Sierra Leone in 2026, we share authentic reels, stories and photo documentation on our official Instagram channel <strong>@bildung.mit.herz</strong>:'}
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+          ${locs.map(loc => `
+            <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-sm);">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.5rem; gap:0.5rem; flex-wrap:wrap;">
+                  <span style="font-size:0.75rem; font-weight:700; color:var(--color-terracotta); text-transform:uppercase; letter-spacing:0.04em;">
+                    📍 ${loc.location}
+                  </span>
+                  <span style="font-size:0.75rem; background:var(--color-surface-muted); color:var(--color-text-muted); padding:0.15rem 0.5rem; border-radius:3px;">
+                    ${loc.category[lang]}
+                  </span>
+                </div>
+                <h3 style="font-size:1.15rem; color:var(--color-slate-dark); margin-bottom:0.6rem; line-height:1.35;">
+                  ${loc.title[lang]}
+                </h3>
+                <p style="font-size:0.88rem; color:var(--color-text-muted); line-height:1.55; margin-bottom:1.25rem;">
+                  ${loc.desc[lang]}
+                </p>
+              </div>
+              <div>
+                <a href="${loc.instagramUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center; gap:0.4rem;">
+                  <span>📸</span>
+                  <span>${isDe ? `Reels & Fotos aus ${loc.location} ↗` : `View Reels from ${loc.location} ↗`}</span>
+                </a>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="margin-top:2.5rem; text-align:center; background:linear-gradient(135deg, #fdf2f8 0%, #fff1f2 100%); border:1px solid #fbcfe8; border-radius:var(--radius-lg); padding:1.75rem;">
+          <h3 style="margin-top:0; margin-bottom:0.35rem; color:#9d174d;">
+            📱 ${isDe ? 'Folgen Sie @bildung.mit.herz auf Instagram' : 'Follow @bildung.mit.herz on Instagram'}
+          </h3>
+          <p style="color:#831843; font-size:0.92rem; max-width:620px; margin:0 auto 1.25rem;">
+            ${isDe 
+              ? 'Begleiten Sie unsere Projektfortschritte, Handwerker und Reisegruppen in Echtzeit. Regelmäßige Reels, Stories und Einblicke direkt aus den Dörfern.' 
+              : 'Experience our ongoing project milestones, local craftspeople, and educational cohorts in real time. Regular reels and stories direct from Sierra Leone.'}
+          </p>
+          <a href="${org.socialLinks.instagram}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            ${isDe ? 'Offiziellen Instagram-Account öffnen ↗' : 'Open Official Instagram Account ↗'}
+          </a>
+        </div>
+      </div>
+    </section>
   `;
 }
 
@@ -917,6 +990,9 @@ function renderTravelReportPage(lang = 'de') {
           `).join('')}
         </div>
 
+        <!-- Instagram Field Showcase across Visited Locations -->
+        ${renderInstagramLocationShowcase(lang)}
+
         <!-- Substack Box -->
         <div style="margin-top:3rem; padding:2rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); text-align:center;">
           <h3 style="margin-top:0;">${isDe ? 'Laufende Reiseberichte auf Substack' : 'Ongoing Travel Journals on Substack'}</h3>
@@ -938,6 +1014,109 @@ function renderTravelReportPage(lang = 'de') {
 function renderProjectDetailPage(p, lang = 'de') {
   const isDe = lang === 'de';
   const isMafabaneh = p.id === 'mafabaneh';
+
+  if (p.status === 'archived') {
+    return `
+    <section class="section">
+      <div class="container container-narrow">
+        <a href="${isDe ? '/projekte/' : '/en/projects/'}" class="btn btn-secondary btn-sm" style="margin-bottom:1.5rem;">
+          ${isDe ? '← Zurück zur Projektübersicht' : '← Back to Projects Overview'}
+        </a>
+        
+        <div style="margin-bottom:1rem; display:flex; align-items:center; gap:0.75rem;">
+          <span class="status-badge" style="background:#fee2e2; color:#991b1b; border:1px solid #f87171;">
+            ${p.statusLabel[lang]}
+          </span>
+          <span style="font-size:0.9rem; color:var(--color-text-muted);">📍 ${p.location}</span>
+        </div>
+
+        <h1 style="margin-bottom:0.75rem;">${p.title[lang]}</h1>
+        <p class="lead" style="margin-bottom:2rem;">${p.tagline[lang]}</p>
+
+        <!-- Archived Project Alert Banner -->
+        <div style="background:#fef2f2; border:2px solid #f87171; border-radius:var(--radius-lg); padding:1.75rem; margin-bottom:2.5rem; box-shadow:var(--shadow-sm);">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem; flex-wrap:wrap;">
+            <span style="font-size:1.5rem;">⚠️</span>
+            <span style="background:#dc2626; color:#ffffff; font-weight:800; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.65rem; border-radius:var(--radius-full);">
+              ${isDe ? 'Archiviertes Projekt' : 'Archived Project'}
+            </span>
+            <strong style="font-size:1.15rem; color:#991b1b;">
+              ${isDe ? 'Dieses Projekt wird derzeit nicht aktiv unterstützt' : 'This project is currently not actively supported'}
+            </strong>
+          </div>
+          <p style="color:#7f1d1d; font-size:0.95rem; line-height:1.6; margin-bottom:0;">
+            ${p.archivedNotice[lang]}
+          </p>
+        </div>
+
+        <img src="${p.leadImage}" alt="${p.title[lang]}" style="border-radius:var(--radius-lg); margin-bottom:2rem; box-shadow:var(--shadow-md); width:100%; object-fit:cover; max-height:480px;">
+
+        <!-- Honest History & Lessons Learned -->
+        <div style="background:var(--color-surface); padding:2rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); margin:2.5rem 0;">
+          <h2 style="margin-top:0; color:var(--color-slate-dark);">
+            ${isDe ? 'Hintergrund & Wichtige Lehren aus der Anfangszeit' : 'Background & Fundamental Lessons Learned'}
+          </h2>
+          <p style="font-size:1rem; line-height:1.7; color:var(--color-text-main); margin-bottom:0;">
+            ${p.honestHistory[lang]}
+          </p>
+        </div>
+
+        <!-- Structural Engineering Standards Adopted -->
+        <h2 style="margin-top:3rem;">${isDe ? 'Konsequenzen & Vereinskriterien für nachhaltigen Bau' : 'Structural Standards & Association Criteria'}</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin:1.5rem 0;">
+          ${(p.engineeringStandard || []).map(s => `
+            <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
+              <h4 style="margin-bottom:0.35rem; color:var(--color-terracotta);">${s.title[lang]}</h4>
+              <p style="font-size:0.9rem; margin-bottom:0; color:var(--color-text-muted);">${s.desc[lang]}</p>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Milestones Timeline -->
+        <h2 style="margin-top:3rem;">${isDe ? 'Chronologie & Projektschritte' : 'Chronology & Project History'}</h2>
+        <div style="margin:1.5rem 0;">
+          ${p.milestones.map(m => `
+            <div class="chronology-step">
+              <div class="chronology-step-content" style="width:100%;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem; flex-wrap:wrap; gap:0.5rem;">
+                  <span style="font-weight:700; color:var(--color-terracotta); font-size:0.95rem;">${m.date}</span>
+                  <span style="font-size:0.75rem; background:#fee2e2; color:#991b1b; padding:0.15rem 0.5rem; border-radius:3px; font-weight:600;">
+                    ${isDe ? 'Dokumentiert' : 'Archived'}
+                  </span>
+                </div>
+                <h4 style="margin-bottom:0.35rem; font-size:1.1rem;">${m.title[lang]}</h4>
+                <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0.5rem;">${m.desc[lang]}</p>
+                <div style="font-size:0.78rem; color:#78716c;">
+                  <strong>${isDe ? 'Quelle' : 'Source'}:</strong> ${m.source}
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Active Projects Link Box -->
+        <div style="margin-top:3.5rem; padding:2rem; background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1px solid #86efac; border-radius:var(--radius-lg); text-align:center;">
+          <h3 style="margin-top:0; color:#166534;">
+            ${isDe ? 'Unterstützen Sie unsere aktiven Schulbauprojekte' : 'Support Our Active School Construction Projects'}
+          </h3>
+          <p style="color:#15803d; font-size:0.95rem; max-width:620px; margin:0 auto 1.5rem;">
+            ${isDe 
+              ? 'Unsere gesamte Energie fließt aktuell in die Fertigstellung der 5 Klassenräume in Mamoru und den Bau des Mafabaneh Learning Hubs.' 
+              : 'Our entire collective focus is currently directed toward completing five classrooms in Mamoru and constructing the Mafabaneh Learning Hub.'}
+          </p>
+          <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+            <a href="${isDe ? '/projekte/mamoru/' : '/en/projects/mamoru/'}" class="btn btn-primary btn-sm">
+              ${isDe ? 'Grundschule Mamoru ansehen →' : 'View Mamoru Primary →'}
+            </a>
+            <a href="${isDe ? '/projekte/mafabaneh/' : '/en/projects/mafabaneh/'}" class="btn btn-secondary btn-sm">
+              ${isDe ? 'Mafabaneh Learning Hub ansehen →' : 'View Mafabaneh Hub →'}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    `;
+  }
 
   return `
     <section class="section">
@@ -984,6 +1163,19 @@ function renderProjectDetailPage(p, lang = 'de') {
 
         <!-- Prominent Bank Info Quick Card Right Near Top -->
         ${renderBankQuickCard(lang, p.title[lang])}
+
+        ${p.crowdfunding ? `
+          <!-- GoFundMe Crowdfunding Alternative Notice -->
+          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1rem 1.25rem; margin-top:1rem; margin-bottom:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+            <div style="font-size:0.88rem; color:var(--color-text-muted); max-width:680px;">
+              <strong>💳 ${isDe ? 'Spenden aus dem Ausland oder per Kreditkarte?' : 'International Donors or Credit Card?'}</strong>
+              <span style="display:block; margin-top:0.2rem;">${p.crowdfunding.note[lang]}</span>
+            </div>
+            <a href="${p.crowdfunding.campaignUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="white-space:nowrap;">
+              ${isDe ? 'GoFundMe-Kampagne ↗' : 'GoFundMe Campaign ↗'}
+            </a>
+          </div>
+        ` : ''}
 
         <!-- Project Story & Impact -->
         <div style="margin:2.5rem 0;">
@@ -1428,6 +1620,34 @@ function buildSite() {
             </article>
           `).join('')}
         </div>
+
+        <!-- Archived & Paused Projects Section -->
+        <div style="margin-top:4rem; padding-top:2.5rem; border-top:1px solid var(--color-border);">
+          <div class="section-tag" style="background:#fef2f2; color:#b91c1c; border:1px solid #fecaca;">Transparenz & Dokumentation</div>
+          <h2 style="margin-top:0.5rem; font-size:1.5rem;">Archivierte & pausierte Projekte</h2>
+          <p style="color:var(--color-text-muted); max-width:760px; font-size:0.95rem; margin-bottom:1.5rem;">
+            Wahre Transparenz bedeutet auch, über Herausforderungen und pausierte Initiativen offen zu berichten. Hier dokumentieren wir Projekte, die derzeit vom Verein nicht aktiv unterstützt werden:
+          </p>
+
+          <div class="projects-grid">
+            ${archivedProjects.map(p => `
+              <article class="project-card" style="border-color:#fca5a5;">
+                <div class="project-card-image-wrap">
+                  <img src="${p.leadImage}" alt="${p.title.de}" class="project-card-image">
+                  <span class="status-badge" style="background:#fee2e2; color:#991b1b; border:1px solid #f87171;">${p.statusLabel.de}</span>
+                </div>
+                <div class="project-card-body">
+                  <h3 class="project-card-title">${p.title.de}</h3>
+                  <p class="project-card-summary">${p.tagline.de}</p>
+                  <div style="margin-top:auto; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.85rem; color:var(--color-text-muted);">${p.location.split(',')[0]}</span>
+                    <a href="/projekte/${p.slug}/" class="btn btn-secondary btn-sm">Archivbericht ansehen →</a>
+                  </div>
+                </div>
+              </article>
+            `).join('')}
+          </div>
+        </div>
       </div>
     </section>
   `;
@@ -1435,7 +1655,7 @@ function buildSite() {
   writeRoute('/projekte', renderHtmlPage({
     lang: 'de',
     title: 'Unsere Schulprojekte in Sierra Leone',
-    description: 'Übersicht über alle aktiven Bau- und Bildungsprojekte in Sierra Leone: Mafabaneh Learning Hub und Grundschule Mamoru.',
+    description: 'Übersicht über alle aktiven Bau- und Bildungsprojekte in Sierra Leone sowie Dokumentation archivierter Initiativen.',
     canonicalPath: '/projekte/',
     content: projectsOverviewDe
   }));
@@ -1443,7 +1663,7 @@ function buildSite() {
   // ==========================================
   // 3. PROJEKT DETAILSEITEN (DEUTSCH)
   // ==========================================
-  projects.forEach(p => {
+  allProjects.forEach(p => {
     writeRoute(`/projekte/${p.slug}`, renderHtmlPage({
       lang: 'de',
       title: p.title.de,
@@ -1876,6 +2096,9 @@ function buildSite() {
           </div>
         </div>
 
+        <!-- Instagram Field Showcase across Visited Locations -->
+        ${renderInstagramLocationShowcase('de')}
+
         <div style="text-align:center; margin:2.5rem 0; padding:2rem; background:var(--color-surface-muted); border-radius:var(--radius-md); border:1px solid var(--color-border);">
           <h3>Ausführlicher Reisebericht 2026</h3>
           <p style="color:var(--color-text-muted); font-size:0.95rem; margin-bottom:1.25rem;">Lesen Sie den vollständigen Erfahrungsbericht von Philipp Herzberg über Trommeln in Makoma und Grundsteine in Mafabaneh.</p>
@@ -1967,7 +2190,7 @@ function buildSite() {
             </div>
             <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
               <h4>Gibt es alternative Spendenwege (Kreditkarte, PayPal)?</h4>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">Um Gebührenabzüge durch Zahlungsdienstleister von bis zu 3 % zu vermeiden, setzen wir bewusst auf die direkte SEPA-Banküberweisung. So kommen garantiert 100 % Ihrer Unterstützung in Sierra Leone an.</p>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">Um Gebührenabzüge durch Zahlungsdienstleister von bis zu 3 % zu vermeiden und sicherzustellen, dass 100 % in Sierra Leone ankommen, empfehlen wir die direkte SEPA-Banküberweisung. Für Unterstützerinnen und Unterstützer ohne europäisches Bankkonto oder bei gewünschter Zahlung via Kreditkarte/Apple Pay besteht zusätzlich die Möglichkeit, unsere verifizierte GoFundMe-Kampagne zu nutzen: <a href="https://www.gofundme.com/f/wir-bauen-schulen-in-sierra-leone-mach-mit" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary-dark); font-weight:600; text-decoration:underline;">GoFundMe: Wir bauen Schulen in Sierra Leone</a> (bitte beachten Sie, dass GoFundMe Abwicklungsgebühren einbehält und keine deutschen Zuwendungsbestätigungen ausstellen kann).</p>
             </div>
           </div>
         </div>
@@ -2231,6 +2454,25 @@ function buildSite() {
         </div>
       </div>
     </section>
+
+    <!-- Corporate Teaser -->
+    <section class="section section-muted">
+      <div class="container" style="background:var(--color-surface); border:2px solid var(--color-border); border-radius:var(--radius-lg); padding:3.5rem 2.5rem; display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center;">
+        <div>
+          <span class="hero-tagline" style="margin-bottom:0.75rem;">For Corporations & Foundations</span>
+          <h2>Sponsor School Infrastructure with Verifiable Impact</h2>
+          <p class="lead" style="margin-bottom:1.5rem;">
+            Invest targeted funds into rural education: from classroom furniture sets to full classroom blocks or annual teacher salaries. We provide comprehensive photo and receipt documentation for your CSR reporting.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="/en/corporate/" class="btn btn-primary">Review Partnership Models</a>
+            <button type="button" class="btn btn-secondary copy-btn" data-copy="${org.contacts.email}">
+              Copy Email Address
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   `;
 
   writeRoute('/en', renderHtmlPage({
@@ -2261,13 +2503,52 @@ function buildSite() {
               <div class="project-card-body">
                 <h2 class="project-card-title">${p.title.en}</h2>
                 <p class="project-card-summary">${p.tagline.en}</p>
+
+                <div class="funding-bar-wrap">
+                  <div class="funding-bar-labels">
+                    <span>Secured: ${p.finances.securedFunding.amount.toLocaleString('en-US')} €</span>
+                    <span>Need: ${p.finances.outstandingNeed.amount.toLocaleString('en-US')} €</span>
+                  </div>
+                  <div class="funding-progress">
+                    <div class="funding-progress-fill" style="width: ${Math.round((p.finances.securedFunding.amount / p.finances.totalEstimatedBudget.amount) * 100)}%;"></div>
+                  </div>
+                </div>
+
                 <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
                   <span style="font-size:0.85rem; color:var(--color-text-muted);">${p.location.split(',')[0]}</span>
-                  <a href="/en/projects/${p.slug}/" class="btn btn-secondary btn-sm">Details →</a>
+                  <a href="/en/projects/${p.slug}/" class="btn btn-secondary btn-sm">View Project →</a>
                 </div>
               </div>
             </article>
           `).join('')}
+        </div>
+
+        <!-- Archived & Paused Projects Section -->
+        <div style="margin-top:4rem; padding-top:2.5rem; border-top:1px solid var(--color-border);">
+          <div class="section-tag" style="background:#fef2f2; color:#b91c1c; border:1px solid #fecaca;">Transparency & Field Records</div>
+          <h2 style="margin-top:0.5rem; font-size:1.5rem;">Archived & Paused Projects</h2>
+          <p style="color:var(--color-text-muted); max-width:760px; font-size:0.95rem; margin-bottom:1.5rem;">
+            Authentic transparency means reporting openly on challenges and paused initiatives. Here we document projects that are currently not actively supported by the association:
+          </p>
+
+          <div class="projects-grid">
+            ${archivedProjects.map(p => `
+              <article class="project-card" style="border-color:#fca5a5;">
+                <div class="project-card-image-wrap">
+                  <img src="${p.leadImage}" alt="${p.title.en}" class="project-card-image">
+                  <span class="status-badge" style="background:#fee2e2; color:#991b1b; border:1px solid #f87171;">${p.statusLabel.en}</span>
+                </div>
+                <div class="project-card-body">
+                  <h3 class="project-card-title">${p.title.en}</h3>
+                  <p class="project-card-summary">${p.tagline.en}</p>
+                  <div style="margin-top:auto; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.85rem; color:var(--color-text-muted);">${p.location.split(',')[0]}</span>
+                    <a href="/en/projects/${p.slug}/" class="btn btn-secondary btn-sm">View Archive Notes →</a>
+                  </div>
+                </div>
+              </article>
+            `).join('')}
+          </div>
         </div>
       </div>
     </section>
@@ -2276,13 +2557,13 @@ function buildSite() {
   writeRoute('/en/projects', renderHtmlPage({
     lang: 'en',
     title: 'Our School Projects in Sierra Leone',
-    description: 'Overview of all active educational infrastructure projects in Sierra Leone: Mafabaneh Learning Hub and Mamoru Primary School.',
+    description: 'Overview of all active educational infrastructure projects in Sierra Leone as well as archived initiatives.',
     canonicalPath: '/en/projects/',
     content: projectsEn
   }));
 
   // 12.3 & 12.4 PROJECT DETAIL PAGES (EN)
-  projects.forEach(p => {
+  allProjects.forEach(p => {
     writeRoute(`/en/projects/${p.slug}`, renderHtmlPage({
       lang: 'en',
       title: p.title.en,
@@ -2681,6 +2962,9 @@ function buildSite() {
           </div>
         </div>
 
+        <!-- Instagram Field Showcase across Visited Locations -->
+        ${renderInstagramLocationShowcase('en')}
+
         <div style="text-align:center; margin:2.5rem 0; padding:2rem; background:var(--color-surface-muted); border-radius:var(--radius-md); border:1px solid var(--color-border);">
           <h3>In-Depth Educational Travel Report 2026</h3>
           <p style="color:var(--color-text-muted); font-size:0.95rem; margin-bottom:1.25rem;">Read Philipp Herzberg’s full 10-chapter pedagogical field account, reflecting on community immersion, school development, and intercultural learning in Sierra Leone.</p>
@@ -2762,8 +3046,8 @@ function buildSite() {
               <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">Yes! Simply specify the target project in your transfer memo (e.g. "Donation Mamoru" or "Donation Mafabaneh"). Funds will be deployed strictly for that project.</p>
             </div>
             <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
-              <h4>Why SEPA bank transfer instead of credit card or PayPal?</h4>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">To avoid 2–3% transaction fees charged by payment processors, we prioritize direct bank transfers. That way, 100% of your gift reaches Sierra Leone without deductions.</p>
+              <h4>Can I donate via credit card or international platforms?</h4>
+              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">To guarantee that 100% of donations reach schools without 2–3% transaction fee deductions, we prioritize direct bank transfers (SEPA / IBAN). For international supporters who prefer card payments or Apple Pay, we also maintain a verified GoFundMe campaign: <a href="https://www.gofundme.com/f/wir-bauen-schulen-in-sierra-leone-mach-mit" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary-dark); font-weight:600; text-decoration:underline;">GoFundMe: Building Schools in Sierra Leone</a> (note that GoFundMe retains payment processing fees and cannot issue German tax receipts).</p>
             </div>
           </div>
         </div>
@@ -2798,13 +3082,9 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
 /unterstützen/            /spenden/ 301
 /unterstützen             /spenden/ 301
 
-# Removed project redirects (Madina -> /projekte/)
-/projekte/madina/         /projekte/ 301
-/projekte/madina          /projekte/ 301
-/en/projects/madina/      /en/projects/ 301
-/en/projects/madina       /en/projects/ 301
-
-# Clean URLs
+# Clean URLs & Trailing Slashes
+/projekte/madina          /projekte/madina/ 301
+/en/projects/madina       /en/projects/madina/ 301
 /projekte/kappr-yoni/     /projekte/mafabaneh/ 301
 /projekte/kappr-yoni      /projekte/mafabaneh/ 301
 /fuer-unternehmen         /fuer-unternehmen/ 301
@@ -2832,6 +3112,7 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/projekte/',
     '/projekte/mafabaneh/',
     '/projekte/mamoru/',
+    '/projekte/madina/',
     '/fuer-unternehmen/',
     '/transparenz/',
     '/ueber-uns/',
@@ -2847,6 +3128,7 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/en/projects/',
     '/en/projects/mafabaneh/',
     '/en/projects/mamoru/',
+    '/en/projects/madina/',
     '/en/corporate/',
     '/en/transparency/',
     '/en/about/',

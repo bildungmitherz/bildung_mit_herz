@@ -1,7 +1,10 @@
 [
   {
     "id": "german-design-award-2027",
-    "date": "Oktober 2026",
+    "date": {
+      "de": "Oktober 2026",
+      "en": "October 2026"
+    },
     "category": { "de": "Architektur-Auszeichnung", "en": "Architecture Award" },
     "title": {
       "de": "German Design Award 2027 für den Mafabaneh Learning Hub!",
@@ -19,7 +22,10 @@
   },
   {
     "id": "trockenzeit-2026",
-    "date": "Oktober 2026",
+    "date": {
+      "de": "Oktober 2026",
+      "en": "October 2026"
+    },
     "category": { "de": "Baufortschritt", "en": "Construction" },
     "title": {
       "de": "Vorbereitungen für die Trockenzeit-Bauphase 2026/2027",
@@ -30,11 +36,17 @@
       "en": "As the monsoon season subsides, we are coordinating upcoming material deliveries with local partners: protective plaster and screed flooring for Mamoru, and timber roofing for the Mafabaneh Learning Hub."
     },
     "image": "/assets/images/mafabaneh-bricks.jpg",
-    "link": "/projekte/mamoru/"
+    "link": {
+      "de": "/projekte/mamoru/",
+      "en": "/en/projects/mamoru/"
+    }
   },
   {
     "id": "reisebericht-2026",
-    "date": "März 2026",
+    "date": {
+      "de": "März 2026",
+      "en": "March 2026"
+    },
     "category": { "de": "Bildungsreise", "en": "Educational Journey" },
     "title": {
       "de": "Rückblick Bildungsreise: 26 Teilnehmende & Grundsteinlegung",
@@ -45,11 +57,17 @@
       "en": "Our third educational journey brought together students, parents and teachers. Hand-in-hand with community elders, 2,000 earth bricks were produced, sealing a historic inter-village peace covenant."
     },
     "image": "/assets/images/hero-home.jpg",
-    "link": "/bildungsreisen/reiseberichte/"
+    "link": {
+      "de": "/bildungsreisen/reiseberichte/",
+      "en": "/en/travel/report/"
+    }
   },
   {
     "id": "academediasupport-2026",
-    "date": "Januar 2026",
+    "date": {
+      "de": "Januar 2026",
+      "en": "January 2026"
+    },
     "category": { "de": "Unternehmenspartnerschaft", "en": "Corporate Partnership" },
     "title": {
       "de": "AcadeMedia sichert Mobiliar und Jahresgehälter in Mamoru",
@@ -60,6 +78,9 @@
       "en": "Thanks to major support from AcadeMedia Education GmbH, all five classrooms at Mamoru Primary School were equipped with sturdy wooden desks, and five teacher salaries were guaranteed for 12 months."
     },
     "image": "/assets/images/mamoru-school.jpg",
-    "link": "/projekte/mamoru/"
+    "link": {
+      "de": "/projekte/mamoru/",
+      "en": "/en/projects/mamoru/"
+    }
   }
 ]

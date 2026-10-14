@@ -127,5 +127,17 @@
         "description": { "de": "Ausstattung mit langlebigen Holztischen und Bänken für Schüler:innen.", "en": "Furnishing with durable wooden tables and benches for pupils." }
       }
     ]
+  },
+  "crowdfunding": {
+    "platform": "GoFundMe",
+    "campaignUrl": "https://www.gofundme.com/f/wir-bauen-schulen-in-sierra-leone-mach-mit",
+    "campaignTitle": {
+      "de": "Wir bauen Schulen in Sierra Leone – Mach mit!",
+      "en": "We build schools in Sierra Leone – Join us!"
+    },
+    "note": {
+      "de": "Für Spenden aus dem Ausland oder per Kreditkarte / Apple Pay steht alternativ unsere verifizierte GoFundMe-Kampagne bereit. Hinweis: Bei direkter SEPA-Banküberweisung auf unser Spendenkonto fließen 100 % Ihrer Spende ohne Abzug von Plattformgebühren direkt in den Bau.",
+      "en": "For international contributions or payments via Credit Card / Apple Pay, our verified GoFundMe campaign is optionally available. Note: With direct SEPA bank transfer to our donation account, 100% of your donation reaches the building site completely free of platform fees."
+    }
   }
 }
