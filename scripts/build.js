@@ -72,7 +72,6 @@ function renderHtmlPage({
     '/projekte/': '/en/projects/',
     '/projekte/mafabaneh/': '/en/projects/mafabaneh/',
     '/projekte/mamoru/': '/en/projects/mamoru/',
-    '/projekte/madina/': '/en/projects/madina/',
     '/fuer-unternehmen/': '/en/corporate/',
     '/transparenz/': '/en/transparency/',
     '/ueber-uns/': '/en/about/',
@@ -599,6 +598,37 @@ function renderPackingList(lang = 'de') {
   `;
 }
 
+// Reusable Video Card with Horizontal Theater Mode Expansion
+function renderVideoCard(v, lang = 'de') {
+  const isDe = lang === 'de';
+  const title = v.title[lang] || v.title.de || '';
+  const desc = v.desc ? (v.desc[lang] || v.desc.de || '') : '';
+  const coverImg = v.coverImage || `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+  const escapedTitle = title.replace(/'/g, "\\'");
+  return `
+    <div class="video-card">
+      <button type="button" class="video-theater-badge" aria-label="${isDe ? 'Theater-Modus beenden' : 'Exit theater mode'}">
+        <span>⤡</span>
+        <span>${isDe ? 'Theater-Modus' : 'Theater Mode'}</span>
+      </button>
+      <div class="video-cover-facade" data-video-id="${v.id}" onclick="const card=this.closest('.video-card'); if(card){card.classList.add('is-expanded');} this.innerHTML='<iframe src=\\'https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0\\' title=\\'${escapedTitle}\\' style=\\'width:100%; height:100%; border:0;\\' allow=\\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\\' allowfullscreen></iframe>'">
+        <img src="${coverImg}" alt="${title}" class="video-cover-img" loading="lazy">
+        <div class="video-play-btn" aria-label="${isDe ? 'Video abspielen: ' : 'Play video: '}${title}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </div>
+        <div class="video-play-hint">
+          <span>▶ ${isDe ? 'Video abspielen (Theater-Modus)' : 'Play Video (Theater Mode)'}</span>
+          <span>YouTube HD</span>
+        </div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">${title}</div>
+        ${desc ? `<div class="video-card-desc">${desc}</div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
 // Reusable Video Gallery Generator
 function renderVideoGallery(lang = 'de') {
   const isDe = lang === 'de';
@@ -613,31 +643,133 @@ function renderVideoGallery(lang = 'de') {
 
   return `
     <div class="videos-grid">
-      ${filtered.map(v => {
-        const title = v.title[lang] || v.title.de;
-        const desc = v.desc[lang] || v.desc.de;
-        const coverImg = v.coverImage || `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
-        const escapedTitle = title.replace(/'/g, "\\'");
-        return `
-          <div class="video-card">
-            <div class="video-cover-facade" data-video-id="${v.id}" onclick="this.innerHTML='<iframe src=\\'https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0\\' title=\\'${escapedTitle}\\' style=\\'width:100%; height:100%; border:0;\\' allow=\\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\\' allowfullscreen></iframe>'">
-              <img src="${coverImg}" alt="${title}" class="video-cover-img" loading="lazy">
-              <div class="video-play-btn" aria-label="${isDe ? 'Video abspielen: ' : 'Play video: '}${title}">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-              <div class="video-play-hint">
-                <span>▶ ${isDe ? 'Video abspielen' : 'Play Video'}</span>
-                <span>YouTube HD</span>
-              </div>
-            </div>
-            <div class="video-card-body">
-              <div class="video-card-title">${title}</div>
-              <div class="video-card-desc">${desc}</div>
+      ${filtered.map(v => renderVideoCard(v, lang)).join('')}
+    </div>
+  `;
+}
+
+// Reusable Homepage Social Media Footprint Component (Instagram & YouTube)
+function renderHomeSocialFootprint(lang = 'de') {
+  const isDe = lang === 'de';
+  const featVidId = isDe ? '5cqYvInke7I' : 'jBt4hURaXig';
+  const featVideo = travel.videos.find(v => v.id === featVidId) || {
+    id: featVidId,
+    title: {
+      de: 'Dokumentarfilm: Bildungsreise Sierra Leone 2026',
+      en: 'Field Documentary: Sierra Leone Educational Journey 2026'
+    },
+    desc: {
+      de: '25-minütige Gesamtdokumentation unserer Reise: Begegnungen in Mafabaneh und Mamoru, der Schulbau und kulturelle Höhepunkte.',
+      en: '25-minute comprehensive documentary of our journey: community encounters in Mafabaneh and Mamoru, school builds, and cultural immersion.'
+    },
+    coverImage: `https://img.youtube.com/vi/${featVidId}/hqdefault.jpg`
+  };
+
+  return `
+    <section class="section" style="background:var(--color-surface); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag" style="background:#fdf2f8; color:#be185d; border:1px solid #fbcfe8;">
+            ${isDe ? 'Social Media & Video-Einblicke' : 'Social Media & Field Insights'}
+          </div>
+          <h2>${isDe ? 'Direkt aus Sierra Leone: Folgen Sie uns online' : 'Direct from Sierra Leone: Follow Our Journey Online'}</h2>
+          <p class="lead" style="max-width:760px; margin-left:auto; margin-right:auto;">
+            ${isDe 
+              ? 'Erleben Sie Schulbau, Handwerker und Dorfgemeinschaften in Echtzeit. Auf Instagram und YouTube teilen wir regelmäßige Reels, Vor-Ort-Interviews und ungefilterte Baudokumentationen.' 
+              : 'Experience school construction, local craftspeople, and rural communities in real time. We publish frequent reels, on-site interviews, and uncut building logs on Instagram and YouTube.'}
+          </p>
+        </div>
+
+        <div class="social-footprint-grid">
+          <!-- Instagram Channel Card -->
+          <div class="social-footprint-card instagram-card">
+            <span class="social-card-badge instagram">
+              <span>📸</span>
+              <span>Instagram • @bildung.mit.herz</span>
+            </span>
+            <h3 class="social-card-title">
+              ${isDe ? 'Tägliche Storys, Reels & Fotos aus den Dörfern' : 'Daily Stories, Reels & Field Photos from the Villages'}
+            </h3>
+            <p class="social-card-desc">
+              ${isDe 
+                ? 'Begleiten Sie unsere Projektleiter Philipp Herzberg und Yoni Sesay direkt vor Ort. Kurze Video-Reels zeigen das Pressen der Lehmziegel in Mafabaneh, Schreinerarbeiten für Mamoru und spontane Dorffeste.' 
+                : 'Follow project leaders Philipp Herzberg and Yoni Sesay on the ground. Quick video reels document earth brick compression in Mafabaneh, carpentry in Mamoru, and spontaneous village celebrations.'}
+            </p>
+            <ul class="social-card-features">
+              <li class="social-card-feature-item">
+                <span class="social-card-feature-bullet">✓</span>
+                <span>${isDe ? 'Authentische Einblicke ohne PR-Filter' : 'Authentic field updates with zero PR filters'}</span>
+              </li>
+              <li class="social-card-feature-item">
+                <span class="social-card-feature-bullet">✓</span>
+                <span>${isDe ? 'Reels aus Mafabaneh, Mamoru, Makeni & Freetown' : 'Reels from Mafabaneh, Mamoru, Makeni & Freetown'}</span>
+              </li>
+              <li class="social-card-feature-item">
+                <span class="social-card-feature-bullet">✓</span>
+                <span>${isDe ? 'Direkter Austausch mit den Gründern & Freiwilligen' : 'Direct engagement with founders and volunteers'}</span>
+              </li>
+            </ul>
+            <div style="margin-top:auto;">
+              <a href="${org.socialLinks.instagram}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width:100%; justify-content:center; gap:0.5rem; background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border:0;">
+                <span>📸</span>
+                <span>${isDe ? '@bildung.mit.herz auf Instagram öffnen ↗' : 'Open @bildung.mit.herz on Instagram ↗'}</span>
+              </a>
             </div>
           </div>
-        `;
-      }).join('')}
-    </div>
+
+          <!-- YouTube Channel Card -->
+          <div class="social-footprint-card youtube-card">
+            <span class="social-card-badge youtube">
+              <span>▶</span>
+              <span>YouTube • @bildung-mit-herz-sierra-leone</span>
+            </span>
+            <h3 class="social-card-title">
+              ${isDe ? 'Ausführliche Baudokumentationen & Reisefilme' : 'In-Depth Building Logs & Documentary Films'}
+            </h3>
+            <p class="social-card-desc">
+              ${isDe 
+                ? 'Auf unserem YouTube-Kanal veröffentlichen wir detaillierte Berichte: von der rituellen Grundsteinlegung mit Dorfvorstehern über Drohnenaufnahmen der Schulanlagen bis zum 25-minütigen Bildungsreise-Dokumentarfilm.' 
+                : 'Our YouTube channel hosts full documentaries: from the traditional cornerstone ceremony with village elders to aerial drone surveys of the building plots and the 25-minute travel documentary.'}
+            </p>
+            <ul class="social-card-features">
+              <li class="social-card-feature-item">
+                <span class="social-card-feature-bullet">✓</span>
+                <span>${isDe ? 'Drohnenaufnahmen des Baufelds in Mafabaneh' : 'Aerial drone footage of the Mafabaneh building site'}</span>
+              </li>
+              <li class="social-card-feature-item">
+                <span class="social-card-feature-bullet">✓</span>
+                <span>${isDe ? 'Grundsteinlegung & Bautagebuch Mamoru' : 'Mamoru cornerstone ceremony and building progress'}</span>
+              </li>
+              <li class="social-card-feature-item">
+                <span class="social-card-feature-bullet">✓</span>
+                <span>${isDe ? 'Offizielle Dokumentarfilme in HD' : 'Official high-definition documentary films'}</span>
+              </li>
+            </ul>
+            <div style="margin-top:auto;">
+              <a href="${org.socialLinks.youtube}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width:100%; justify-content:center; gap:0.5rem; border-color:#dc2626; color:#dc2626;">
+                <span>▶</span>
+                <span>${isDe ? 'YouTube-Kanal besuchen & abonnieren ↗' : 'Visit & Subscribe on YouTube ↗'}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Documentary Video with Theater Mode on Home -->
+        <div style="margin-top:3rem;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+            <h3 style="font-size:1.2rem; color:var(--color-slate-dark); margin:0;">
+              🎬 ${isDe ? 'Ausgewählter Videobericht: Klicken zum Abspielen im Theater-Modus' : 'Featured Video: Click to Play in Theater Mode'}
+            </h3>
+            <span style="font-size:0.85rem; color:var(--color-text-muted);">
+              ${isDe ? 'Klick vergrößert das Video horizontal' : 'Click expands video horizontally'}
+            </span>
+          </div>
+          <div class="videos-grid" style="margin:0;">
+            ${renderVideoCard(featVideo, lang)}
+          </div>
+        </div>
+      </div>
+    </section>
   `;
 }
 
@@ -995,19 +1127,11 @@ function renderTravelReportPage(lang = 'de') {
               ` : ''}
 
               ${s.videos && s.videos.length > 0 ? `
-                <div style="margin-top:1.5rem; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+                <div style="margin-top:1.5rem;" class="videos-grid">
                   ${s.videos.map(vidId => {
                     const vObj = travel.videos.find(v => v.id === vidId);
                     if (!vObj) return '';
-                    return `
-                      <div class="video-card" style="padding:1rem;">
-                        <div class="video-card-title" style="font-size:0.95rem;">${vObj.title[lang]}</div>
-                        <div class="video-card-desc" style="font-size:0.82rem; margin-bottom:0.5rem;">${vObj.desc[lang]}</div>
-                        <div class="video-responsive" style="margin:0;">
-                          <iframe src="${vObj.url}" title="${vObj.title[lang]}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                      </div>
-                    `;
+                    return renderVideoCard(vObj, lang);
                   }).join('')}
                 </div>
               ` : ''}
@@ -1303,15 +1427,7 @@ function renderProjectDetailPage(p, lang = 'de') {
           <h2 style="margin-top:3.5rem;">${isDe ? (isMafabaneh ? 'Drohnenaufnahme & Baufeld' : 'Videodokumentation: Von der Grundsteinlegung bis zur Ausstattung') : (isMafabaneh ? 'Drone Aerial Footage & Site' : 'Video Documentation: From Cornerstone to Furnishing')}</h2>
           <p class="lead">${isDe ? (isMafabaneh ? 'Erleben Sie das Dorf Mafabaneh und das Baufeld des Learning Hubs aus der Vogelperspektive:' : 'Erleben Sie die entscheidenden Momente des Schulbaus in Mamoru in Bild und Ton:') : (isMafabaneh ? 'Experience the village of Mafabaneh and the building site from an aerial perspective:' : 'Experience pivotal moments of the school construction in Mamoru through original video footage:')}</p>
           <div class="videos-grid">
-            ${p.videos.map(v => `
-              <div class="video-card">
-                <div class="video-card-title">${v.title[lang]}</div>
-                <div class="video-card-desc">${v.desc[lang]}</div>
-                <div class="video-responsive">
-                  <iframe src="${v.url}" title="${v.title[lang]}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-              </div>
-            `).join('')}
+            ${p.videos.map(v => renderVideoCard(v, lang)).join('')}
           </div>
         ` : ''}
 
@@ -1528,6 +1644,9 @@ function buildSite() {
       </div>
     </section>
 
+    <!-- Social Media Footprint (Instagram & YouTube) -->
+    ${renderHomeSocialFootprint('de')}
+
     <!-- Prominent Bank Info Quick Card on Home -->
     <section class="section section-muted" style="padding-top:2rem; padding-bottom:2rem;">
       <div class="container container-narrow">
@@ -1645,34 +1764,6 @@ function buildSite() {
             </article>
           `).join('')}
         </div>
-
-        <!-- Archived & Paused Projects Section -->
-        <div style="margin-top:4rem; padding-top:2.5rem; border-top:1px solid var(--color-border);">
-          <div class="section-tag" style="background:#fef2f2; color:#b91c1c; border:1px solid #fecaca;">Transparenz & Dokumentation</div>
-          <h2 style="margin-top:0.5rem; font-size:1.5rem;">Archivierte & pausierte Projekte</h2>
-          <p style="color:var(--color-text-muted); max-width:760px; font-size:0.95rem; margin-bottom:1.5rem;">
-            Wahre Transparenz bedeutet auch, über Herausforderungen und pausierte Initiativen offen zu berichten. Hier dokumentieren wir Projekte, die derzeit vom Verein nicht aktiv unterstützt werden:
-          </p>
-
-          <div class="projects-grid">
-            ${archivedProjects.map(p => `
-              <article class="project-card" style="border-color:#fca5a5;">
-                <div class="project-card-image-wrap">
-                  <img src="${p.leadImage}" alt="${p.title.de}" class="project-card-image">
-                  <span class="status-badge" style="background:#fee2e2; color:#991b1b; border:1px solid #f87171;">${p.statusLabel.de}</span>
-                </div>
-                <div class="project-card-body">
-                  <h3 class="project-card-title">${p.title.de}</h3>
-                  <p class="project-card-summary">${p.tagline.de}</p>
-                  <div style="margin-top:auto; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
-                    <span style="font-size:0.85rem; color:var(--color-text-muted);">${p.location.split(',')[0]}</span>
-                    <a href="/projekte/${p.slug}/" class="btn btn-secondary btn-sm">Archivbericht ansehen →</a>
-                  </div>
-                </div>
-              </article>
-            `).join('')}
-          </div>
-        </div>
       </div>
     </section>
   `;
@@ -1680,7 +1771,7 @@ function buildSite() {
   writeRoute('/projekte', renderHtmlPage({
     lang: 'de',
     title: 'Unsere Schulprojekte in Sierra Leone',
-    description: 'Übersicht über alle aktiven Bau- und Bildungsprojekte in Sierra Leone sowie Dokumentation archivierter Initiativen.',
+    description: 'Übersicht über unsere aktiven, nachhaltigen Schulbauprojekte in Sierra Leone: Mafabaneh und Mamoru.',
     canonicalPath: '/projekte/',
     content: projectsOverviewDe
   }));
@@ -1688,7 +1779,7 @@ function buildSite() {
   // ==========================================
   // 3. PROJEKT DETAILSEITEN (DEUTSCH)
   // ==========================================
-  allProjects.forEach(p => {
+  activeProjects.forEach(p => {
     writeRoute(`/projekte/${p.slug}`, renderHtmlPage({
       lang: 'de',
       title: p.title.de,
@@ -1823,6 +1914,17 @@ function buildSite() {
         </div>
 
         <h2 style="margin-top:3rem;">Jahresübersichten der Mittelverwendung</h2>
+        
+        <div style="margin:1.5rem 0; padding:1.25rem 1.5rem; background:#f8fafc; border:1px solid var(--color-border); border-radius:var(--radius-md); font-size:0.92rem; line-height:1.6; color:var(--color-text-main);">
+          <div style="font-weight:700; color:var(--color-slate-dark); margin-bottom:0.35rem; display:flex; align-items:center; gap:0.4rem;">
+            <span>ℹ️</span>
+            <span>Rechtliche Transparenz zur Gründungsphase 2025</span>
+          </div>
+          <p style="margin:0; font-size:0.88rem; color:var(--color-text-muted);">
+            Der Verein befand sich 2025 in der formellen Eintragungs- und Anerkennungsphase. Bis zur Erteilung der steuerlichen Gemeinnützigkeit flossen aus haftungs- und vereinsrechtlichen Gründen bewusst <strong>keinerlei Gelder über das Vereinskonto</strong> (0 € Vereinskontoumsatz). Sämtliche Projektkosten vor Ort in Mamoru wurden zu 100 % von den Gründern aus privaten Mitteln getragen.
+          </p>
+        </div>
+
         <div style="overflow-x:auto; margin:1.5rem 0;">
           <table style="width:100%; border-collapse:collapse; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
             <thead>
@@ -1838,8 +1940,8 @@ function buildSite() {
               ${transparency.annualFinancialOverview.map(row => `
                 <tr style="border-bottom:1px solid var(--color-border);">
                   <td style="padding:0.75rem 1rem; font-weight:700;">${row.year}</td>
-                  <td style="padding:0.75rem 1rem;">${row.totalDonations.toLocaleString('de-DE')} €</td>
-                  <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements.toLocaleString('de-DE')} €</td>
+                  <td style="padding:0.75rem 1rem;">${row.totalDonations === 0 ? '0 €' : row.totalDonations.toLocaleString('de-DE') + ' €'}</td>
+                  <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements === 0 ? '0 €' : row.projectDisbursements.toLocaleString('de-DE') + ' €'}</td>
                   <td style="padding:0.75rem 1rem;">0 € (ehrenamtlich)</td>
                   <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote.de}</td>
                 </tr>
@@ -2440,6 +2542,9 @@ function buildSite() {
       </div>
     </section>
 
+    <!-- Social Media Footprint (Instagram & YouTube) -->
+    ${renderHomeSocialFootprint('en')}
+
     <!-- Prominent Bank Info Quick Card on Home -->
     <section class="section section-muted" style="padding-top:2rem; padding-bottom:2rem;">
       <div class="container container-narrow">
@@ -2547,34 +2652,6 @@ function buildSite() {
             </article>
           `).join('')}
         </div>
-
-        <!-- Archived & Paused Projects Section -->
-        <div style="margin-top:4rem; padding-top:2.5rem; border-top:1px solid var(--color-border);">
-          <div class="section-tag" style="background:#fef2f2; color:#b91c1c; border:1px solid #fecaca;">Transparency & Field Records</div>
-          <h2 style="margin-top:0.5rem; font-size:1.5rem;">Archived & Paused Projects</h2>
-          <p style="color:var(--color-text-muted); max-width:760px; font-size:0.95rem; margin-bottom:1.5rem;">
-            Authentic transparency means reporting openly on challenges and paused initiatives. Here we document projects that are currently not actively supported by the association:
-          </p>
-
-          <div class="projects-grid">
-            ${archivedProjects.map(p => `
-              <article class="project-card" style="border-color:#fca5a5;">
-                <div class="project-card-image-wrap">
-                  <img src="${p.leadImage}" alt="${p.title.en}" class="project-card-image">
-                  <span class="status-badge" style="background:#fee2e2; color:#991b1b; border:1px solid #f87171;">${p.statusLabel.en}</span>
-                </div>
-                <div class="project-card-body">
-                  <h3 class="project-card-title">${p.title.en}</h3>
-                  <p class="project-card-summary">${p.tagline.en}</p>
-                  <div style="margin-top:auto; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
-                    <span style="font-size:0.85rem; color:var(--color-text-muted);">${p.location.split(',')[0]}</span>
-                    <a href="/en/projects/${p.slug}/" class="btn btn-secondary btn-sm">View Archive Notes →</a>
-                  </div>
-                </div>
-              </article>
-            `).join('')}
-          </div>
-        </div>
       </div>
     </section>
   `;
@@ -2582,13 +2659,13 @@ function buildSite() {
   writeRoute('/en/projects', renderHtmlPage({
     lang: 'en',
     title: 'Our School Projects in Sierra Leone',
-    description: 'Overview of all active educational infrastructure projects in Sierra Leone as well as archived initiatives.',
+    description: 'Overview of our active, sustainable educational infrastructure projects in Sierra Leone: Mafabaneh and Mamoru.',
     canonicalPath: '/en/projects/',
     content: projectsEn
   }));
 
   // 12.3 & 12.4 PROJECT DETAIL PAGES (EN)
-  allProjects.forEach(p => {
+  activeProjects.forEach(p => {
     writeRoute(`/en/projects/${p.slug}`, renderHtmlPage({
       lang: 'en',
       title: p.title.en,
@@ -2709,6 +2786,17 @@ function buildSite() {
         </div>
 
         <h2 style="margin-top:3rem;">Annual Fund Utilization Overviews</h2>
+        
+        <div style="margin:1.5rem 0; padding:1.25rem 1.5rem; background:#f8fafc; border:1px solid var(--color-border); border-radius:var(--radius-md); font-size:0.92rem; line-height:1.6; color:var(--color-text-main);">
+          <div style="font-weight:700; color:var(--color-slate-dark); margin-bottom:0.35rem; display:flex; align-items:center; gap:0.4rem;">
+            <span>ℹ️</span>
+            <span>Regulatory Transparency on the 2025 Founding Phase</span>
+          </div>
+          <p style="margin:0; font-size:0.88rem; color:var(--color-text-muted);">
+            During 2025, the association was in its formal court registration phase. Prior to official tax-exempt charity recognition, <strong>zero donation funds were routed through the institutional bank account</strong> (0 € institutional turnover). 100% of construction and site expenditures in Mamoru were funded directly and privately by the founders.
+          </p>
+        </div>
+
         <div style="overflow-x:auto; margin:1.5rem 0;">
           <table style="width:100%; border-collapse:collapse; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
             <thead>
@@ -2724,8 +2812,8 @@ function buildSite() {
               ${transparency.annualFinancialOverview.map(row => `
                 <tr style="border-bottom:1px solid var(--color-border);">
                   <td style="padding:0.75rem 1rem; font-weight:700;">${row.year}</td>
-                  <td style="padding:0.75rem 1rem;">${row.totalDonations.toLocaleString('en-US')} €</td>
-                  <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements.toLocaleString('en-US')} €</td>
+                  <td style="padding:0.75rem 1rem;">${row.totalDonations === 0 ? '0 €' : row.totalDonations.toLocaleString('en-US') + ' €'}</td>
+                  <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements === 0 ? '0 €' : row.projectDisbursements.toLocaleString('en-US') + ' €'}</td>
                   <td style="padding:0.75rem 1rem;">0 € (100% honorary)</td>
                   <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote.en}</td>
                 </tr>
@@ -3107,9 +3195,15 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
 /unterstützen/            /spenden/ 301
 /unterstützen             /spenden/ 301
 
+# Archived Project Redirects (Graceful fallback)
+/projekte/madina          /projekte/ 302
+/projekte/madina/         /projekte/ 302
+/projekte/madina/*        /projekte/ 302
+/en/projects/madina       /en/projects/ 302
+/en/projects/madina/      /en/projects/ 302
+/en/projects/madina/*     /en/projects/ 302
+
 # Clean URLs & Trailing Slashes
-/projekte/madina          /projekte/madina/ 301
-/en/projects/madina       /en/projects/madina/ 301
 /projekte/kappr-yoni/     /projekte/mafabaneh/ 301
 /projekte/kappr-yoni      /projekte/mafabaneh/ 301
 /fuer-unternehmen         /fuer-unternehmen/ 301
@@ -3137,7 +3231,6 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/projekte/',
     '/projekte/mafabaneh/',
     '/projekte/mamoru/',
-    '/projekte/madina/',
     '/fuer-unternehmen/',
     '/transparenz/',
     '/ueber-uns/',
@@ -3153,7 +3246,6 @@ https://bildung-mit-herz.org/* https://www.bildung-mit-herz.org/:splat 301!
     '/en/projects/',
     '/en/projects/mafabaneh/',
     '/en/projects/mamoru/',
-    '/en/projects/madina/',
     '/en/corporate/',
     '/en/transparency/',
     '/en/about/',

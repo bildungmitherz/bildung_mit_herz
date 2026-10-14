@@ -103,4 +103,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Video Theater Mode Expansion & Toggling
+  document.addEventListener('click', (e) => {
+    // Theater Mode close/collapse button clicked
+    const theaterBtn = e.target.closest('.video-theater-badge');
+    if (theaterBtn) {
+      e.stopPropagation();
+      const card = theaterBtn.closest('.video-card');
+      if (card) {
+        card.classList.toggle('is-expanded');
+      }
+      return;
+    }
+
+    // Video facade clicked
+    const facade = e.target.closest('.video-cover-facade');
+    if (facade) {
+      const card = facade.closest('.video-card');
+      if (card) {
+        card.classList.add('is-expanded');
+        setTimeout(() => {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+      }
+    }
+  });
 });
