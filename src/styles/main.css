@@ -1517,9 +1517,89 @@ img {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.video-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-terracotta);
+}
+
+.video-cover-facade {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #0f172a;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+
+.video-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.video-cover-facade:hover .video-cover-img {
+  transform: scale(1.04);
+  opacity: 0.92;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(194, 65, 12, 0.94);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, background 0.25s ease;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.video-play-btn svg {
+  margin-left: 3px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.video-cover-facade:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: #ea580c;
+}
+
+.video-play-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.4rem 0.75rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.video-card-body {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .video-card-title {
@@ -1532,8 +1612,8 @@ img {
 .video-card-desc {
   font-size: 0.85rem;
   color: var(--color-text-muted);
-  margin-bottom: 0.75rem;
-  line-height: 1.45;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 /* Packing List */

@@ -27,42 +27,102 @@
   ],
   "partnershipModels": [
     {
-      "tier": "Klassenzimmer-Patenschaft",
-      "amount": "ab 3.500 €",
-      "targetProject": "Mamoru Grundschule",
-      "impact": { "de": "Ermöglicht bis zu 45 Kindern das tägliche Lernen an festen Tischen in einem wetterfesten Raum.", "en": "Enables up to 45 children to learn in a safe, fully sheltered classroom." },
-      "deliverables": [
-        "Namensplakette am Klassenraum (auf Wunsch)",
-        "Detaillierter Abschlussbericht mit Schülervideos",
-        "Offizielle Spendenbescheinigung"
-      ]
+      "tier": {
+        "de": "Klassenzimmer-Patenschaft",
+        "en": "Classroom Sponsorship"
+      },
+      "amount": {
+        "de": "ab 3.500 €",
+        "en": "from €3,500"
+      },
+      "targetProject": {
+        "de": "Grundschule Mamoru",
+        "en": "Mamoru Primary School"
+      },
+      "impact": {
+        "de": "Ermöglicht bis zu 45 Kindern das tägliche Lernen an festen Tischen in einem wetterfesten Raum.",
+        "en": "Enables up to 45 children to learn daily at permanent desks inside a fully sheltered classroom."
+      },
+      "deliverables": {
+        "de": [
+          "Namensplakette am Klassenraum (auf Wunsch)",
+          "Detaillierter Abschlussbericht mit Schülervideos",
+          "Offizielle Spendenbescheinigung"
+        ],
+        "en": [
+          "Donor commemorative plaque at classroom entrance (optional)",
+          "Comprehensive completion report including student video messages",
+          "Official German tax-deductible donation receipt"
+        ]
+      }
     },
     {
-      "tier": "Lehrer-Jahrespatenschaft",
-      "amount": "2.400 € / Jahr (oder 200 € / Monat)",
-      "targetProject": "Mamoru Grundschule",
-      "impact": { "de": "Sichert das monatliche Gehalt einer qualifizierten Lehrkraft für volle 12 Monate.", "en": "Secures the full living salary for a qualified local teacher for 12 months." },
-      "deliverables": [
-        "Direkter Bericht aus dem Klassenzimmer",
-        "Regelmäßige Quartalsupdates zur Unterrichtsentwicklung",
-        "Offizielle Spendenbescheinigung"
-      ]
+      "tier": {
+        "de": "Lehrer-Jahrespatenschaft",
+        "en": "Annual Teacher Sponsorship"
+      },
+      "amount": {
+        "de": "2.400 € / Jahr (oder 200 € / Monat)",
+        "en": "€2,400 / year (or €200 / month)"
+      },
+      "targetProject": {
+        "de": "Grundschule Mamoru",
+        "en": "Mamoru Primary School"
+      },
+      "impact": {
+        "de": "Sichert das monatliche Gehalt einer qualifizierten Lehrkraft für volle 12 Monate.",
+        "en": "Secures the full living salary of a qualified local primary school teacher for 12 months."
+      },
+      "deliverables": {
+        "de": [
+          "Direkter Bericht aus dem Klassenzimmer",
+          "Regelmäßige Quartalsupdates zur Unterrichtsentwicklung",
+          "Offizielle Spendenbescheinigung"
+        ],
+        "en": [
+          "Direct pedagogical progress report from the classroom",
+          "Quarterly updates on educational curriculum milestones",
+          "Official German tax-deductible donation receipt"
+        ]
+      }
     },
     {
-      "tier": "Architektur- & Leuchtturmförderung",
-      "amount": "ab 7.500 €",
-      "targetProject": "Mafabaneh Learning Hub",
-      "impact": { "de": "Förderung von innovativer Lehmbauarchitektur und passivem Klimadesign in Kooperation mit Tchoban Voss.", "en": "Support innovative sustainable earth architecture in cooperation with Tchoban Voss Architects." },
-      "deliverables": [
-        "Nennung im Architektur- und Veröffentlichungsdossier",
-        "Hochauflösendes Bildmaterial für Jahresberichte",
-        "Einladung zur nächsten Bildungsreise vor Ort"
-      ]
+      "tier": {
+        "de": "Architektur- & Leuchtturmförderung",
+        "en": "Architecture & Flagship Sponsorship"
+      },
+      "amount": {
+        "de": "ab 7.500 €",
+        "en": "from €7,500"
+      },
+      "targetProject": {
+        "de": "Mafabaneh Learning Hub",
+        "en": "Mafabaneh Learning Hub"
+      },
+      "impact": {
+        "de": "Förderung von innovativer Lehmbauarchitektur und passivem Klimadesign in Kooperation mit Tchoban Voss.",
+        "en": "Support innovative sustainable earth architecture and passive climate design in cooperation with Tchoban Voss."
+      },
+      "deliverables": {
+        "de": [
+          "Nennung im Architektur- und Veröffentlichungsdossier (German Design Award 2027)",
+          "Hochauflösendes Bild- und Videomaterial für CSR- und Jahresberichte",
+          "Persönliche Einladung zur nächsten Bildungsreise vor Ort"
+        ],
+        "en": [
+          "Recognition in architectural publications (German Design Award 2027 showcase)",
+          "High-resolution media assets and drone footage for CSR & sustainability reports",
+          "Personal invitation to accompany the next on-site educational journey"
+        ]
+      }
     }
   ],
   "existingSuccessStory": {
     "company": "AcadeMedia Education GmbH",
-    "quote": "Dank der Unterstützung der AcadeMedia Education GmbH konnten wir 2026 alle fünf Klassenräume der Schule in Mamoru mit soliden Möbeln ausstatten und die Gehälter von fünf Lehrkräften für ein ganzes Jahr im Voraus absichern.",
+    "quote": {
+      "de": "Dank der Unterstützung der AcadeMedia Education GmbH konnten wir 2026 alle fünf Klassenräume der Schule in Mamoru mit soliden Möbeln ausstatten und die Gehälter von fünf Lehrkräften für ein ganzes Jahr im Voraus absichern.",
+      "en": "Thanks to the generous support of AcadeMedia Education GmbH, in 2026 we fully furnished all five classrooms of the school in Mamoru with durable wooden desks and secured the salaries of five qualified teachers for an entire school year in advance."
+    },
     "video": "https://www.youtube-nocookie.com/embed/DnkBu1MgH68",
     "verified": true
   }

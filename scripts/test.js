@@ -115,8 +115,12 @@ allInternalLinks.forEach(({ from, to }) => {
 // 4. Image Assets & Accessibility
 console.log(`\nTest Group 4: Image Existence & WCAG Alt Text`);
 allImageSrcs.forEach(({ from, src, hasAlt }) => {
-  const target = path.join(DIST_DIR, src.split('?')[0]);
-  assert(fs.existsSync(target), `Image [${src}] on [${from}] exists`);
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    assert(src.startsWith('https://'), `External image [${src}] on [${from}] uses secure HTTPS`);
+  } else {
+    const target = path.join(DIST_DIR, src.split('?')[0]);
+    assert(fs.existsSync(target), `Image [${src}] on [${from}] exists`);
+  }
   assert(hasAlt, `Image [${src}] on [${from}] has alt attribute`);
 });
 

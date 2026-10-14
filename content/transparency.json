@@ -39,16 +39,28 @@
   ],
   "verifiedDocuments": [
     {
-      "title": "Welfare Alert Sierra Leone — Organisationsprofil",
-      "subtitle": "Offizielle Registrierung und Wirkungsbericht unserer Partnerin Juliet Fornah in Makeni",
+      "title": {
+        "de": "Welfare Alert Sierra Leone — Organisationsprofil",
+        "en": "Welfare Alert Sierra Leone — Organization Profile"
+      },
+      "subtitle": {
+        "de": "Offizielle Registrierung und Wirkungsbericht unserer Partnerin Juliet Fornah in Makeni",
+        "en": "Official registration and community impact dossier of our local partner Juliet Fornah in Makeni"
+      },
       "filename": "WelfareAlert.pdf",
       "url": "/assets/documents/WelfareAlert.pdf",
       "size": "715 KB",
       "format": "PDF"
     },
     {
-      "title": "Kaprr Yoni Global Learning Hub — Strategieplan 2025–2030",
-      "subtitle": "8-seitiges Grundsatzdokument zu Governance, Bildungszielen und Umweltkonzept in Mafabaneh",
+      "title": {
+        "de": "Mafabaneh Learning Hub — Strategieplan 2025–2030",
+        "en": "Mafabaneh Learning Hub — Strategic Framework 2025–2030"
+      },
+      "subtitle": {
+        "de": "8-seitiges Grundsatzdokument zu Governance, Bildungszielen und Umweltkonzept in Mafabaneh",
+        "en": "8-page foundational governance, pedagogical milestones, and ecological blueprint for Mafabaneh"
+      },
       "filename": "KapprYoniGlobalLearningHub.pdf",
       "url": "/assets/documents/KapprYoniGlobalLearningHub.pdf",
       "size": "508 KB",
@@ -61,14 +73,20 @@
       "totalDonations": 23450,
       "projectDisbursements": 23450,
       "adminCosts": 0,
-      "sourceNote": "Jahresbericht 2025 (Kassenprüfung abgeschlossen)"
+      "sourceNote": {
+        "de": "Jahresbericht 2025 (Kassenprüfung abgeschlossen)",
+        "en": "Annual Report 2025 (Audit completed)"
+      }
     },
     {
       "year": 2026,
       "totalDonations": 17800,
       "projectDisbursements": 14200,
       "adminCosts": 0,
-      "sourceNote": "Laufendes Geschäftsjahr (Stand: August 2026, ungeprüft)"
+      "sourceNote": {
+        "de": "Laufendes Geschäftsjahr (Stand: August 2026, ungeprüft)",
+        "en": "Current fiscal year (as of August 2026, interim un-audited)"
+      }
     }
   ],
   "strategicVision": [

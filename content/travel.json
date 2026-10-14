@@ -17,91 +17,130 @@
       "url": "https://www.youtube-nocookie.com/embed/6LH_RUZlGhk",
       "title": { "de": "Sierra Leone Bildungsreise 2026: Gesamtdokumentation", "en": "Sierra Leone Educational Journey 2026: Full Documentary" },
       "desc": { "de": "Umfassende Film-Dokumentation der Bildungsreise 2026: Schulbauprojekte im Landesinneren, dörfliche Immersion in Masingbi, Naturerlebnisse und Dialog in Freetown.", "en": "Comprehensive documentary of the 2026 educational expedition: rural school projects, community immersion in Masingbi, wildlife sanctuaries and diplomacy in Freetown." },
-      "category": "documentary"
+      "category": "documentary",
+      "showInOverview": false,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/6LH_RUZlGhk/hqdefault.jpg"
     },
     {
       "id": "5cqYvInke7I",
       "url": "https://www.youtube-nocookie.com/embed/5cqYvInke7I",
       "title": { "de": "Dokumentation Bildungsreise (Deutsch)", "en": "Educational Journey Documentary (German)" },
       "desc": { "de": "Umfassender Einblick in die Bildungsreise, Begegnungen mit Dorfgemeinschaften und gemeinsame Bauprojekte.", "en": "Comprehensive insight into the educational journey, community encounters and school building." },
-      "category": "documentary"
+      "category": "documentary",
+      "showInOverview": true,
+      "langScope": "de",
+      "coverImage": "https://img.youtube.com/vi/5cqYvInke7I/hqdefault.jpg"
     },
     {
       "id": "jBt4hURaXig",
       "url": "https://www.youtube-nocookie.com/embed/jBt4hURaXig",
       "title": { "de": "Educational Journey Documentary (English)", "en": "Educational Journey Documentary (English)" },
       "desc": { "de": "Authentische Dokumentation der Reise aus internationaler Perspektive.", "en": "Authentic video documentary following our journey through Sierra Leonean communities." },
-      "category": "documentary"
+      "category": "documentary",
+      "showInOverview": true,
+      "langScope": "en",
+      "coverImage": "https://img.youtube.com/vi/jBt4hURaXig/hqdefault.jpg"
     },
     {
       "id": "9yS0TS3fl1Q",
       "url": "https://www.youtube-nocookie.com/embed/9yS0TS3fl1Q",
       "title": { "de": "1. Schulbesuch & Begegnung im Klassenzimmer", "en": "1. School Visit & Classroom Encounters" },
       "desc": { "de": "Direkte Begegnungen im Klassenzimmer, Unterrichtsalltag und Austausch auf Augenhöhe zwischen Reisenden und lokalen Schüler:innen.", "en": "Direct classroom encounters, shared lessons and eye-level dialogue between international students and local classes." },
-      "category": "education"
+      "category": "education",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/9yS0TS3fl1Q/hqdefault.jpg"
     },
     {
       "id": "Iy8OfE8CqOs",
       "url": "https://www.youtube-nocookie.com/embed/Iy8OfE8CqOs",
       "title": { "de": "2. Besuch in Mamoru: Kultureller Empfang", "en": "2. Welcoming Ceremony in Mamoru Community" },
       "desc": { "de": "Traditioneller Festempfang mit Gesang, Trommeln und Tanz bei der Ankunft unserer Bildungsreisegruppe. Mamoru wird von uns jedes Jahr besucht.", "en": "Joyous celebration with traditional singing, drumming and dancing upon arrival. Mamoru is visited every single year." },
-      "category": "community"
+      "category": "community",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/Iy8OfE8CqOs/hqdefault.jpg"
     },
     {
       "id": "Oh38F0LFiew",
       "url": "https://www.youtube-nocookie.com/embed/Oh38F0LFiew",
       "title": { "de": "3. Schulbau & Grundsteinlegung in Mamoru", "en": "3. School Construction & Cornerstone Laying" },
       "desc": { "de": "Philipp Herzberg im feierlichen Handschlag mit dem Dorfvorsteher; Yoni Sesay erläutert das traditionelle Baugrund-Ritual vor der Dorfgemeinschaft.", "en": "Philipp Herzberg shakes hands with the village chief; Yoni Sesay explains the traditional ground-blessing ritual." },
-      "category": "construction"
+      "category": "construction",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/Oh38F0LFiew/hqdefault.jpg"
     },
     {
       "id": "6oc9QDcu6Go",
       "url": "https://www.youtube-nocookie.com/embed/6oc9QDcu6Go",
       "title": { "de": "4. Palmöl-Herstellung & Ananasernte", "en": "4. Red Palm Oil Craft & Pineapple Harvest" },
       "desc": { "de": "Traditionelles Handwerk vor Ort: Auskochen und Stampfen von rotem Palmöl sowie gemeinsame Ernte auf den tropischen Ananasfeldern.", "en": "Hands-on traditional craft: boiling and pressing red palm oil and harvesting fresh pineapples on family-run farms." },
-      "category": "culture"
+      "category": "culture",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/6oc9QDcu6Go/hqdefault.jpg"
     },
     {
       "id": "iiM8gJwvpc8",
       "url": "https://www.youtube-nocookie.com/embed/iiM8gJwvpc8",
       "title": { "de": "5. Dorfleben in Masingbi & Freundschaftsspiel", "en": "5. Village Life in Masingbi & Community Match" },
       "desc": { "de": "Alltag im Landesinneren: Kochen am Holzfeuer, Dorffeste, Fußballmatch gegen die lokale Dorfmannschaft und herzliche Gastfreundschaft.", "en": "Everyday village life: cooking on open fires, community celebrations, a friendly soccer match against local youth, and deep hospitality." },
-      "category": "community"
+      "category": "community",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/iiM8gJwvpc8/hqdefault.jpg"
     },
     {
       "id": "4VMQ7RSjnHY",
       "url": "https://www.youtube-nocookie.com/embed/4VMQ7RSjnHY",
       "title": { "de": "6. Artenschutz im Tacugama-Schimpansenreservat", "en": "6. Wildlife Protection at Tacugama Sanctuary" },
       "desc": { "de": "Exkursion in das Schimpansen-Reservat in den Hügeln von Freetown: Rettung von Wildtieren, Schutz von Primaten und tropischer Regenwald-Erhalt.", "en": "Field visit to the primate rescue sanctuary in Freetown hills: rescuing chimpanzees from the illegal trade and preserving biodiversity." },
-      "category": "nature"
+      "category": "nature",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/4VMQ7RSjnHY/hqdefault.jpg"
     },
     {
       "id": "k6P_VgBddSQ",
       "url": "https://www.youtube-nocookie.com/embed/k6P_VgBddSQ",
       "title": { "de": "7. Gemeinsame Bergwanderung bei Makeni", "en": "7. Mountain Ridge Day Hike Near Makeni" },
       "desc": { "de": "Tageswanderung auf den Bergrücken bei Makeni mit Schülern, Eltern und lokalen Guides: Ein atemberaubender Panoramablick über die Weite Sierra Leones.", "en": "Full-day mountain ridge hike near Makeni with students, parents and local guides: breathtaking panoramic vista of the interior." },
-      "category": "nature"
+      "category": "nature",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/k6P_VgBddSQ/hqdefault.jpg"
     },
     {
       "id": "tDoSTRw_dgQ",
       "url": "https://www.youtube-nocookie.com/embed/tDoSTRw_dgQ",
       "title": { "de": "Drohnenflug Mafabaneh: Das Baufeld der Schule", "en": "Drone Aerial Flight Mafabaneh: School Building Site" },
       "desc": { "de": "Aus der Luft zeigen sich die Umrisse des geplanten Learning Hubs und die Einbettung in das ländliche Dorf.", "en": "Aerial perspective showcasing the footprint of the planned Learning Hub nestled within rural village surroundings." },
-      "category": "construction"
+      "category": "construction",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/tDoSTRw_dgQ/hqdefault.jpg"
     },
     {
       "id": "DnkBu1MgH68",
       "url": "https://www.youtube-nocookie.com/embed/DnkBu1MgH68",
       "title": { "de": "Neue Schultische & Bänke für Mamoru", "en": "New School Desks & Benches for Mamoru" },
       "desc": { "de": "Dank AcadeMedia konnten alle fünf Klassenräume voll möbliert werden – für 85 Kinder ein fester Lernplatz.", "en": "Thanks to AcadeMedia, all five rooms are furnished with durable wooden desks for 85 primary students." },
-      "category": "construction"
+      "category": "construction",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/DnkBu1MgH68/hqdefault.jpg"
     },
     {
       "id": "SDXB4AJdDjE",
       "url": "https://www.youtube-nocookie.com/embed/SDXB4AJdDjE",
       "title": { "de": "Bauzustand Mamoru März 2026: Fünf Klassenräume unter Dach", "en": "Mamoru School March 2026: Five Classrooms Under Roof" },
       "desc": { "de": "Begehung der fünf Klassenräume: Das massive Gebäude steht wettergeschützt unter Dach. Was vor Ort noch fehlt: Wandverputz, gegossener Betonestrich und abschließbare Außentüren.", "en": "Walkthrough of five classrooms: structural shell is standing under the roof. What is still needed on site: protective wall plaster, concrete screed floors and lockable doors." },
-      "category": "construction"
+      "category": "construction",
+      "showInOverview": true,
+      "langScope": "all",
+      "coverImage": "https://img.youtube.com/vi/SDXB4AJdDjE/hqdefault.jpg"
     }
   ],
   "detailedReport2026": {
@@ -353,11 +392,26 @@
     }
   },
   "travelFunding": {
-    "totalCost": "ca. 1.500 € pro Teilnehmer:in",
-    "flightCost": "ca. 750 € (Turkish Airlines via Istanbul oder KLM/Brussels Airlines)",
-    "localCosts": "ca. 650 € für Busmiete, Treibstoff, Unterkünfte und Vollverpflegung",
-    "localSupport": "ca. 100 € Aufwandsentschädigung für lokale Begleiter und Guides vor Ort",
-    "insurance": "Auslandskrankenversicherung (~20 €) und Reiserücktrittsversicherung (~70 €) empfohlen",
+    "totalCost": {
+      "de": "ca. 1.500 € bis 2.300 € pro Teilnehmer:in (stark abhängig vom tagesaktuellen Flugpreis)",
+      "en": "approx. €1,500 to €2,300 per participant (depending on real-time airfare)"
+    },
+    "flightCost": {
+      "de": "ca. 750 € bis 1.500 € (stark schwankend je nach Saison, Kerosinpreisen und Buchungszeitpunkt; zu stark nachgefragten Ferienzeiten wie Ostern oder Feiertagen sind Flüge teurer, da viele Reisende und die Diaspora nach Sierra Leone fliegen; z.B. Brussels Airlines, Air France, Turkish Airlines)",
+      "en": "approx. €750 to €1,500 (fluctuates significantly depending on fuel prices, season, and booking lead time; high-demand holiday periods like Easter are notably higher due to large diaspora travel volume; e.g. Brussels Airlines, Air France, Turkish Airlines)"
+    },
+    "localCosts": {
+      "de": "ca. 650 € für Busmiete, Treibstoff, Unterkünfte und Vollverpflegung",
+      "en": "approx. €650 for chartered minibus, fuel, accommodation, and full board"
+    },
+    "localSupport": {
+      "de": "ca. 100 € Aufwandsentschädigung für lokale Begleiter und Guides vor Ort",
+      "en": "approx. €100 allowance for dedicated local guides and escorts"
+    },
+    "insurance": {
+      "de": "Auslandskrankenversicherung (~20 €) und Reiserücktrittsversicherung (~70 €) empfohlen",
+      "en": "Travel health insurance (~€20) and trip cancellation insurance (~€70) recommended"
+    },
     "zeroDonationGuarantee": {
       "de": "100 % Selbstzahlerbasis: Alle Reise- und Verpflegungskosten werden ausnahmslos von den Teilnehmenden privat getragen. Kein einziger Cent aus Spendengeldern fließt in Reisekosten.",
       "en": "100% self-funded: All travel, lodging and food expenses are paid out-of-pocket by participants. Exactly zero cents from charitable donations are spent on travel."
@@ -544,6 +598,17 @@
       "a": {
         "de": "Nein. Der Verein 'Bildung mit Herz Sierra Leone e.V.' ist kein gewerblicher Reiseveranstalter. Die Reisen werden privat organisiert und die Reisekosten von allen Teilnehmenden zu 100 % selbst getragen. Kein einziger Cent aus Spendengeldern fließt in Reisekosten.",
         "en": "No. The association is not a commercial travel provider. Expeditions are privately coordinated and fully self-funded by individual travelers. Exactly zero cents from charitable donations are spent on travel costs."
+      }
+    },
+    {
+      "category": { "de": "Betreuung & Begleitung", "en": "Guiding & Support" },
+      "q": {
+        "de": "Wer betreut die Gruppe vor Ort in Sierra Leone?",
+        "en": "Who guides and supports our group locally on the ground?"
+      },
+      "a": {
+        "de": "Wir werden während der gesamten Reise durchgehend (24/7) von ortskundigen Personen betreut, die sich in Sierra Leone bestens auskennen, fließend Englisch sprechen und tief in den Dorfgemeinschaften verwurzelt sind. Neben unserem Mitgründer Yoni Sesay begleiten uns feste einheimische Guides, sodass wir zu jedem Zeitpunkt – bei Behörden, in Dörfern, auf Märkten oder bei medizinischen Fragen – immer vertraute Ansprechpartner direkt an unserer Seite haben.",
+        "en": "Throughout the entire trip, our delegation is continuously accompanied and supported (24/7) by trusted local team members who know Sierra Leone intimately, speak fluent English, and are deeply rooted in local communities. Alongside co-founder Yoni Sesay, dedicated local guides remain with our group at all times—ensuring we have experienced, reliable assistance in every situation, from village encounters and local markets to official checkpoints and medical matters."
       }
     }
   ],

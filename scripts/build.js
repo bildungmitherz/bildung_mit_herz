@@ -601,17 +601,42 @@ function renderPackingList(lang = 'de') {
 
 // Reusable Video Gallery Generator
 function renderVideoGallery(lang = 'de') {
+  const isDe = lang === 'de';
+  const filtered = travel.videos.filter(v => {
+    // "Die Gesamtdokumentation kann weg" (from overview page, stays on full report page)
+    if (v.id === '6LH_RUZlGhk' || v.showInOverview === false) return false;
+    // German page only gets German documentary + shared videos; English page only gets English documentary + shared videos
+    if (isDe && v.langScope === 'en') return false;
+    if (!isDe && v.langScope === 'de') return false;
+    return true;
+  });
+
   return `
     <div class="videos-grid">
-      ${travel.videos.map(v => `
-        <div class="video-card">
-          <div class="video-card-title">${v.title[lang]}</div>
-          <div class="video-card-desc">${v.desc[lang]}</div>
-          <div class="video-responsive">
-            <iframe src="${v.url}" title="${v.title[lang]}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      ${filtered.map(v => {
+        const title = v.title[lang] || v.title.de;
+        const desc = v.desc[lang] || v.desc.de;
+        const coverImg = v.coverImage || `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+        const escapedTitle = title.replace(/'/g, "\\'");
+        return `
+          <div class="video-card">
+            <div class="video-cover-facade" data-video-id="${v.id}" onclick="this.innerHTML='<iframe src=\\'https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0\\' title=\\'${escapedTitle}\\' style=\\'width:100%; height:100%; border:0;\\' allow=\\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\\' allowfullscreen></iframe>'">
+              <img src="${coverImg}" alt="${title}" class="video-cover-img" loading="lazy">
+              <div class="video-play-btn" aria-label="${isDe ? 'Video abspielen: ' : 'Play video: '}${title}">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+              <div class="video-play-hint">
+                <span>▶ ${isDe ? 'Video abspielen' : 'Play Video'}</span>
+                <span>YouTube HD</span>
+              </div>
+            </div>
+            <div class="video-card-body">
+              <div class="video-card-title">${title}</div>
+              <div class="video-card-desc">${desc}</div>
+            </div>
           </div>
-        </div>
-      `).join('')}
+        `;
+      }).join('')}
     </div>
   `;
 }
@@ -1700,16 +1725,16 @@ function buildSite() {
           ${corporate.partnershipModels.map(m => `
             <div style="background:var(--color-surface); padding:2rem; border:2px solid var(--color-border); border-radius:var(--radius-lg);">
               <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-                <h3 style="font-size:1.35rem; color:var(--color-terracotta);">${m.tier}</h3>
-                <span style="font-size:1.25rem; font-weight:800; color:var(--color-slate-dark);">${m.amount}</span>
+                <h3 style="font-size:1.35rem; color:var(--color-terracotta);">${m.tier.de}</h3>
+                <span style="font-size:1.25rem; font-weight:800; color:var(--color-slate-dark);">${m.amount.de}</span>
               </div>
-              <p style="font-weight:600; font-size:0.95rem; margin-bottom:0.5rem;">Zielprojekt: ${m.targetProject}</p>
+              <p style="font-weight:600; font-size:0.95rem; margin-bottom:0.5rem;">Zielprojekt: ${m.targetProject.de}</p>
               <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom:1rem;">${m.impact.de}</p>
               
               <div style="background:var(--color-surface-muted); padding:1rem; border-radius:var(--radius-sm); font-size:0.85rem;">
                 <strong>Was Ihr Unternehmen erhält:</strong>
                 <ul style="margin-left:1.25rem; margin-top:0.35rem; color:var(--color-text-muted);">
-                  ${m.deliverables.map(d => `<li>${d}</li>`).join('')}
+                  ${m.deliverables.de.map(d => `<li>${d}</li>`).join('')}
                 </ul>
               </div>
             </div>
@@ -1718,7 +1743,7 @@ function buildSite() {
 
         <div class="callout" style="margin-top:3rem;">
           <div class="callout-title">Erfolgsbeispiel: AcadeMedia Education GmbH</div>
-          <p>${corporate.existingSuccessStory.quote}</p>
+          <p>${corporate.existingSuccessStory.quote.de}</p>
           ${corporate.existingSuccessStory.video ? `
             <div class="video-responsive" style="margin:1.25rem 0 0.5rem;">
               <iframe src="${corporate.existingSuccessStory.video}" title="AcadeMedia Schulausstattung Mamoru" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -1789,8 +1814,8 @@ function buildSite() {
           ${transparency.verifiedDocuments.map(doc => `
             <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
               <div>
-                <h4 style="margin-bottom:0.25rem;">${doc.title}</h4>
-                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0;">${doc.subtitle}</p>
+                <h4 style="margin-bottom:0.25rem;">${doc.title.de}</h4>
+                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0;">${doc.subtitle.de}</p>
               </div>
               <a href="${doc.url}" class="btn btn-secondary btn-sm" download>Download (${doc.format}, ${doc.size})</a>
             </div>
@@ -1816,7 +1841,7 @@ function buildSite() {
                   <td style="padding:0.75rem 1rem;">${row.totalDonations.toLocaleString('de-DE')} €</td>
                   <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements.toLocaleString('de-DE')} €</td>
                   <td style="padding:0.75rem 1rem;">0 € (ehrenamtlich)</td>
-                  <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote}</td>
+                  <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote.de}</td>
                 </tr>
               `).join('')}
             </tbody>
@@ -1875,9 +1900,9 @@ function buildSite() {
             <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
               <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
                 <h3 style="margin-bottom:0; font-size:1.3rem;">${b.name}</h3>
-                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${b.role}</span>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${b.role.de}</span>
               </div>
-              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">${b.profession}</p>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">${b.profession.de}</p>
               <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${b.bio.de}</p>
             </div>
           `).join('')}
@@ -1886,10 +1911,10 @@ function buildSite() {
             <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
               <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
                 <h3 style="margin-bottom:0; font-size:1.3rem;">${c.name}</h3>
-                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${c.role}</span>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${c.role.de}</span>
               </div>
-              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">${c.profession}</p>
-              <p style="color:var(--color-text-muted); font-size:0.85rem; margin-bottom:0.75rem;"><em>📍 ${c.origin}</em></p>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">${c.profession.de}</p>
+              <p style="color:var(--color-text-muted); font-size:0.85rem; margin-bottom:0.75rem;"><em>📍 ${c.origin.de}</em></p>
               <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${c.bio.de}</p>
             </div>
           `).join('')}
@@ -2060,13 +2085,13 @@ function buildSite() {
         <div style="background:var(--color-surface); padding:2rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); margin:3rem 0;">
           <h2 style="margin-top:0;">Reisekosten & 100% Direkt-Garantie</h2>
           <p style="font-size:0.95rem; color:var(--color-text-main); margin-bottom:1rem;">
-            <strong>Gesamtkosten:</strong> ${travel.travelFunding.totalCost}
+            <strong>Gesamtkosten:</strong> ${travel.travelFunding.totalCost.de}
           </p>
           <ul style="color:var(--color-text-muted); font-size:0.9rem; margin-left:1.25rem; margin-bottom:1.5rem; line-height:1.6;">
-            <li><strong>Flugkosten:</strong> ${travel.travelFunding.flightCost}</li>
-            <li><strong>Kosten vor Ort:</strong> ${travel.travelFunding.localCosts}</li>
-            <li><strong>Begleiter & Guides:</strong> ${travel.travelFunding.localSupport}</li>
-            <li><strong>Versicherungen:</strong> ${travel.travelFunding.insurance}</li>
+            <li><strong>Flugkosten:</strong> ${travel.travelFunding.flightCost.de}</li>
+            <li><strong>Kosten vor Ort:</strong> ${travel.travelFunding.localCosts.de}</li>
+            <li><strong>Begleiter & Guides:</strong> ${travel.travelFunding.localSupport.de}</li>
+            <li><strong>Versicherungen:</strong> ${travel.travelFunding.insurance.de}</li>
           </ul>
           <div style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1px solid #86efac; border-radius:var(--radius-md); padding:1.25rem;">
             <strong style="color:#166534;">🛡️ Keine Spendengelder für Reisen:</strong>
@@ -2598,15 +2623,15 @@ function buildSite() {
           ${corporate.partnershipModels.map(m => `
             <div style="background:var(--color-surface); padding:2rem; border:2px solid var(--color-border); border-radius:var(--radius-lg);">
               <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-                <h3 style="font-size:1.35rem; color:var(--color-terracotta);">${m.tier}</h3>
-                <span style="font-size:1.25rem; font-weight:800; color:var(--color-slate-dark);">${m.amount}</span>
+                <h3 style="font-size:1.35rem; color:var(--color-terracotta);">${m.tier.en}</h3>
+                <span style="font-size:1.25rem; font-weight:800; color:var(--color-slate-dark);">${m.amount.en}</span>
               </div>
-              <p style="font-weight:600; font-size:0.95rem; margin-bottom:0.5rem;">Target Project: ${m.targetProject}</p>
+              <p style="font-weight:600; font-size:0.95rem; margin-bottom:0.5rem;">Target Project: ${m.targetProject.en}</p>
               <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom:1rem;">${m.impact.en}</p>
               <div style="background:var(--color-surface-muted); padding:1rem; border-radius:var(--radius-sm); font-size:0.85rem;">
                 <strong>Deliverables for your company:</strong>
                 <ul style="margin-left:1.25rem; margin-top:0.35rem; color:var(--color-text-muted);">
-                  ${m.deliverables.map(d => `<li>${d}</li>`).join('')}
+                  ${m.deliverables.en.map(d => `<li>${d}</li>`).join('')}
                 </ul>
               </div>
             </div>
@@ -2615,7 +2640,7 @@ function buildSite() {
 
         <div class="callout" style="margin-top:3rem;">
           <div class="callout-title">Success Story: AcadeMedia Education GmbH</div>
-          <p>${corporate.existingSuccessStory.quote}</p>
+          <p>${corporate.existingSuccessStory.quote.en}</p>
           ${corporate.existingSuccessStory.video ? `
             <div class="video-responsive" style="margin:1.25rem 0 0.5rem;">
               <iframe src="${corporate.existingSuccessStory.video}" title="AcadeMedia Classroom Desks Mamoru" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -2675,8 +2700,8 @@ function buildSite() {
           ${transparency.verifiedDocuments.map(doc => `
             <div style="background:var(--color-surface); padding:1.25rem; border:1px solid var(--color-border); border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
               <div>
-                <h4 style="margin-bottom:0.25rem;">${doc.title}</h4>
-                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0;">${doc.subtitle}</p>
+                <h4 style="margin-bottom:0.25rem;">${doc.title.en}</h4>
+                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0;">${doc.subtitle.en}</p>
               </div>
               <a href="${doc.url}" class="btn btn-secondary btn-sm" download>Download (${doc.format}, ${doc.size})</a>
             </div>
@@ -2702,7 +2727,7 @@ function buildSite() {
                   <td style="padding:0.75rem 1rem;">${row.totalDonations.toLocaleString('en-US')} €</td>
                   <td style="padding:0.75rem 1rem; color:#15803d; font-weight:600;">${row.projectDisbursements.toLocaleString('en-US')} €</td>
                   <td style="padding:0.75rem 1rem;">0 € (100% honorary)</td>
-                  <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote}</td>
+                  <td style="padding:0.75rem 1rem; font-size:0.85rem; color:var(--color-text-muted);">${row.sourceNote.en}</td>
                 </tr>
               `).join('')}
             </tbody>
@@ -2750,9 +2775,9 @@ function buildSite() {
             <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
               <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
                 <h3 style="margin-bottom:0; font-size:1.3rem;">${b.name}</h3>
-                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${b.role}</span>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${b.role.en}</span>
               </div>
-              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">${b.profession}</p>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">${b.profession.en}</p>
               <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${b.bio.en}</p>
             </div>
           `).join('')}
@@ -2761,10 +2786,10 @@ function buildSite() {
             <div style="background:var(--color-surface); padding:1.75rem; border:1px solid var(--color-border); border-radius:var(--radius-md);">
               <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
                 <h3 style="margin-bottom:0; font-size:1.3rem;">${c.name}</h3>
-                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${c.role}</span>
+                <span style="color:var(--color-terracotta); font-weight:700; font-size:0.88rem;">${c.role.en}</span>
               </div>
-              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">${c.profession}</p>
-              <p style="color:var(--color-text-muted); font-size:0.85rem; margin-bottom:0.75rem;"><em>📍 ${c.origin}</em></p>
+              <p style="color:var(--color-text-muted); font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">${c.profession.en}</p>
+              <p style="color:var(--color-text-muted); font-size:0.85rem; margin-bottom:0.75rem;"><em>📍 ${c.origin.en}</em></p>
               <p style="font-size:0.92rem; color:var(--color-text-main); line-height:1.6; margin-bottom:0;">${c.bio.en}</p>
             </div>
           `).join('')}
@@ -2926,13 +2951,13 @@ function buildSite() {
         <div style="background:var(--color-surface); padding:2rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); margin:3rem 0;">
           <h2 style="margin-top:0;">Travel Costs & 100% Self-Funded Guarantee</h2>
           <p style="font-size:0.95rem; color:var(--color-text-main); margin-bottom:1rem;">
-            <strong>Estimated Total Cost:</strong> ${travel.travelFunding.totalCost}
+            <strong>Estimated Total Cost:</strong> ${travel.travelFunding.totalCost.en}
           </p>
           <ul style="color:var(--color-text-muted); font-size:0.9rem; margin-left:1.25rem; margin-bottom:1.5rem; line-height:1.6;">
-            <li><strong>International Flights:</strong> ${travel.travelFunding.flightCost}</li>
-            <li><strong>On-the-ground Expenses:</strong> ${travel.travelFunding.localCosts}</li>
-            <li><strong>Local Guides & Logistics:</strong> ${travel.travelFunding.localSupport}</li>
-            <li><strong>Travel Insurance:</strong> ${travel.travelFunding.insurance}</li>
+            <li><strong>International Flights:</strong> ${travel.travelFunding.flightCost.en}</li>
+            <li><strong>On-the-ground Expenses:</strong> ${travel.travelFunding.localCosts.en}</li>
+            <li><strong>Local Guides & Logistics:</strong> ${travel.travelFunding.localSupport.en}</li>
+            <li><strong>Travel Insurance:</strong> ${travel.travelFunding.insurance.en}</li>
           </ul>
           <div style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1px solid #86efac; border-radius:var(--radius-md); padding:1.25rem;">
             <strong style="color:#166534;">🛡️ Zero Donations Used for Travel:</strong>
